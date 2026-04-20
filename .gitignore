@@ -5,3 +5,6 @@ dist
 npm-debug.log*
 .env
 .env.local
+
+# Design references (not needed for build)
+Intro Compensaciones - standalone.html

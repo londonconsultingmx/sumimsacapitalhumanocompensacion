@@ -4,24 +4,33 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       colors: {
-        ink: '#1E293B',
-        canvas: '#F9FAFB',
-        teal: {
-          DEFAULT: '#00897B',
-          dark: '#00695C',
-          light: '#4DB6AC',
-        },
+        // Editorial palette matched to intro design
+        bg: '#ffffff',
+        paper: '#FBFAF6',      // oklch(98% 0.005 80) warm paper
+        ink: '#1C1B17',        // oklch(18% 0.01 80) near-black
+        muted: '#6B6A62',      // oklch(45% 0.015 80)
+        rule: '#E7E4DC',       // oklch(90% 0.005 80) hairline
+        blue: '#274B8E',       // oklch(38% 0.08 240) corporate accent
+        gold: '#B68845',       // oklch(62% 0.10 75) secondary
+        // status colors for the dashboard indicator pills
         status: {
           good: '#16A34A',
-          warn: '#F59E0B',
-          bad: '#DC2626',
+          warn: '#D97706',
+          bad: '#B91C1C',
+        },
+        // keep teal as legacy accent alias
+        teal: {
+          DEFAULT: '#274B8E',
+          dark: '#1B355F',
+          light: '#4F6FA8',
         },
       },
       boxShadow: {
-        card: '0 1px 2px rgba(15,23,42,0.04), 0 4px 14px rgba(15,23,42,0.06)',
+        card: '0 1px 2px rgba(28,27,23,0.04), 0 4px 14px rgba(28,27,23,0.06)',
       },
     },
   },

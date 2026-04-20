@@ -7,10 +7,29 @@ html, body, #root {
 }
 
 body {
-  @apply bg-canvas text-ink font-sans antialiased;
+  @apply bg-paper text-ink font-sans antialiased;
 }
 
-/* smooth focus ring */
 button:focus-visible, a:focus-visible {
-  @apply outline-none ring-2 ring-teal ring-offset-2 ring-offset-canvas;
+  @apply outline-none ring-2 ring-blue ring-offset-2 ring-offset-paper;
 }
+
+/* Editorial fade-in for route content */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.rise-in { animation: rise-in 0.55s cubic-bezier(0.22,1,0.36,1) both; }
+
+@keyframes line-grow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.line-grow { animation: line-grow 0.9s cubic-bezier(0.22,1,0.36,1) both; transform-origin: left center; }
+
+@keyframes mask-rise {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+.mask-rise { display: inline-block; animation: mask-rise 0.8s cubic-bezier(0.22,1,0.36,1) both; }
+.mask-wrap { display: inline-block; overflow: hidden; line-height: 1; }
