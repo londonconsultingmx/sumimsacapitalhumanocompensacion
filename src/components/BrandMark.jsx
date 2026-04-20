@@ -14,17 +14,26 @@ export default function BrandMark({
 
   const src = `${import.meta.env.BASE_URL}assets/sumimsa-logo.png`
 
+  const imgEl = (
+    <LogoWithFallback
+      src={src}
+      alt="SUMIMSA — Un Solo Proveedor"
+      className={`${isLg ? 'h-16 md:h-20' : 'h-7'} w-auto`}
+      tone={tone}
+      isLg={isLg}
+    />
+  )
+
   return (
     <div className={`flex flex-col ${isLg ? 'gap-4' : 'gap-1.5'}`}>
-      <LogoWithFallback
-        src={src}
-        alt="SUMIMSA — Un Solo Proveedor"
-        className={`${isLg ? 'h-16 md:h-20' : 'h-9'} w-auto ${
-          onDark ? 'brightness-0 invert' : ''
-        }`}
-        tone={tone}
-        isLg={isLg}
-      />
+      {onDark ? (
+        // White chip to preserve the two-tone blues on a dark header.
+        <span className="inline-flex items-center bg-paper rounded-sm px-3 py-1.5 self-start">
+          {imgEl}
+        </span>
+      ) : (
+        imgEl
+      )}
       <div className={`${line} ${isLg ? 'h-[2px] w-64' : 'h-px w-24'} line-grow`} />
       {caption && (
         <div
@@ -42,7 +51,7 @@ export default function BrandMark({
 function LogoWithFallback({ src, alt, className, tone, isLg }) {
   const [failed, setFailed] = React.useState(false)
   if (failed) {
-    const mark = tone === 'paper' ? 'text-paper' : 'text-ink'
+    const mark = tone === 'paper' ? 'text-ink' : 'text-ink'
     return (
       <span
         className={`${mark} font-sans font-extrabold uppercase leading-none ${
