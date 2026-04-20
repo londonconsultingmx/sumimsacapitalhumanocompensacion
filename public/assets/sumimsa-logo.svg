@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-label="SUMIMSA — Un Solo Proveedor">
+  <!-- Shield mark: soft pentagon with stylized S -->
+  <g transform="translate(10, 10)">
+    <path d="M70 0 L130 28 L120 108 L65 140 L10 108 L0 28 Z"
+          fill="#1F3FA6" stroke="none"/>
+    <!-- Inner S shape carved out -->
+    <path d="M95 36
+             Q60 36 56 58
+             Q52 78 78 84
+             Q104 90 100 108
+             Q96 126 66 126
+             Q50 126 42 118
+             M42 118
+             L54 106
+             Q60 114 70 114
+             Q82 114 84 104
+             Q86 94 62 90
+             Q36 84 40 60
+             Q44 36 80 30 Z"
+          fill="#4DC0D8" stroke="none"/>
+  </g>
+
+  <!-- Wordmark: SUMIMSA in bold italic navy -->
+  <g transform="translate(160, 92)">
+    <text x="0" y="0"
+          font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-weight="900"
+          font-style="italic"
+          font-size="76"
+          letter-spacing="-2"
+          fill="#1F3FA6">SUMIMSA</text>
+    <!-- ® mark -->
+    <text x="373" y="-32"
+          font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-weight="700"
+          font-size="18"
+          fill="#1F3FA6">®</text>
+  </g>
+
+  <!-- Tagline -->
+  <g transform="translate(244, 130)">
+    <text x="0" y="0"
+          font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-style="italic"
+          font-weight="500"
+          font-size="26"
+          letter-spacing="1"
+          fill="#1F3FA6">Un Solo Proveedor</text>
+    <line x1="0" y1="8" x2="300" y2="8" stroke="#1F3FA6" stroke-width="2"/>
+  </g>
+</svg>

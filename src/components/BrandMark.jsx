@@ -14,7 +14,7 @@ export default function BrandMark({
   const line = onDark ? 'bg-paper/90' : 'bg-ink'
   const subt = onDark ? 'text-paper/70' : 'text-muted'
 
-  const finalSrc = logoSrc ?? `${import.meta.env.BASE_URL}assets/sumimsa-logo.png`
+  const finalSrc = logoSrc ?? `${import.meta.env.BASE_URL}assets/sumimsa-logo.svg`
 
   return (
     <div className={`flex flex-col ${isLg ? 'gap-4' : 'gap-1.5'}`}>
