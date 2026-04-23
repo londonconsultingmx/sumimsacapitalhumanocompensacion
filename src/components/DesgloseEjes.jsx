@@ -7,6 +7,7 @@ import {
   YAxis,
   Tooltip,
   CartesianGrid,
+  ReferenceLine,
   ResponsiveContainer,
 } from 'recharts'
 import {
@@ -14,6 +15,7 @@ import {
   EJE_LABELS,
   EJE_ORDER,
   EJE_WEIGHTS,
+  THRESHOLD_APROBATORIO,
   fmtPct,
 } from '../utils/compensation.js'
 
@@ -60,6 +62,13 @@ export default function DesgloseEjes({ breakdowns }) {
                   <XAxis type="number" domain={[0, 100]} tickFormatter={(v) => `${v}%`} fontSize={11} />
                   <YAxis type="category" dataKey="area" width={110} fontSize={11} />
                   <Tooltip formatter={(v) => `${Number(v).toFixed(1)}%`} cursor={{ fill: '#F1F5F9' }} />
+                  <ReferenceLine
+                    x={THRESHOLD_APROBATORIO * 100}
+                    stroke="#1C1B17"
+                    strokeDasharray="4 3"
+                    strokeWidth={1.5}
+                    label={{ value: '75% mínimo', position: 'insideTopRight', fill: '#1C1B17', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
+                  />
                   <Bar dataKey="score" radius={[0, 6, 6, 0]}>
                     {block.data.map((d) => (
                       <Cell key={d.area} fill={d.color} />

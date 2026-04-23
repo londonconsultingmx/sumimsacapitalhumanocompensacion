@@ -25,6 +25,9 @@ export const AREA_COLORS = {
 export const EVIDENCIAS_URL =
   'https://suministrosmarinos.sharepoint.com/sites/EsquemaObjetivosIndicadoresSubdirectores/Documentos%20compartidos/Forms/AllItems.aspx'
 
+// Passing threshold: 75% across all ejes, shown as a reference line in charts.
+export const THRESHOLD_APROBATORIO = 0.75
+
 // --- numeric helpers -----------------------------------------------------
 
 // Parse European-style numbers:
@@ -90,7 +93,23 @@ export function normalizeRow(row) {
 
 // --- calculations --------------------------------------------------------
 
-export function scoreEje(rowsOfEje) {
+// Ceiling to nearest whole percent, e.g. 0.898 -> 0.90.
+function ceilPct(n) {
+  return Math.ceil(n * 100) / 100
+}
+
+export function scoreEje(rowsOfEje, metrica) {
+  // 360° is a simple average of the Real values (5 behavioral ratings),
+  // then rounded up to the nearest whole percent per user request.
+  if (metrica === '03. 360') {
+    const reals = rowsOfEje
+      .map((r) => parseEuroNumber(r.realRaw))
+      .filter((n) => Number.isFinite(n))
+    if (reals.length === 0) return 0
+    const avg = reals.reduce((s, n) => s + n, 0) / reals.length
+    return ceilPct(avg)
+  }
+  // Other ejes: weighted average by Importancia of Cumple #.
   let num = 0
   let den = 0
   for (const r of rowsOfEje) {
@@ -109,7 +128,7 @@ export function computeAreaBreakdown(rows, area) {
   }
   const scores = {}
   for (const key of EJE_ORDER) {
-    scores[key] = scoreEje(byMetrica[key])
+    scores[key] = scoreEje(byMetrica[key], key)
   }
   const bruta =
     scores['00. Objetivos'] * EJE_WEIGHTS['00. Objetivos'] +

@@ -4,6 +4,7 @@ import { CountPills } from './StatusPill.jsx'
 import {
   AREA_COLORS,
   EBITDA_CAP,
+  THRESHOLD_APROBATORIO,
   fmtPct,
 } from '../utils/compensation.js'
 
@@ -24,11 +25,27 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
       <div className="grid md:grid-cols-3 gap-5">
         <div className="bg-white rounded-2xl shadow-card p-6 flex flex-col items-center">
           <div className="text-sm text-slate-500 mb-2">Calificación grupal (con tope)</div>
-          <Gauge value={grupal.final} color="#00897B" sublabel="× 0.96 EBITDA" />
+          <Gauge
+            value={grupal.final}
+            color="#00897B"
+            sublabel="× 0.96 EBITDA"
+            threshold={THRESHOLD_APROBATORIO}
+          />
+          <div className="text-[10px] text-slate-400 font-mono uppercase tracking-[0.18em] mt-2">
+            Mínimo aprobatorio 75%
+          </div>
         </div>
         <div className="bg-white rounded-2xl shadow-card p-6 flex flex-col items-center">
           <div className="text-sm text-slate-500 mb-2">Calificación grupal bruta</div>
-          <Gauge value={grupal.bruta} color="#1E293B" sublabel="sin tope" />
+          <Gauge
+            value={grupal.bruta}
+            color="#1E293B"
+            sublabel="sin tope"
+            threshold={THRESHOLD_APROBATORIO}
+          />
+          <div className="text-[10px] text-slate-400 font-mono uppercase tracking-[0.18em] mt-2">
+            Mínimo aprobatorio 75%
+          </div>
         </div>
         <div className="bg-white rounded-2xl shadow-card p-6 flex flex-col justify-center gap-3">
           <div className="text-sm text-slate-500">Resumen de indicadores</div>
@@ -66,7 +83,13 @@ function AreaGauge({ b }) {
   return (
     <div className="border border-slate-200 rounded-xl p-5 flex flex-col items-center gap-2 bg-slate-50/60">
       <div className="text-sm font-semibold text-ink text-center">{b.area}</div>
-      <Gauge value={b.final} color={color} size={140} sublabel={`bruta ${fmtPct(b.bruta)}`} />
+      <Gauge
+        value={b.final}
+        color={color}
+        size={140}
+        sublabel={`bruta ${fmtPct(b.bruta)}`}
+        threshold={THRESHOLD_APROBATORIO}
+      />
       <div className="mt-1"><CountPills counts={b.counts} /></div>
     </div>
   )

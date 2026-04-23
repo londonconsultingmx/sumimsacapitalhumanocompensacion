@@ -6,10 +6,11 @@ import {
   YAxis,
   Tooltip,
   CartesianGrid,
+  ReferenceLine,
   ResponsiveContainer,
   Legend,
 } from 'recharts'
-import { AREA_COLORS, EBITDA_CAP, fmtPct } from '../utils/compensation.js'
+import { AREA_COLORS, EBITDA_CAP, THRESHOLD_APROBATORIO, fmtPct } from '../utils/compensation.js'
 
 export default function SinTope({ breakdowns, grupal }) {
   const data = breakdowns.map((b) => ({
@@ -60,6 +61,13 @@ export default function SinTope({ breakdowns, grupal }) {
               <YAxis domain={[0, 100]} tickFormatter={(v) => `${v}%`} fontSize={12} />
               <Tooltip formatter={(v) => `${Number(v).toFixed(1)}%`} cursor={{ fill: '#F1F5F9' }} />
               <Legend />
+              <ReferenceLine
+                y={THRESHOLD_APROBATORIO * 100}
+                stroke="#1C1B17"
+                strokeDasharray="4 3"
+                strokeWidth={1.5}
+                label={{ value: '75% mínimo', position: 'insideRight', fill: '#1C1B17', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
+              />
               <Bar dataKey="final" name="Final (con tope)" fill="#00897B" radius={[6, 6, 0, 0]} />
               <Bar dataKey="bruta" name="Bruta (sin tope)" fill="#1E293B" radius={[6, 6, 0, 0]} />
             </BarChart>
