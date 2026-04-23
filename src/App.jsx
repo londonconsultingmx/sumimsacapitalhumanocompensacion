@@ -5,6 +5,7 @@ import ResultadoGrupal from './components/ResultadoGrupal.jsx'
 import DesgloseEjes from './components/DesgloseEjes.jsx'
 import DetallePorArea from './components/DetallePorArea.jsx'
 import SinTope from './components/SinTope.jsx'
+import BenchmarksPage from './components/BenchmarksPage.jsx'
 import { useData } from './data/useData.js'
 import { computeAllAreas, computeGrupal } from './utils/compensation.js'
 
@@ -56,6 +57,7 @@ function Dashboard({ onBackToIntro }) {
             {tab === 'ejes' && <DesgloseEjes breakdowns={breakdowns} />}
             {tab === 'detalle' && <DetallePorArea breakdowns={breakdowns} />}
             {tab === 'sintope' && <SinTope breakdowns={breakdowns} grupal={grupal} />}
+            {tab === 'benchmarks' && <BenchmarksPage breakdowns={breakdowns} />}
           </>
         )}
       </main>

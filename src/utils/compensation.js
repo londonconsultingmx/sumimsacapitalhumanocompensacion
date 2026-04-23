@@ -28,6 +28,97 @@ export const EVIDENCIAS_URL =
 // Passing threshold: 75% across all ejes, shown as a reference line in charts.
 export const THRESHOLD_APROBATORIO = 0.75
 
+// Subdirector per area (from 2024 evaluation PDF).
+export const SUBDIRECTORES = {
+  'Auditoría':      { nombre: 'Arturo Reyes' },
+  'Capital Humano': { nombre: 'Héctor Loredo' },
+  'CDS':            { nombre: 'Salvador Turrubiates' },
+  'Finanzas':       { nombre: 'Alberto Castillo' },
+  'Talleres':       { nombre: 'Federico Ortiz' },
+  'TI':             { nombre: 'Subdirector de TI' },
+}
+
+// Benchmark levels (Korn Ferry / Aon / Deloitte / PwC style bell curve) —
+// calibrated per SUMIMSA Capital Humano scheme. Each level defines min/max
+// cumplimiento (inclusive/exclusive), ranking, interpretation, and external
+// benchmark comparison text.
+export const BENCHMARK_LEVELS = [
+  {
+    id: 5,
+    label: 'Outstanding',
+    rangeLabel: '95 – 100%',
+    rangeMin: 0.95,
+    rangeMax: 1.0001,
+    ranking: 'Role Model',
+    rankingRange: '90% – 100%',
+    interp: 'Excepcional, muy raro. Rol modelo global.',
+    external: 'En Korn Ferry y Aon este nivel se asocia con el top 5–10% del talento.',
+    color: '#0B2C5C', // deep navy
+    textOnColor: '#FFFFFF',
+  },
+  {
+    id: 4,
+    label: 'Excellent',
+    rangeLabel: '90 – 94%',
+    rangeMin: 0.90,
+    rangeMax: 0.95,
+    ranking: 'Role Model',
+    rankingRange: '90% – 100%',
+    interp: 'Excede expectativas de forma constante.',
+    external: 'Similar a categorías "Exceeds" en PwC o Deloitte, que aplican a ~15–20%.',
+    color: '#1F6FB0',
+    textOnColor: '#FFFFFF',
+  },
+  {
+    id: 3,
+    label: 'Strong',
+    rangeLabel: '75 – 89%',
+    rangeMin: 0.75,
+    rangeMax: 0.90,
+    ranking: 'Regularly demonstrated',
+    rankingRange: '75% – 89%',
+    interp: 'Cumple con lo esperado y en ocasiones lo supera.',
+    external: 'Equivalente a la mayoría en bell curve (60–70% en GM o Aon).',
+    color: '#57A6CC',
+    textOnColor: '#1C1B17',
+  },
+  {
+    id: 2,
+    label: 'Minimum / Improvement Needed',
+    rangeLabel: '60 – 74%',
+    rangeMin: 0.60,
+    rangeMax: 0.75,
+    ranking: 'Improvement Needed',
+    rankingRange: '60% – 74%',
+    interp: 'Por debajo de lo esperado. Necesita desarrollo.',
+    external: 'Coincide con "Low performer" en bell curve (~10–15%).',
+    color: '#B9DEEA',
+    textOnColor: '#1C1B17',
+  },
+  {
+    id: 1,
+    label: 'Unsatisfactory',
+    rangeLabel: '< 60%',
+    rangeMin: 0,
+    rangeMax: 0.60,
+    ranking: '—',
+    rankingRange: '< 60%',
+    interp: 'No cumple con requisitos. Riesgo.',
+    external: 'Asociado con el bottom 5–10% en sistemas de forced ranking.',
+    color: '#B91C1C',
+    textOnColor: '#FFFFFF',
+  },
+]
+
+// Find the benchmark level that contains the given fraction [0, 1].
+export function benchmarkLevelFor(fraction) {
+  if (!Number.isFinite(fraction)) return null
+  for (const lvl of BENCHMARK_LEVELS) {
+    if (fraction >= lvl.rangeMin && fraction < lvl.rangeMax) return lvl
+  }
+  return BENCHMARK_LEVELS[BENCHMARK_LEVELS.length - 1]
+}
+
 // --- numeric helpers -----------------------------------------------------
 
 // Parse European-style numbers:

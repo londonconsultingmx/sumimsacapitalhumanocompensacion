@@ -7,6 +7,7 @@ const TABS = [
   { id: 'ejes', label: 'Desglose por eje' },
   { id: 'detalle', label: 'Detalle por área' },
   { id: 'sintope', label: '¿Y sin el tope?' },
+  { id: 'benchmarks', label: 'Benchmarks' },
 ]
 
 export default function Header({ active, onChange, onBackToIntro }) {
