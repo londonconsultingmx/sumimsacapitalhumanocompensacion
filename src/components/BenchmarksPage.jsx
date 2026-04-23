@@ -2,24 +2,25 @@ import React from 'react'
 import {
   AREA_COLORS,
   BENCHMARK_LEVELS,
-  SUBDIRECTORES,
   benchmarkLevelFor,
   fmtPct,
 } from '../utils/compensation.js'
 
+// Areas excluded from the benchmarks view.
+const EXCLUDED_AREAS = new Set(['Talleres'])
+
 export default function BenchmarksPage({ breakdowns }) {
-  // Order from 5 (top) to 1 (bottom) — as in the source PDF.
   const levels = BENCHMARK_LEVELS
 
-  // Enriched list: each subdirector with their 360 score and benchmark level.
-  const placed = breakdowns.map((b) => {
-    const score360 = b.scores['03. 360'] ?? 0
-    const lvl = benchmarkLevelFor(score360)
-    const subdir = SUBDIRECTORES[b.area]?.nombre ?? b.area
-    return { area: b.area, subdir, score360, level: lvl }
-  })
+  // Enriched list, area-only (no subdirector names), with Talleres excluded.
+  const placed = breakdowns
+    .filter((b) => !EXCLUDED_AREAS.has(b.area))
+    .map((b) => {
+      const score360 = b.scores['03. 360'] ?? 0
+      const lvl = benchmarkLevelFor(score360)
+      return { area: b.area, score360, level: lvl }
+    })
 
-  // Group subdirectors by level id for the distribution column.
   const byLevel = {}
   for (const lvl of levels) byLevel[lvl.id] = []
   for (const p of placed) {
@@ -34,7 +35,7 @@ export default function BenchmarksPage({ breakdowns }) {
         </div>
         <h2 className="text-lg font-semibold text-ink">Niveles de desempeño</h2>
         <p className="text-sm text-muted mt-1 max-w-3xl">
-          Los scores de 360° de cada subdirector se clasifican en la curva de desempeño
+          Los scores de 360° de cada área se clasifican en la curva de desempeño
           calibrada contra firmas como Korn Ferry, Aon, PwC, Deloitte y GM. El mínimo
           aprobatorio es <strong className="text-ink">75%</strong> (nivel 3 "Strong / Regularly demonstrated").
         </p>
@@ -52,7 +53,7 @@ export default function BenchmarksPage({ breakdowns }) {
                 <th className="py-3 px-4">Ranking SUMIMSA</th>
                 <th className="py-3 px-4">Interpretación</th>
                 <th className="py-3 px-4">Benchmark (consultoras globales)</th>
-                <th className="py-3 px-4">Subdirectores</th>
+                <th className="py-3 px-4">Áreas</th>
               </tr>
             </thead>
             <tbody>
@@ -88,7 +89,7 @@ export default function BenchmarksPage({ breakdowns }) {
                         {here.length === 0 ? (
                           <span className="text-xs text-slate-400">—</span>
                         ) : (
-                          here.map((p) => <SubdirectorChip key={p.area} p={p} />)
+                          here.map((p) => <AreaChip key={p.area} p={p} />)
                         )}
                       </div>
                     </td>
@@ -100,13 +101,13 @@ export default function BenchmarksPage({ breakdowns }) {
         </div>
       </div>
 
-      {/* Per-subdirector cards with their placement */}
+      {/* Per-area cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {placed
           .slice()
           .sort((a, b) => b.score360 - a.score360)
           .map((p) => (
-            <SubdirectorCard key={p.area} p={p} />
+            <AreaCard key={p.area} p={p} />
           ))}
       </div>
 
@@ -127,19 +128,18 @@ export default function BenchmarksPage({ breakdowns }) {
   )
 }
 
-function SubdirectorChip({ p }) {
+function AreaChip({ p }) {
   const dot = AREA_COLORS[p.area] ?? '#6B6A62'
   return (
     <div className="inline-flex items-center gap-2 text-xs">
       <span className="w-1.5 h-1.5 rounded-full" style={{ background: dot }} />
-      <span className="font-semibold text-ink">{p.subdir}</span>
-      <span className="text-muted">· {p.area}</span>
+      <span className="font-semibold text-ink">{p.area}</span>
       <span className="font-mono tabular-nums text-ink">{fmtPct(p.score360, 0)}</span>
     </div>
   )
 }
 
-function SubdirectorCard({ p }) {
+function AreaCard({ p }) {
   const dot = AREA_COLORS[p.area] ?? '#6B6A62'
   const lvl = p.level
   return (
@@ -148,7 +148,7 @@ function SubdirectorCard({ p }) {
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full" style={{ background: dot }} />
           <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted">
-            {p.area}
+            Área
           </span>
         </div>
         <span
@@ -160,7 +160,7 @@ function SubdirectorCard({ p }) {
       </div>
 
       <div>
-        <div className="font-sans font-bold text-ink text-lg leading-tight">{p.subdir}</div>
+        <div className="font-sans font-bold text-ink text-lg leading-tight">{p.area}</div>
         <div className="font-sans text-sm text-muted mt-0.5">
           360° promedio:{' '}
           <span className="font-bold text-ink tabular-nums">{fmtPct(p.score360, 0)}</span>
@@ -174,15 +174,12 @@ function SubdirectorCard({ p }) {
 
       <div className="text-xs text-slate-700 leading-snug">{lvl.interp}</div>
 
-      {/* Mini scale */}
       <div className="mt-2 flex items-stretch h-2 rounded-sm overflow-hidden">
         {BENCHMARK_LEVELS.slice().reverse().map((x) => (
           <div
             key={x.id}
             className="flex-1"
-            style={{
-              background: x.id === lvl.id ? x.color : `${x.color}33`,
-            }}
+            style={{ background: x.id === lvl.id ? x.color : `${x.color}33` }}
           />
         ))}
       </div>
