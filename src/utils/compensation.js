@@ -192,6 +192,34 @@ function ceilPct(n) {
   return Math.ceil(n * 100) / 100
 }
 
+// Relative achievement of one indicator: how close Real got to Meta as a
+// fraction [0, 1] (capped), honoring the Dirección logic. Used to give partial
+// credit instead of the absolute 0/0.5/1 compliance value.
+//   "Arriba es bueno (>= Meta)" -> Real / Meta
+//   "Arriba es malo (<= Meta)"  -> Meta / Real (lower Real is better)
+//   "Es = Meta"                 -> 1 - |Real - Meta| / |Meta|
+// Falls back to the precomputed Cumple # when Meta is not numeric, and treats a
+// missing Real as 0 (pending / no actual yet).
+export function achievementRatio(r) {
+  const meta = parseEuroNumber(r.metaRaw)
+  const real = parseEuroNumber(r.realRaw)
+  if (!Number.isFinite(meta)) return r.cumple
+  if (!Number.isFinite(real)) return 0
+  const dir = r.direccion || ''
+  if (dir.includes('<=')) {
+    if (meta === 0) return real <= 0 ? 1 : 0
+    if (real <= meta) return 1
+    return real > 0 ? meta / real : 1
+  }
+  if (dir.startsWith('Es =')) {
+    if (meta === 0) return real === 0 ? 1 : 0
+    return Math.max(0, 1 - Math.abs(real - meta) / Math.abs(meta))
+  }
+  // default: "Arriba es bueno (>= Meta)"
+  if (meta === 0) return real >= 0 ? 1 : 0
+  return Math.min(1, real / meta)
+}
+
 export function scoreEje(rowsOfEje, metrica) {
   // 360° is a simple average of the Real values (5 behavioral ratings),
   // then rounded up to the nearest whole percent per user request.
@@ -203,12 +231,14 @@ export function scoreEje(rowsOfEje, metrica) {
     const avg = reals.reduce((s, n) => s + n, 0) / reals.length
     return ceilPct(avg)
   }
-  // Other ejes: weighted average by Importancia of Cumple #.
+  // Indicadores de Negocio: relative (proportional achievement) per indicator.
+  // Objetivos: absolute compliance (Cumple # = 0 / 0.5 / 1).
+  const relative = metrica === '02. Indicadores de Negocio'
   let num = 0
   let den = 0
   for (const r of rowsOfEje) {
     const w = Number(r.importancia) || 0
-    num += r.cumple * w
+    num += (relative ? achievementRatio(r) : r.cumple) * w
     den += w
   }
   return den === 0 ? 0 : num / den
