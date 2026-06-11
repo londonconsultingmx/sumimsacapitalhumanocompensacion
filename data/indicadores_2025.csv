@@ -1,181 +1,201 @@
-﻿Eje,Metrica,Comunes,UM,Dirección,Meta (%23),Real,Importancia,Cumple %23,Cumple?,Corte,Año Esquema,Pilar ASG
-Auditoría,00. Objetivos,01. Métricas ASG cumplidas (MNJ) (%),,%,Arriba es bueno (>= Meta),"0,9","0,9",3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,02. Documentación de las 71 métricas ASG (%),,%,Arriba es bueno (>= Meta),"0,9","0,95",2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,03. Cumplimiento del Plan de Auditorías SGI (%),,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,04. Avance de certificación ISO / AsmeB30.9-2025 de Talleres y Estrobos (%),,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,05. Denuncias Cerradas en 3 Semanas por Robos Internos (%),,%,Arriba es malo (>= Meta),"0,9",1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,"06. Cumplimiento en la entrega y calidad del informe MMRDD (Matriz de Monitoreo, Reporte y Diagnóstico de Denuncias) de PEMEX (%)",,%,Arriba es malo (>= Meta),"0,9",1,3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,07. Tiempo promedio de cierre de denuncias (días),,días,Arriba es malo (<= Meta),21,15,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,08. Número de deductivas contractuales por incumplimiento de cursos vigentes y experiencia (),,Número,Es = Meta,0,0,3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,09. Responsables SSPA con cursos y experiencia vigente (%),,%,Es = Meta,1,1,3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,10. Auditorías Ejecutadas vs Planificadas (%),,%,Arriba es bueno (>= Meta),"0,85","0,9",2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,11. Hallazgos Críticos Corregidos dentro del Plazo Establecido (%),,%,Arriba es bueno (>= Meta),"0,9",1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,12. KPIs alineados al Marco de Objetivos de Riesgos Empresariales (%),,%,Arriba es bueno (>= Meta),"0,95","0,96",2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,00. Objetivos,"12. Entrega del informe mensual de actividades, resultados y avances del área de Seguridad Patrimonial (%)",,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,75","0,97",3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,75","0,87",3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,75","0,93",3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,75","0,92",3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,75","0,88",3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,01. Matrices de Control,,Número,Arriba es bueno (>= Meta),7,7,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,02. Seguimiento a PAC del SIG ,,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,03. Estrategias a Riesgos (Act. Comerciales - Integridad Corporativa),,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,04. Certificación ISO,,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,05. Aseguramiento de los inventarios (Inventarios Ciclícos),,Número,Arriba es bueno (>= Meta),20,33,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,"06. Monitoreo de Procesos compras, CXP, Ingresos, Inventarios, Intercambios, Pagos a proveedores, ",,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,"07. Revisión de trabajos especiales (DG) RESICOS, Importaciones   Depuraciones de OC y PV ",,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,08. Inventarios de BDs,,Número,Arriba es bueno (>= Meta),13,43,2,0,SI,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,"09. Informes de MMRDD, SSPA y CN a PEMEX",,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,10. Seguimiento Línea Ética y CEC,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,"11. Cumplimiento Factores ASG (802, 601 y 602)",,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,12. Validación SGI-Talleres,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,13. Revisión Integridad Terceros W.Check,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,14. Tiempos y personal destinado a SSPA (Efectividad),,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,15. Requisitos Legales y Ambientales Anexo SSPA,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,16. Análisis y Concentraciones informes (0 multas),,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,17. Cumplimiento Indicadores (SSPA y SGI),x,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Auditoría,02. Indicadores de Negocio,18. Validación del Anexo SSPA y SGI TBX,x,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,02. Indicadores de Negocio,CH 2025-01. Mantener el índice de rotación (Renuncias),,%,Arriba es malo (<= Meta),"0,03","0,027",3,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-02. Ingresar totalidad de folios de trabajo en REPSE SUMIMSA,,%,Arriba es malo (<= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-03. Implementación requisiciones de personal por sistema,,%,Arriba es malo (<= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,02. Indicadores de Negocio,CH 2025-04. Tasa óptima de ausentismo (injustificado),,%,Arriba es malo (<= Meta),"0,06","0,0435",2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-05. Reclutamiento: Incluir perfilamientos al proceso de reclutamiento,,%,Arriba es malo (<= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,02. Indicadores de Negocio,CH 2025-06. EBITDA por HC Presupuestado vs EBITDA vs HC Real,x,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,02. Indicadores de Negocio,CH 2025-07. Mantener índice clima laboral favorable,,%,Arriba es bueno (>= Meta),"0,75","0,8",2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-08. Reclasificación de registros patronales y activación de registros por zona,,%,Arriba es malo (<= Meta),"0,15","0,135",3,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,02. Indicadores de Negocio,CH 2025-09. Tiempo de contratación,,días,Arriba es malo (<= Meta),28,14,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-10. Actualización de KPI´s e indicadores de las subdirecciones,,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-11. Laboral: Reducción % de demandas laborales,,%,Arriba es malo (<= Meta),"0,07","0,04",2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-12. Implementación  plan desarrollo institucional (Growth Management),,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-13. Proceso de PTU (Alineado y justificado a los procesos de ley),,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-14. Definición de Macroestructuras SUMIMSA,x,Número,Arriba es bueno (>= Meta),1,1,2,"0,5",Parcial,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-15. Esquema de compensación variable,,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-16. Capital Humano: Ahorros en desvinculaciones,,%,Arriba es bueno (>= Meta),"0,3","0,5",2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,00. Objetivos,CH 2025-17. Proyecto nueva oficina en VHSA,,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,75","0,94",3,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,75","0,89",3,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,75","0,9",3,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,75","0,92",3,1,Si,2025-12-31T08:00:00Z,25
-Capital Humano,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,75","0,84",3,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,01. Proyectos de TI Entregados a Tiempo (%),,%,Arriba es malo (<= Meta),1,"0,95",1,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,02. Tiempo Promedio de Resolución de Tickets (hrs),,Horas,Arriba es malo (<= Meta),12,"8,08",1,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,03. Ahorro por Automatización (),,USD,Arriba es bueno (>= Meta),200,301,1,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,04. Reducción en Tiempo de Proceso (%),,%,Arriba es malo (<= Meta),"0,25","0,25",1,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,05. Datos Críticos con Diccionario Publicado (%),,%,Arriba es bueno (>= Meta),"0,9","0,9",1,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,06. Horas Hombre Ahorradas (HH),x,Horas Hombre,Arriba es malo (<= Meta),10,10,1,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,07. Tiempo de Disponibilidad del Sistema (%),,%,Arriba es malo (<= Meta),"0,99","0,99",1,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,08. Tiempo de Disponibilidad de Servicios (%),,%,Arriba es malo (<= Meta),"0,99","0,99",1,1,Si,2025-12-31T08:00:00Z,25
-TI,02. Indicadores de Negocio,09. Incremento de Cultura de la Tecnología (%),x,%,Arriba es bueno (>= Meta),"0,3","0,3",1,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,10. Prueba funcional anual de plan recuperación anti desastres (DRP),,Número,Arriba es bueno (>= Meta),52,52,2,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,11. Aseguramiento de los 5 sites Sumimsa,,Número,Arriba es bueno (>= Meta),5,5,2,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,12. Reducir en 10% el gasto de planes móviles de los líneas celulares activas anual,,%,Arriba es bueno (>= Meta),"0,1","0,1",2,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,13.  Implementar EDR en los 398 equipos de colaboradores,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,"14. Concientizar a los 398 colaboradores con campañas antiphishing, para reducir a 0 incidentes",x,%,Arriba es malo (<= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,"15. Elaboración de los 5 conjuntos de datos (dashboards)  para toma de decisiones de acuerdo con plan anual en el segundo trimestre del 2025: Ventas, compras, inventarios, tesorería y finanzas",,%,Arriba es malo (<= Meta),1,95,2,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,16. Asegurar el manejo de los datos con la totalidad de los tableros que se generaran durante 2025 y alinearlos a un modelos corporativo sostenible,,%,Arriba es bueno (>= Meta),"0,5","0,5",2,5,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,17. Asegurar durante el 4Q que se colocan candados en el sistema para que las OC y PV tengan consistencia,,%,Arriba es bueno (>= Meta),"0,3","0,3",2,3,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,18. Realizar un tablero que contenga la información necesaria validada por DG y subdirectores que se dé visibilidad del seguimiento del pedido. Esta actividad quedara resuelta para el 3Q,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,19. Durante 4Q realizar la certificación de usuarios con respecto a permisos y capacitación de los sistemas actuales.,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25
-TI,00. Objetivos,"Al finalizar 2025 colocar al menos 5 power apps que ayuden a la aceleración de negocio y transformación digital alineado a los objetivos planteados por London.  Adicionalmente, terminar la intranet de Sumimsa como plataforma de comunicación y gestión",,Número,Arriba es bueno (>= Meta),5,5,2,5,Si,2025-12-31T08:00:00Z,25
-TI,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,75","0,97",3,1,Si,2025-12-31T08:00:00Z,25
-TI,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,75","0,9",3,1,Si,2025-12-31T08:00:00Z,25
-TI,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,75","0,93",3,1,Si,2025-12-31T08:00:00Z,25
-TI,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,75","0,94",3,1,Si,2025-12-31T08:00:00Z,25
-TI,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,75","0,88",3,1,Si,2025-12-31T08:00:00Z,25
-Talleres,00. Objetivos,OTs 100% Correctas,,%,Arriba es bueno (>= Meta),1,"0,3",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,00. Objetivos,Pedidos de venta 100% Correcto,,%,Arriba es bueno (>= Meta),1,"0,5",1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,01. Ingresos (Revenue),,USD,Arriba es bueno (>= Meta),46200000,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,01. Ingresos contratos de Gobierno.,,USD,Arriba es bueno (>= Meta),15000000,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,02. EBITDA,x,%,Arriba es bueno (>= Meta),"0,28",,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,02. EBITDA / Headcount,x,USD,Arriba es bueno (>= Meta),60000,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,02. Utilidad antes de impuestos,x,USD,Arriba es bueno (>= Meta),9000000,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,03. Cumplimiento al Presupuesto de Renta de Contenedores.,,USD,Arriba es bueno (>= Meta),20000000,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,03. Cumplimiento al Presupuesto de Venta de Consumibles.,,USD,Arriba es bueno (>= Meta),2200000,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,08. Productividad de Contenedores.,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,11. Trabajos conciliados y estimados TBX y Gobierno.,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,09. Herramientas Dañadas.,,%,Arriba es malo (<= Meta),"0,1",,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,02. Indicadores de Negocio,10. Herramientas perdidas.,,%,Arriba es malo (<= Meta),"0,03",,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,"12. Implementación y uso de los dashboards del proyecto Géminis. (One pages, inventarios, pedidos de ventas, licitaciones) en Q2 2026.",,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,13. Cumplimiento en Capacitaciones en todos los contenedores en campo en las solicitudes de herramientas.,,%,Arriba es bueno (>= Meta),"0,95",,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,14. Tener operables 37 hidrolavadoras con Programa de mantenimiento desarrollado en Q2 2026.,x,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,15. Reducción de Inventario de consumibles. Mínimo de $ 4MUSD en el 2026.,x,USD,Arriba es bueno (>= Meta),4000000,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,16. Cero accidentes de trabajo incapacitantes.,,%,Es = Meta,0,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,17. Todos los contratos de gobierno no deberán quedar sin ejercer ventas.,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,18. Visitas operativas a campo,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,19. Visitas periódicas con el cliente.,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25
-TBX Servicios,00. Objetivos,20. Incursionar en nuevo mercado.,,1,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,03. Margen Operativo,,%,Arriba es bueno (>= Meta),"0,26","0,21",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,05. EBITDA,,USD,Arriba es bueno (>= Meta),36573000,19649000,1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,06. EBITDA / Headcount,,USD,Arriba es bueno (>= Meta),60000,35000,1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,07. Utilidad Neta Ajustada,,USD,Arriba es bueno (>= Meta),22180000,8364000,1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,08. Flujo de Efectivo Operativo,,USD,Arriba es bueno (>= Meta),110885000,95745000,1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,,%,Arriba es bueno (>= Meta),"0,9","0,87",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,01. Ingresos (Ventas Netas),,USD,Arriba es bueno (>= Meta),108910000,77410693,1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,02. Costo de Ventas,,USD,Arriba es malo (<= Meta),74818000,52168000,1,1,Si,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,03. Margen Bruto (%),,%,Arriba es bueno (>= Meta),"0,31","0,27",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,04. EBITDA / Ingresos (%),,%,Arriba es bueno (>= Meta),"0,31","0,27",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,05. EBITDA / Headcount (),,USD,Arriba es bueno (>= Meta),18000,35000,1,1,Si,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,"01. Cumplimiento al Presupuesto a Contratos (601, 602  625) (%)",,%,Arriba es bueno (>= Meta),1,"0,6107",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,02. Cumplimiento a las Ventas (Valcamex) (%),,%,Arriba es bueno (>= Meta),1,"0,66",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,"03. Cumplimiento EBITDA Talleres (601, 625) (%)",,%,Arriba es bueno (>= Meta),"0,9","0,7",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,04. Cumplimiento a EBIT Talleres (602  Valcamex) (%),,%,Arriba es bueno (>= Meta),"0,9","0,7",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,02. Indicadores de Negocio,07. Rotación de Inventario (),,Número,Arriba es bueno (>= Meta),3,"1,1",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,85","0,83",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Talleres,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,85","0,78",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Talleres,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,85","0,76",1,0,No,2025-12-31T08:00:00Z,25
-Talleres,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,85","0,78",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Talleres,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,85","0,75",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,03. Margen Operativo,,%,Arriba es bueno (>= Meta),"0,26","0,21",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,05. EBITDA,,USD,Arriba es bueno (>= Meta),36573000,19649000,1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,06. EBITDA / Headcount,,USD,Arriba es bueno (>= Meta),60000,35000,1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,07. Utilidad Neta Ajustada,,USD,Arriba es bueno (>= Meta),22180000,8364000,1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,08. Flujo de Efectivo Operativo,,USD,Arriba es bueno (>= Meta),110885000,95745000,1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,,%,Arriba es bueno (>= Meta),"0,9","0,87",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,01. EBITDA atribuible a la CDS (),,USD,Arriba es bueno (>= Meta),10000000,8000000,1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,02. Costo de Ventas / Ingresos Netos (%),,%,Arriba es malo (<= Meta),"0,45","0,38",1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,03. Margen Bruto (%),,%,Arriba es bueno (>= Meta),"0,3","0,25",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,04. Reducción estructural de costos vs año anterior (%),,%,Arriba es malo (<= Meta),"0,25","0,13",1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,02. Confiabilidad de Inventario (%),,%,Arriba es bueno (>= Meta),"0,98","0,98",1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,03. Costo Total de Inventario,,USD,Arriba es malo (<= Meta),20000000,24184197,1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,03. Incrementar la Rotación a 3 vueltas por año / COMPRAS,,Número,Arriba es bueno (>= Meta),3,"2,29",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,04. Compras a Crédito (%) en un 70%,,%,Arriba es bueno (>= Meta),"0,7","0,2",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,04. Incrementar la Rotación a 3 vueltas por año / Inventarios,,Número,Arriba es bueno (>= Meta),3,"2,29",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,05. Cumplimiento a SLAs,,%,Arriba es bueno (>= Meta),"0,9","0,5",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,06. Cumplimiento a OTIF,,%,Arriba es bueno (>= Meta),"0,9","0,5",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,07. Accidentes en Almacén (),,Número,Es = Meta,0,0,1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,02. Indicadores de Negocio,08. Proveedores con contrato o acuerdo comercial,,%,Arriba es bueno (>= Meta),"0,5","0,15",1,0,No,2025-12-31T08:00:00Z,25
-Cadena de Suministro,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,85","0,86",1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,85","0,84",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Cadena de Suministro,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,85","0,84",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Cadena de Suministro,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,85","0,87",1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,85","0,83",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Cadena de Suministro,00. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,Arriba es bueno (>= Meta),5,5,1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,00. Objetivos,02. Reducción de Costos por Innovación,,%,Arriba es malo (<= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,00. Objetivos,03. Éxito Proyectos Implementados,,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25
-Cadena de Suministro,00. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,05. EBITDA,,USD,Arriba es bueno (>= Meta),36573000,19649000,1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,06. EBITDA / Headcount,,USD,Arriba es bueno (>= Meta),60000,35000,1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,08. Flujo de Efectivo Operativo,,USD,Arriba es bueno (>= Meta),110885000,95745000,1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,07. Utilidad Neta Ajustada,,USD,Arriba es bueno (>= Meta),22180000,8364000,1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,03. Margen Operativo,,%,Arriba es bueno (>= Meta),"0,26","0,21",1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,,%,Arriba es bueno (>= Meta),"0,9","0,87",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,01. Flujo de Efectivo Operativo / EBITDA (%),,%,Arriba es bueno (>= Meta),"0,24","0,44",1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,02. Exactitud Presupuestal (%),,%,Arriba es bueno (>= Meta),"0,9","0,6",1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,03. Ciclo de Conversión de Efectivo (Días),,Días,Arriba es malo (<= Meta),90,230,1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,08. Cuentas por Pagar,,%,Arriba es bueno (>= Meta),"0,7",0,1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,02. Indicadores de Negocio,09. Cuentas por Cobrar,,%,Arriba es bueno (>= Meta),"0,95",0,1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,85","0,91",1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,85","0,9",1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,85","0,92",1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,85","0,94",1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,85","0,89",1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,Arriba es bueno (>= Meta),5,5,1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,02. Reducción de Costos por Innovación,,%,Arriba es malo (<= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,03. Éxito Proyectos Implementados,,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,01. Cierre Contable al día 13 (día),,días,Arriba es malo (<= Meta),13,13,1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,02. Ahorro en las cuentas de gastos - Administrativos - Ventas (%),,%,Arriba es bueno (>= Meta),"0,2","0,1",1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,03. Desviación del Presupuesto de Pagarés (%),,%,Arriba es malo (<= Meta),"0,05","0,02",1,1,Si,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,04. Portal de Proveedores Fase 1 (%),,%,Arriba es bueno (>= Meta),1,"0,8",1,0,No,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,"06. Reporte de Rentabilidad por marca, familia, segmento (%)",,%,Arriba es bueno (>= Meta),1,"0,9",1,0.5,Parcial,2025-12-31T08:00:00Z,25
-Finanzas,00. Objetivos,07. Depuración en la Contabilidad (%),,%,Arriba es bueno (>= Meta),1,"0,9",1,0.5,Parcial,2025-12-31T08:00:00Z,25
+﻿Eje,Metrica,Comunes,UM,Dirección,Meta (%23),Real,Importancia,Cumple %23,Cumple?,Corte,Año Esquema,Pilar ASG,Fuente
+Auditoría,00. Objetivos,01. Métricas ASG cumplidas (MNJ) (%),,%,Arriba es bueno (>= Meta),"0,9","0,9",3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,02. Documentación de las 71 métricas ASG (%),,%,Arriba es bueno (>= Meta),"0,9","0,95",2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,03. Cumplimiento del Plan de Auditorías SGI (%),,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,04. Avance de certificación ISO / AsmeB30.9-2025 de Talleres y Estrobos (%),,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,05. Denuncias Cerradas en 3 Semanas por Robos Internos (%),,%,Arriba es malo (>= Meta),"0,9",1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,"06. Cumplimiento en la entrega y calidad del informe MMRDD (Matriz de Monitoreo, Reporte y Diagnóstico de Denuncias) de PEMEX (%)",,%,Arriba es malo (>= Meta),"0,9",1,3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,07. Tiempo promedio de cierre de denuncias (días),,días,Arriba es malo (<= Meta),21,15,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,08. Número de deductivas contractuales por incumplimiento de cursos vigentes y experiencia (),,Número,Es = Meta,0,0,3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,09. Responsables SSPA con cursos y experiencia vigente (%),,%,Es = Meta,1,1,3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,10. Auditorías Ejecutadas vs Planificadas (%),,%,Arriba es bueno (>= Meta),"0,85","0,9",2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,11. Hallazgos Críticos Corregidos dentro del Plazo Establecido (%),,%,Arriba es bueno (>= Meta),"0,9",1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,12. KPIs alineados al Marco de Objetivos de Riesgos Empresariales (%),,%,Arriba es bueno (>= Meta),"0,95","0,96",2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,00. Objetivos,"12. Entrega del informe mensual de actividades, resultados y avances del área de Seguridad Patrimonial (%)",,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,75","0,97",3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,75","0,87",3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,75","0,93",3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,75","0,92",3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,75","0,88",3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,01. Matrices de Control,,Número,Arriba es bueno (>= Meta),7,7,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,02. Seguimiento a PAC del SIG ,,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,03. Estrategias a Riesgos (Act. Comerciales - Integridad Corporativa),,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,04. Certificación ISO,,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,05. Aseguramiento de los inventarios (Inventarios Ciclícos),,Número,Arriba es bueno (>= Meta),20,33,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,"06. Monitoreo de Procesos compras, CXP, Ingresos, Inventarios, Intercambios, Pagos a proveedores, ",,%,Arriba es bueno (>= Meta),1,1,3,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,"07. Revisión de trabajos especiales (DG) RESICOS, Importaciones   Depuraciones de OC y PV ",,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,08. Inventarios de BDs,,Número,Arriba es bueno (>= Meta),13,43,2,0,SI,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,"09. Informes de MMRDD, SSPA y CN a PEMEX",,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,10. Seguimiento Línea Ética y CEC,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,"11. Cumplimiento Factores ASG (802, 601 y 602)",,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,12. Validación SGI-Talleres,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,13. Revisión Integridad Terceros W.Check,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,14. Tiempos y personal destinado a SSPA (Efectividad),,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,15. Requisitos Legales y Ambientales Anexo SSPA,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,16. Análisis y Concentraciones informes (0 multas),,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,17. Cumplimiento Indicadores (SSPA y SGI),x,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Auditoría,02. Indicadores de Negocio,18. Validación del Anexo SSPA y SGI TBX,x,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,02. Indicadores de Negocio,CH 2025-01. Mantener el índice de rotación (Renuncias),,%,Arriba es malo (<= Meta),"0,03","0,027",3,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-02. Ingresar totalidad de folios de trabajo en REPSE SUMIMSA,,%,Arriba es malo (<= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-03. Implementación requisiciones de personal por sistema,,%,Arriba es malo (<= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,02. Indicadores de Negocio,CH 2025-04. Tasa óptima de ausentismo (injustificado),,%,Arriba es malo (<= Meta),"0,06","0,0435",2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-05. Reclutamiento: Incluir perfilamientos al proceso de reclutamiento,,%,Arriba es malo (<= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,02. Indicadores de Negocio,CH 2025-06. EBITDA por HC Presupuestado vs EBITDA vs HC Real,x,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,02. Indicadores de Negocio,CH 2025-07. Mantener índice clima laboral favorable,,%,Arriba es bueno (>= Meta),"0,75","0,8",2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-08. Reclasificación de registros patronales y activación de registros por zona,,%,Arriba es malo (<= Meta),"0,15","0,135",3,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,02. Indicadores de Negocio,CH 2025-09. Tiempo de contratación,,días,Arriba es malo (<= Meta),28,14,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-10. Actualización de KPI´s e indicadores de las subdirecciones,,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-11. Laboral: Reducción % de demandas laborales,,%,Arriba es malo (<= Meta),"0,07","0,04",2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-12. Implementación  plan desarrollo institucional (Growth Management),,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-13. Proceso de PTU (Alineado y justificado a los procesos de ley),,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-14. Definición de Macroestructuras SUMIMSA,x,Número,Arriba es bueno (>= Meta),1,1,2,"0,5",Parcial,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-15. Esquema de compensación variable,,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-16. Capital Humano: Ahorros en desvinculaciones,,%,Arriba es bueno (>= Meta),"0,3","0,5",2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,00. Objetivos,CH 2025-17. Proyecto nueva oficina en VHSA,,Número,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,75","0,94",3,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,75","0,89",3,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,75","0,9",3,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,75","0,92",3,1,Si,2025-12-31T08:00:00Z,25,
+Capital Humano,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,75","0,84",3,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,01. Proyectos de TI Entregados a Tiempo (%),,%,Arriba es malo (<= Meta),1,"0,95",1,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,02. Tiempo Promedio de Resolución de Tickets (hrs),,Horas,Arriba es malo (<= Meta),12,"8,08",1,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,03. Ahorro por Automatización (),,USD,Arriba es bueno (>= Meta),200,301,1,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,04. Reducción en Tiempo de Proceso (%),,%,Arriba es malo (<= Meta),"0,25","0,25",1,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,05. Datos Críticos con Diccionario Publicado (%),,%,Arriba es bueno (>= Meta),"0,9","0,9",1,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,06. Horas Hombre Ahorradas (HH),x,Horas Hombre,Arriba es malo (<= Meta),10,10,1,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,07. Tiempo de Disponibilidad del Sistema (%),,%,Arriba es malo (<= Meta),"0,99","0,99",1,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,08. Tiempo de Disponibilidad de Servicios (%),,%,Arriba es malo (<= Meta),"0,99","0,99",1,1,Si,2025-12-31T08:00:00Z,25,
+TI,02. Indicadores de Negocio,09. Incremento de Cultura de la Tecnología (%),x,%,Arriba es bueno (>= Meta),"0,3","0,3",1,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,10. Prueba funcional anual de plan recuperación anti desastres (DRP),,Número,Arriba es bueno (>= Meta),52,52,2,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,11. Aseguramiento de los 5 sites Sumimsa,,Número,Arriba es bueno (>= Meta),5,5,2,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,12. Reducir en 10% el gasto de planes móviles de los líneas celulares activas anual,,%,Arriba es bueno (>= Meta),"0,1","0,1",2,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,13.  Implementar EDR en los 398 equipos de colaboradores,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,"14. Concientizar a los 398 colaboradores con campañas antiphishing, para reducir a 0 incidentes",x,%,Arriba es malo (<= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,"15. Elaboración de los 5 conjuntos de datos (dashboards)  para toma de decisiones de acuerdo con plan anual en el segundo trimestre del 2025: Ventas, compras, inventarios, tesorería y finanzas",,%,Arriba es malo (<= Meta),1,95,2,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,16. Asegurar el manejo de los datos con la totalidad de los tableros que se generaran durante 2025 y alinearlos a un modelos corporativo sostenible,,%,Arriba es bueno (>= Meta),"0,5","0,5",2,5,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,17. Asegurar durante el 4Q que se colocan candados en el sistema para que las OC y PV tengan consistencia,,%,Arriba es bueno (>= Meta),"0,3","0,3",2,3,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,18. Realizar un tablero que contenga la información necesaria validada por DG y subdirectores que se dé visibilidad del seguimiento del pedido. Esta actividad quedara resuelta para el 3Q,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,19. Durante 4Q realizar la certificación de usuarios con respecto a permisos y capacitación de los sistemas actuales.,,%,Arriba es bueno (>= Meta),1,1,2,1,Si,2025-12-31T08:00:00Z,25,
+TI,00. Objetivos,"Al finalizar 2025 colocar al menos 5 power apps que ayuden a la aceleración de negocio y transformación digital alineado a los objetivos planteados por London.  Adicionalmente, terminar la intranet de Sumimsa como plataforma de comunicación y gestión",,Número,Arriba es bueno (>= Meta),5,5,2,5,Si,2025-12-31T08:00:00Z,25,
+TI,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,75","0,97",3,1,Si,2025-12-31T08:00:00Z,25,
+TI,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,75","0,9",3,1,Si,2025-12-31T08:00:00Z,25,
+TI,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,75","0,93",3,1,Si,2025-12-31T08:00:00Z,25,
+TI,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,75","0,94",3,1,Si,2025-12-31T08:00:00Z,25,
+TI,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,75","0,88",3,1,Si,2025-12-31T08:00:00Z,25,
+Talleres,00. Objetivos,OTs 100% Correctas,,%,Arriba es bueno (>= Meta),1,"0,3",1,0,No,2025-12-31T08:00:00Z,25,
+Talleres,00. Objetivos,Pedidos de venta 100% Correcto,,%,Arriba es bueno (>= Meta),1,"0,5",1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,02. Indicadores de Negocio,01. Ingresos (Revenue),,USD,Arriba es bueno (>= Meta),46200000,,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,02. Indicadores de Negocio,01. Ingresos contratos de Gobierno.,,USD,Arriba es bueno (>= Meta),15000000,,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,02. Indicadores de Negocio,02. EBITDA,x,%,Arriba es bueno (>= Meta),"0,28",,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,02. Indicadores de Negocio,02. EBITDA / Headcount,x,USD,Arriba es bueno (>= Meta),60000,,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,02. Indicadores de Negocio,02. Utilidad antes de impuestos,x,USD,Arriba es bueno (>= Meta),9000000,,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,02. Indicadores de Negocio,03. Cumplimiento al Presupuesto de Renta de Contenedores.,,USD,Arriba es bueno (>= Meta),20000000,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,02. Indicadores de Negocio,03. Cumplimiento al Presupuesto de Venta de Consumibles.,,USD,Arriba es bueno (>= Meta),2200000,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,02. Indicadores de Negocio,08. Productividad de Contenedores.,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,02. Indicadores de Negocio,11. Trabajos conciliados y estimados TBX y Gobierno.,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,02. Indicadores de Negocio,09. Herramientas Dañadas.,,%,Arriba es malo (<= Meta),"0,1",,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,02. Indicadores de Negocio,10. Herramientas perdidas.,,%,Arriba es malo (<= Meta),"0,03",,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,00. Objetivos,"12. Implementación y uso de los dashboards del proyecto Géminis. (One pages, inventarios, pedidos de ventas, licitaciones) en Q2 2026.",,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,00. Objetivos,13. Cumplimiento en Capacitaciones en todos los contenedores en campo en las solicitudes de herramientas.,,%,Arriba es bueno (>= Meta),"0,95",,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,00. Objetivos,14. Tener operables 37 hidrolavadoras con Programa de mantenimiento desarrollado en Q2 2026.,x,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,00. Objetivos,15. Reducción de Inventario de consumibles. Mínimo de $ 4MUSD en el 2026.,x,USD,Arriba es bueno (>= Meta),4000000,,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,00. Objetivos,16. Cero accidentes de trabajo incapacitantes.,,%,Es = Meta,0,,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,00. Objetivos,17. Todos los contratos de gobierno no deberán quedar sin ejercer ventas.,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,00. Objetivos,18. Visitas operativas a campo,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=120863a8-f564-4b1b-ab9c-ebbcc9657349&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+TBX Servicios,00. Objetivos,19. Visitas periódicas con el cliente.,,%,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25,
+TBX Servicios,00. Objetivos,20. Incursionar en nuevo mercado.,,1,Arriba es bueno (>= Meta),1,,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=120863a8-f564-4b1b-ab9c-ebbcc9657349&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Talleres,02. Indicadores de Negocio,03. Margen Operativo,,%,Arriba es bueno (>= Meta),"0,26","0,21",1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,05. EBITDA,,USD,Arriba es bueno (>= Meta),36573000,19649000,1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,06. EBITDA / Headcount,,USD,Arriba es bueno (>= Meta),60000,35000,1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,07. Utilidad Neta Ajustada,,USD,Arriba es bueno (>= Meta),22180000,8364000,1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,08. Flujo de Efectivo Operativo,,USD,Arriba es bueno (>= Meta),110885000,95745000,1,0,No,2025-12-31T08:00:00Z,25,
+Talleres,02. Indicadores de Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,,%,Arriba es bueno (>= Meta),"0,9","0,87",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Talleres,02. Indicadores de Negocio,01. Ingresos (Ventas Netas),,USD,Arriba es bueno (>= Meta),108910000,77410693,1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,02. Costo de Ventas,,USD,Arriba es malo (<= Meta),74818000,52168000,1,1,Si,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,03. Margen Bruto (%),,%,Arriba es bueno (>= Meta),"0,31","0,27",1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,04. EBITDA / Ingresos (%),,%,Arriba es bueno (>= Meta),"0,31","0,27",1,0,No,2025-12-31T08:00:00Z,25,
+Talleres,02. Indicadores de Negocio,05. EBITDA / Headcount (),,USD,Arriba es bueno (>= Meta),18000,35000,1,1,Si,2025-12-31T08:00:00Z,25,
+Talleres,02. Indicadores de Negocio,"01. Cumplimiento al Presupuesto a Contratos (601, 602  625) (%)",,%,Arriba es bueno (>= Meta),1,"0,6107",1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,02. Cumplimiento a las Ventas (Valcamex) (%),,%,Arriba es bueno (>= Meta),1,"0,66",1,0,No,2025-12-31T08:00:00Z,25,
+Talleres,02. Indicadores de Negocio,"03. Cumplimiento EBITDA Talleres (601, 625) (%)",,%,Arriba es bueno (>= Meta),"0,9","0,7",1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,04. Cumplimiento a EBIT Talleres (602  Valcamex) (%),,%,Arriba es bueno (>= Meta),"0,9","0,7",1,0,No,2025-12-31T08:00:00Z,25,"https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+
+https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=73fcb635-bc07-46b8-87fc-c5b3248506b5&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ef77fba7f0803b35d5cb&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd"
+Talleres,02. Indicadores de Negocio,07. Rotación de Inventario (),,Número,Arriba es bueno (>= Meta),3,"1,1",1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Talleres,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,85","0,83",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Talleres,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,85","0,78",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Talleres,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,85","0,76",1,0,No,2025-12-31T08:00:00Z,25,
+Talleres,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,85","0,78",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Talleres,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,85","0,75",1,0,No,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,03. Margen Operativo,,%,Arriba es bueno (>= Meta),"0,26","0,21",1,0,No,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,05. EBITDA,,USD,Arriba es bueno (>= Meta),36573000,19649000,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,06. EBITDA / Headcount,,USD,Arriba es bueno (>= Meta),60000,35000,1,0,No,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,07. Utilidad Neta Ajustada,,USD,Arriba es bueno (>= Meta),22180000,8364000,1,0,No,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,08. Flujo de Efectivo Operativo,,USD,Arriba es bueno (>= Meta),110885000,95745000,1,0,No,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,,%,Arriba es bueno (>= Meta),"0,9","0,87",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,01. EBITDA atribuible a la CDS (),,USD,Arriba es bueno (>= Meta),10000000,8000000,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,02. Costo de Ventas / Ingresos Netos (%),,%,Arriba es malo (<= Meta),"0,45","0,38",1,1,Si,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,03. Margen Bruto (%),,%,Arriba es bueno (>= Meta),"0,3","0,25",1,0,No,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,04. Reducción estructural de costos vs año anterior (%),,%,Arriba es malo (<= Meta),"0,25","0,13",1,1,Si,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,02. Confiabilidad de Inventario (%),,%,Arriba es bueno (>= Meta),"0,98","0,98",1,1,Si,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,03. Costo Total de Inventario,,USD,Arriba es malo (<= Meta),20000000,24184197,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,03. Incrementar la Rotación a 3 vueltas por año / COMPRAS,,Número,Arriba es bueno (>= Meta),3,"2,29",1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,04. Compras a Crédito (%) en un 70%,,%,Arriba es bueno (>= Meta),"0,7","0,2",1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=9277e812-b72a-4dcc-9e02-02fe484c2ef8&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=4054e62453e2d81188a4&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,04. Incrementar la Rotación a 3 vueltas por año / Inventarios,,Número,Arriba es bueno (>= Meta),3,"2,29",1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,05. Cumplimiento a SLAs,,%,Arriba es bueno (>= Meta),"0,9","0,5",1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=14a2099c-e954-41d1-87bb-a44e0ad5d320&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=cdc56100917931a099c6&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,06. Cumplimiento a OTIF,,%,Arriba es bueno (>= Meta),"0,9","0,5",1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=14a2099c-e954-41d1-87bb-a44e0ad5d320&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=cdc56100917931a099c6&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,02. Indicadores de Negocio,07. Accidentes en Almacén (),,Número,Es = Meta,0,0,1,1,Si,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,02. Indicadores de Negocio,08. Proveedores con contrato o acuerdo comercial,,%,Arriba es bueno (>= Meta),"0,5","0,15",1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=9277e812-b72a-4dcc-9e02-02fe484c2ef8&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=4054e62453e2d81188a4&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd
+Cadena de Suministro,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,85","0,86",1,1,Si,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,85","0,84",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,85","0,84",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,85","0,87",1,1,Si,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,85","0,83",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,00. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,Arriba es bueno (>= Meta),5,5,1,1,Si,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,00. Objetivos,02. Reducción de Costos por Innovación,,%,Arriba es malo (<= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,00. Objetivos,03. Éxito Proyectos Implementados,,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,
+Cadena de Suministro,00. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,05. EBITDA,,USD,Arriba es bueno (>= Meta),36573000,19649000,1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,06. EBITDA / Headcount,,USD,Arriba es bueno (>= Meta),60000,35000,1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,08. Flujo de Efectivo Operativo,,USD,Arriba es bueno (>= Meta),110885000,95745000,1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,07. Utilidad Neta Ajustada,,USD,Arriba es bueno (>= Meta),22180000,8364000,1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,03. Margen Operativo,,%,Arriba es bueno (>= Meta),"0,26","0,21",1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,,%,Arriba es bueno (>= Meta),"0,9","0,87",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,01. Flujo de Efectivo Operativo / EBITDA (%),,%,Arriba es bueno (>= Meta),"0,24","0,44",1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,02. Exactitud Presupuestal (%),,%,Arriba es bueno (>= Meta),"0,9","0,6",1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,03. Ciclo de Conversión de Efectivo (Días),,Días,Arriba es malo (<= Meta),90,230,1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,08. Cuentas por Pagar,,%,Arriba es bueno (>= Meta),"0,7",0,1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,02. Indicadores de Negocio,09. Cuentas por Cobrar,,%,Arriba es bueno (>= Meta),"0,95",0,1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,85","0,91",1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,85","0,9",1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,85","0,92",1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,03. 360,04. Responsabilidad,,%,Arriba es bueno (>= Meta),"0,85","0,94",1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,03. 360,05. Enfoque al Cliente,,%,Arriba es bueno (>= Meta),"0,85","0,89",1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,Arriba es bueno (>= Meta),5,5,1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,02. Reducción de Costos por Innovación,,%,Arriba es malo (<= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,03. Éxito Proyectos Implementados,,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,01. Cierre Contable al día 13 (día),,días,Arriba es malo (<= Meta),13,13,1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,02. Ahorro en las cuentas de gastos - Administrativos - Ventas (%),,%,Arriba es bueno (>= Meta),"0,2","0,1",1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,03. Desviación del Presupuesto de Pagarés (%),,%,Arriba es malo (<= Meta),"0,05","0,02",1,1,Si,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,04. Portal de Proveedores Fase 1 (%),,%,Arriba es bueno (>= Meta),1,"0,8",1,0,No,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,"06. Reporte de Rentabilidad por marca, familia, segmento (%)",,%,Arriba es bueno (>= Meta),1,"0,9",1,0.5,Parcial,2025-12-31T08:00:00Z,25,
+Finanzas,00. Objetivos,07. Depuración en la Contabilidad (%),,%,Arriba es bueno (>= Meta),1,"0,9",1,0.5,Parcial,2025-12-31T08:00:00Z,25,

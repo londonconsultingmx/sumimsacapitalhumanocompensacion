@@ -100,7 +100,20 @@ export default function DetallePorArea({ breakdowns }) {
                         {fmtMetaReal(r.metaRaw, r.um)}
                       </td>
                       <td className="py-2 px-3 text-slate-700 whitespace-nowrap">
-                        {fmtMetaReal(r.realRaw, r.um)}
+                        {r.fuente && r.realRaw ? (
+                          <a
+                            href={r.fuente}
+                            target="_blank"
+                            rel="noreferrer"
+                            title="Ver fuente en Power BI"
+                            className="inline-flex items-center gap-1 text-teal hover:text-teal-dark font-medium underline decoration-dotted underline-offset-2"
+                          >
+                            {fmtMetaReal(r.realRaw, r.um)}
+                            <span aria-hidden className="text-[10px]">↗</span>
+                          </a>
+                        ) : (
+                          fmtMetaReal(r.realRaw, r.um)
+                        )}
                       </td>
                       <td className="py-2 px-3">
                         <ImportanciaChip value={r.importancia} />

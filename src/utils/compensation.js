@@ -181,6 +181,7 @@ export function normalizeRow(row) {
     cumpleLabel: String(row['Cumple?'] ?? '').trim(),
     corte: String(row['Corte'] ?? '').trim(),
     anio: String(row['Año Esquema'] ?? '').trim(),
+    fuente: String(row['Fuente'] ?? '').trim(),
   }
 }
 

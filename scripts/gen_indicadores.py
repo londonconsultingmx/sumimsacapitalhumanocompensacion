@@ -186,6 +186,7 @@ def build_rows():
 
         out_area = AREA_RENAME.get(area, area)
         comunes = 'x' if compart.strip().upper() == 'X' else ''
+        fuente_url = fuente.strip() if fuente.strip().lower().startswith('http') else ''
 
         key = (out_area, metrica, indicador.strip(), fmt_num(meta_n), fmt_num(real_n))
         if key in seen:
@@ -195,7 +196,7 @@ def build_rows():
         row = [out_area, metrica, indicador.strip(), comunes, um.strip(),
                dir_label, fmt_num(meta_n), fmt_num(real_n), '1',
                (str(int(cumple_n)) if cumple_n in (0, 1) else '0.5'),
-               cumple_lbl, CORTE, ANIO]
+               cumple_lbl, CORTE, ANIO, fuente_url]
         out.append(row)
         s = stats.setdefault(out_area, {'si': 0, 'parcial': 0, 'no': 0, 'n': 0})
         s['n'] += 1
@@ -204,9 +205,9 @@ def build_rows():
     # Talleres manual Objetivos (OTs real 30%, Pedidos real 50%) -- inserted at front
     manual = [
         ['Talleres', '00. Objetivos', 'OTs 100% Correctas', '', '%',
-         'Arriba es bueno (>= Meta)', '1', '0,3', '1', '0', 'No', CORTE, ANIO],
+         'Arriba es bueno (>= Meta)', '1', '0,3', '1', '0', 'No', CORTE, ANIO, ''],
         ['Talleres', '00. Objetivos', 'Pedidos de venta 100% Correcto', '', '%',
-         'Arriba es bueno (>= Meta)', '1', '0,5', '1', '0', 'No', CORTE, ANIO],
+         'Arriba es bueno (>= Meta)', '1', '0,5', '1', '0', 'No', CORTE, ANIO, ''],
     ]
     for m in manual:
         s = stats.setdefault('Talleres', {'si': 0, 'parcial': 0, 'no': 0, 'n': 0})
@@ -220,8 +221,10 @@ def main():
     # read existing csv, keep header + untouched areas
     with open(CSV_IN, encoding='utf-8-sig', newline='') as f:
         existing = list(csv.reader(f))
-    header = existing[0]
+    # add a 14th column "Fuente" (the loader ignores the header and maps by position)
+    header = existing[0] + (['Fuente'] if len(existing[0]) == 13 else [])
     keep = [r for r in existing[1:] if r and r[0] in ('Auditoría', 'Capital Humano', 'TI')]
+    keep = [r + [''] if len(r) == 13 else r for r in keep]   # pad to 14 cols
 
     # order: keep grouping by area, then new areas
     final = [header] + keep + new_rows
