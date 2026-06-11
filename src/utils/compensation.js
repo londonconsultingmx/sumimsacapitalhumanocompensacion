@@ -285,10 +285,19 @@ export function computeAllAreas(rows) {
   return areas.map((a) => computeAreaBreakdown(rows, a))
 }
 
+// Áreas que NO ponderan en la calificación grupal (existen y se evalúan, pero su
+// subdirector no cuenta para el grupo ese año). TBX: Alex no pondera en 2025.
+export const EXCLUDED_FROM_GRUPAL = new Set(['TBX Servicios'])
+
+export function ponderanGrupal(breakdowns) {
+  return breakdowns.filter((b) => !EXCLUDED_FROM_GRUPAL.has(b.area))
+}
+
 export function computeGrupal(breakdowns) {
-  if (!breakdowns.length) return { bruta: 0, final: 0 }
-  const bruta = breakdowns.reduce((s, b) => s + b.bruta, 0) / breakdowns.length
-  const final = breakdowns.reduce((s, b) => s + b.final, 0) / breakdowns.length
+  const ponderan = ponderanGrupal(breakdowns)
+  if (!ponderan.length) return { bruta: 0, final: 0 }
+  const bruta = ponderan.reduce((s, b) => s + b.bruta, 0) / ponderan.length
+  const final = ponderan.reduce((s, b) => s + b.final, 0) / ponderan.length
   return { bruta, final }
 }
 

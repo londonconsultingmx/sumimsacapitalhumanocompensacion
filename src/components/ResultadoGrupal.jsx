@@ -4,12 +4,16 @@ import { CountPills } from './StatusPill.jsx'
 import {
   AREA_COLORS,
   EBITDA_CAP,
+  EXCLUDED_FROM_GRUPAL,
   THRESHOLD_APROBATORIO,
   fmtPct,
 } from '../utils/compensation.js'
 
 export default function ResultadoGrupal({ breakdowns, grupal }) {
-  const totals = breakdowns.reduce(
+  // El resumen grupal solo cuenta áreas que ponderan (TBX no pondera este año).
+  const totals = breakdowns
+    .filter((b) => !EXCLUDED_FROM_GRUPAL.has(b.area))
+    .reduce(
     (acc, b) => {
       acc.si += b.counts.si
       acc.parcial += b.counts.parcial
@@ -70,7 +74,7 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {breakdowns.map((b) => (
-            <AreaGauge key={b.area} b={b} />
+            <AreaGauge key={b.area} b={b} excluded={EXCLUDED_FROM_GRUPAL.has(b.area)} />
           ))}
         </div>
       </div>
@@ -78,11 +82,18 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
   )
 }
 
-function AreaGauge({ b }) {
+function AreaGauge({ b, excluded }) {
   const color = AREA_COLORS[b.area] ?? '#00897B'
   return (
     <div className="border border-slate-200 rounded-xl p-5 flex flex-col items-center gap-2 bg-slate-50/60">
-      <div className="text-sm font-semibold text-ink text-center">{b.area}</div>
+      <div className="text-sm font-semibold text-ink text-center flex items-center gap-2">
+        {b.area}
+        {excluded && (
+          <span className="text-[9px] font-semibold uppercase tracking-wide bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded-full">
+            No pondera
+          </span>
+        )}
+      </div>
       <Gauge
         value={b.final}
         color={color}
