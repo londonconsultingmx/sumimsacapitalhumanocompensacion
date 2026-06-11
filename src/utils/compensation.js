@@ -14,12 +14,13 @@ export const EJE_ORDER = ['00. Objetivos', '02. Indicadores de Negocio', '03. 36
 
 // Distinctive color per area
 export const AREA_COLORS = {
-  'Auditoría':       '#2563EB', // blue
-  'Capital Humano':  '#7C3AED', // purple
-  'CDS':             '#EA580C', // orange
-  'Finanzas':        '#0EA5E9', // sky
-  'Talleres':        '#B91C1C', // red
-  'TI':              '#0F766E', // teal-ish
+  'Auditoría':            '#2563EB', // blue
+  'Capital Humano':       '#7C3AED', // purple
+  'Cadena de Suministro': '#EA580C', // orange (antes CDS)
+  'Finanzas':             '#0EA5E9', // sky
+  'Talleres':             '#B91C1C', // red
+  'TBX Servicios':        '#CA8A04', // amber
+  'TI':                   '#0F766E', // teal-ish
 }
 
 export const EVIDENCIAS_URL =
@@ -30,12 +31,13 @@ export const THRESHOLD_APROBATORIO = 0.75
 
 // Subdirector per area (from 2024 evaluation PDF).
 export const SUBDIRECTORES = {
-  'Auditoría':      { nombre: 'Arturo Reyes' },
-  'Capital Humano': { nombre: 'Héctor Loredo' },
-  'CDS':            { nombre: 'Salvador Turrubiates' },
-  'Finanzas':       { nombre: 'Alberto Castillo' },
-  'Talleres':       { nombre: 'Federico Ortiz' },
-  'TI':             { nombre: 'Subdirector de TI' },
+  'Auditoría':            { nombre: 'Arturo Reyes' },
+  'Capital Humano':       { nombre: 'Héctor Loredo' },
+  'Cadena de Suministro': { nombre: 'Salvador Turrubiates' },
+  'Finanzas':             { nombre: 'Alberto Castillo' },
+  'Talleres':             { nombre: 'Federico Ortiz' },
+  'TBX Servicios':        { nombre: 'Subdirector TBX' },
+  'TI':                   { nombre: 'Subdirector de TI' },
 }
 
 // Benchmark levels (Korn Ferry / Aon / Deloitte / PwC style bell curve) —
