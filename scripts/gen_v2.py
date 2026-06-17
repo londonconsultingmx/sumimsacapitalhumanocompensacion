@@ -36,6 +36,10 @@ def is_excluded(area, ind):
         low = ind.lower()
         if 'capex' in low or 'flujo de efectivo operativo' in low:
             return True
+        # "Incrementar la Rotación a 3 vueltas" está duplicado (Inventarios y
+        # COMPRAS); se deja solo el de Inventarios.
+        if 'incrementar la rotación a 3 vueltas' in low and 'compras' in low:
+            return True
     return False
 
 # ---- read xlsb ----------------------------------------------------------
