@@ -204,11 +204,13 @@ def build_catalog(data):
         out_area = AREA_RENAME.get(area, area)
         ejec = ejecat_2026(eje)
         comp = 'x' if cell(d, 'Objetivo Compartido (MARCAR CON X)2').upper() == 'X' else ''
+        # En el catálogo 2026, cualquier referencia a "2025" pasa a "2026".
+        ind = ind.replace('2025', '2026')
         key = (out_area, ejec, ind)
         if key in seen:
             continue
         seen.add(key)
-        out.append([out_area, ejec, ind, cell(d, 'Racional'),
+        out.append([out_area, ejec, ind, cell(d, 'Racional').replace('2025', '2026'),
                     cell(d, 'Unidad de Medida'), cell(d, 'Objetivo'),
                     cell(d, 'Real'), cell(d, '2025'), fuente_of(d), comp])
     return out

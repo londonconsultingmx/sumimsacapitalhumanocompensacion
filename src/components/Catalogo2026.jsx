@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import { AREA_COLORS, fmtMetaReal } from '../utils/compensation.js'
+import { AREA_COLORS } from '../utils/compensation.js'
 import { useCatalog2026 } from '../data/useCatalog2026.js'
 
 // Orden de ejes del catálogo (coincide con los prefijos del CSV).
@@ -43,11 +43,10 @@ export default function Catalogo2026() {
         <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted mb-1">
           Catálogo de indicadores · Esquema 2026
         </div>
-        <h2 className="text-lg font-semibold text-ink">Listado de referencia (sin calificación)</h2>
+        <h2 className="text-lg font-semibold text-ink">Listado de indicadores</h2>
         <p className="text-sm text-muted mt-1 max-w-3xl">
           Inventario de los indicadores planeados para 2026 de todas las subdirecciones
-          (incluye Servicios/TBX). Muestra meta 2026, avance, real 2025 de referencia y la
-          fuente. No calcula calificación ni tope EBITDA.
+          (incluye Servicios/TBX), agrupados por eje. Solo el listado, sin metas ni montos.
         </p>
       </div>
 
@@ -80,61 +79,18 @@ export default function Catalogo2026() {
               </h3>
               <span className="text-xs text-slate-500">{ejeRows.length}</span>
             </div>
-            <div className="overflow-x-auto">
-              <table className="min-w-full text-sm">
-                <thead>
-                  <tr className="text-left text-slate-500 bg-slate-50 border-b border-slate-200">
-                    <th className="py-2 px-4">Indicador</th>
-                    <th className="py-2 px-3">UM</th>
-                    <th className="py-2 px-3">Meta 2026</th>
-                    <th className="py-2 px-3">Avance 2026</th>
-                    <th className="py-2 px-3">Real 2025</th>
-                    <th className="py-2 px-3">Fuente</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {ejeRows.map((r, i) => (
-                    <tr key={i} className="border-b border-slate-100 last:border-0 align-top">
-                      <td className="py-2 px-4 text-slate-800 max-w-md">
-                        {r.indicador}
-                        {r.compartido && (
-                          <span className="ml-2 text-[9px] font-semibold uppercase bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded-full">
-                            Compartido
-                          </span>
-                        )}
-                        {r.racional && (
-                          <div className="text-xs text-slate-400 mt-0.5">{r.racional}</div>
-                        )}
-                      </td>
-                      <td className="py-2 px-3 text-slate-500 whitespace-nowrap">{r.um || '—'}</td>
-                      <td className="py-2 px-3 text-slate-700 whitespace-nowrap">
-                        {r.objetivo ? fmtMetaReal(r.objetivo, r.um) : '—'}
-                      </td>
-                      <td className="py-2 px-3 text-slate-700 whitespace-nowrap">
-                        {r.real2026 ? fmtMetaReal(r.real2026, r.um) : '—'}
-                      </td>
-                      <td className="py-2 px-3 text-slate-500 whitespace-nowrap">
-                        {r.real2025 ? fmtMetaReal(r.real2025, r.um) : '—'}
-                      </td>
-                      <td className="py-2 px-3 whitespace-nowrap">
-                        {r.fuente ? (
-                          <a
-                            href={r.fuente}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-teal hover:text-teal-dark font-medium underline decoration-dotted underline-offset-2"
-                          >
-                            Power BI ↗
-                          </a>
-                        ) : (
-                          '—'
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <ol className="px-5 py-3 grid sm:grid-cols-2 gap-x-8 gap-y-1.5 list-decimal list-inside marker:text-slate-400 marker:text-xs">
+              {ejeRows.map((r, i) => (
+                <li key={i} className="text-sm text-slate-800 leading-snug">
+                  {r.indicador}
+                  {r.compartido && (
+                    <span className="ml-2 text-[9px] font-semibold uppercase bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded-full align-middle">
+                      Compartido
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ol>
           </div>
         )
       })}
