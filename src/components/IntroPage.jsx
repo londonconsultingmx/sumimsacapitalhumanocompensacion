@@ -1,5 +1,6 @@
 import React from 'react'
 import BrandMark from './BrandMark.jsx'
+import { useData } from '../data/useData.js'
 
 const PILLARS = [
   { k: '01', label: 'Objetivos', pct: 40, desc: 'Metas individuales del periodo', accent: 'bg-ink' },
@@ -8,6 +9,9 @@ const PILLARS = [
 ]
 
 export default function IntroPage({ onEnter }) {
+  const { rows } = useData()
+  const nIndicadores = rows ? rows.length : null
+  const nAreas = rows ? new Set(rows.map((r) => r.eje)).size : 6
   return (
     <div className="h-screen w-full bg-bg text-ink relative overflow-hidden flex flex-col">
       {/* vertical guide lines */}
@@ -74,9 +78,9 @@ export default function IntroPage({ onEnter }) {
           <div className="flex items-center gap-4 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.22em] text-muted">
             <span>Tope EBITDA 96%</span>
             <span className="h-3 w-px bg-rule" />
-            <span>6 Subdirecciones</span>
+            <span>{nAreas} Subdirecciones</span>
             <span className="h-3 w-px bg-rule" />
-            <span>148 Indicadores</span>
+            <span>{nIndicadores ?? '—'} Indicadores</span>
           </div>
 
           <button

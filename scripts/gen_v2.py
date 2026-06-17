@@ -30,6 +30,14 @@ CORTE, ANIO = '2025-12-31T08:00:00Z', '25'
 AREA_RENAME = {'CDS': 'Cadena de Suministro'}
 REFRESH_2025 = {'Talleres', 'CDS', 'Finanzas'}  # áreas a regenerar para 2025
 
+def is_excluded(area, ind):
+    # En CDS se quitan CAPEX y Flujo de Efectivo Operativo (ambos años).
+    if area == 'CDS':
+        low = ind.lower()
+        if 'capex' in low or 'flujo de efectivo operativo' in low:
+            return True
+    return False
+
 # ---- read xlsb ----------------------------------------------------------
 def read_xlsb():
     wb = pyxlsb.open_workbook(XLSB)
@@ -165,6 +173,8 @@ def build_2025(data):
         eje = cell(d, 'Eje Compensación')
         if not ind or not eje:
             continue
+        if is_excluded(area, ind):
+            continue
         metr = metrica_2025(eje)
         if metr == '00. Objetivos':
             continue                                 # se conservan del CSV actual
@@ -200,6 +210,8 @@ def build_catalog(data):
         ind = cell(d, 'Indicador')
         eje = cell(d, 'Eje Compensación')
         if not ind or not eje:
+            continue
+        if is_excluded(area, ind):
             continue
         out_area = AREA_RENAME.get(area, area)
         ejec = ejecat_2026(eje)
