@@ -6,6 +6,7 @@ import DesgloseEjes from './components/DesgloseEjes.jsx'
 import DetallePorArea from './components/DetallePorArea.jsx'
 import SinTope from './components/SinTope.jsx'
 import BenchmarksPage from './components/BenchmarksPage.jsx'
+import Catalogo2026 from './components/Catalogo2026.jsx'
 import { useData } from './data/useData.js'
 import { computeAllAreas, computeGrupal } from './utils/compensation.js'
 
@@ -49,15 +50,21 @@ function Dashboard({ onBackToIntro }) {
     <div className="min-h-full flex flex-col">
       <Header active={tab} onChange={setTab} onBackToIntro={onBackToIntro} />
       <main className="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
-        {loading && <Loading />}
-        {error && <ErrorBox error={error} />}
-        {!loading && !error && rows && (
+        {tab === 'catalogo2026' ? (
+          <Catalogo2026 />
+        ) : (
           <>
-            {tab === 'grupal' && <ResultadoGrupal breakdowns={breakdowns} grupal={grupal} />}
-            {tab === 'ejes' && <DesgloseEjes breakdowns={breakdowns} />}
-            {tab === 'detalle' && <DetallePorArea breakdowns={breakdowns} />}
-            {tab === 'sintope' && <SinTope breakdowns={breakdowns} grupal={grupal} />}
-            {tab === 'benchmarks' && <BenchmarksPage breakdowns={breakdowns} />}
+            {loading && <Loading />}
+            {error && <ErrorBox error={error} />}
+            {!loading && !error && rows && (
+              <>
+                {tab === 'grupal' && <ResultadoGrupal breakdowns={breakdowns} grupal={grupal} />}
+                {tab === 'ejes' && <DesgloseEjes breakdowns={breakdowns} />}
+                {tab === 'detalle' && <DetallePorArea breakdowns={breakdowns} />}
+                {tab === 'sintope' && <SinTope breakdowns={breakdowns} grupal={grupal} />}
+                {tab === 'benchmarks' && <BenchmarksPage breakdowns={breakdowns} />}
+              </>
+            )}
           </>
         )}
       </main>

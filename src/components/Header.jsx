@@ -8,6 +8,7 @@ const TABS = [
   { id: 'detalle', label: 'Detalle por área' },
   { id: 'sintope', label: '¿Y sin el tope?' },
   { id: 'benchmarks', label: 'Benchmarks' },
+  { id: 'catalogo2026', label: 'Catálogo 2026' },
 ]
 
 export default function Header({ active, onChange, onBackToIntro }) {

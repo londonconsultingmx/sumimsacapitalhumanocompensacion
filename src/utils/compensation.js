@@ -19,8 +19,17 @@ export const AREA_COLORS = {
   'Cadena de Suministro': '#EA580C', // orange (antes CDS)
   'Finanzas':             '#0EA5E9', // sky
   'Talleres':             '#B91C1C', // red
-  'TBX Servicios':        '#CA8A04', // amber
+  'TBX Servicios':        '#CA8A04', // amber (solo catálogo 2026; fuera del esquema 2025)
   'TI':                   '#0F766E', // teal-ish
+}
+
+// Subgrupos visuales dentro del eje Indicadores de Negocio (no cambian el peso 40%).
+// "Negocio" = corporativos/compartidos (Sumimsa: Macro + Resultado U. Negocio).
+// "Operativos" = específicos del área (Resultados Operativos).
+export const SUBGRUPO_ORDER = ['Negocio', 'Operativos']
+export const SUBGRUPO_LABELS = {
+  Negocio: 'Indicadores Negocio',
+  Operativos: 'Indicadores Operativos',
 }
 
 export const EVIDENCIAS_URL =
@@ -182,6 +191,7 @@ export function normalizeRow(row) {
     corte: String(row['Corte'] ?? '').trim(),
     anio: String(row['Año Esquema'] ?? '').trim(),
     fuente: String(row['Fuente'] ?? '').trim(),
+    subgrupo: String(row['Subgrupo'] ?? '').trim(),
   }
 }
 
@@ -286,8 +296,9 @@ export function computeAllAreas(rows) {
 }
 
 // Áreas que NO ponderan en la calificación grupal (existen y se evalúan, pero su
-// subdirector no cuenta para el grupo ese año). TBX: Alex no pondera en 2025.
-export const EXCLUDED_FROM_GRUPAL = new Set(['TBX Servicios'])
+// subdirector no cuenta para el grupo ese año). TBX/Servicios salió del esquema
+// 2025, así que ya no aplica; se deja el mecanismo por si vuelve a necesitarse.
+export const EXCLUDED_FROM_GRUPAL = new Set()
 
 export function ponderanGrupal(breakdowns) {
   return breakdowns.filter((b) => !EXCLUDED_FROM_GRUPAL.has(b.area))

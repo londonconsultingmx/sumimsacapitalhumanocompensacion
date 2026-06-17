@@ -20,6 +20,7 @@ const FIELDS = [
   'Corte',
   'Año Esquema',
   'Fuente',
+  'Subgrupo',
 ]
 
 export function useData() {

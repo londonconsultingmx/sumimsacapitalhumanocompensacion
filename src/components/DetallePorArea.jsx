@@ -6,9 +6,25 @@ import {
   EJE_ORDER,
   EJE_WEIGHTS,
   EVIDENCIAS_URL,
+  SUBGRUPO_LABELS,
+  SUBGRUPO_ORDER,
   fmtMetaReal,
   fmtPct,
 } from '../utils/compensation.js'
+
+// Dentro de Indicadores de Negocio, subdivide visualmente en Negocio / Operativos.
+// Otros ejes (o áreas sin subgrupo) se muestran en un solo grupo sin encabezado.
+function groupForDisplay(metrica, rows) {
+  if (metrica !== '02. Indicadores de Negocio' || !rows.some((r) => r.subgrupo)) {
+    return [{ label: null, rows }]
+  }
+  const groups = SUBGRUPO_ORDER
+    .map((sg) => ({ label: SUBGRUPO_LABELS[sg], rows: rows.filter((r) => r.subgrupo === sg) }))
+    .filter((g) => g.rows.length)
+  const untagged = rows.filter((r) => !r.subgrupo)
+  if (untagged.length) groups.push({ label: 'Otros', rows: untagged })
+  return groups
+}
 
 export default function DetallePorArea({ breakdowns }) {
   const [selected, setSelected] = useState(breakdowns[0]?.area ?? '')
@@ -91,8 +107,17 @@ export default function DetallePorArea({ breakdowns }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {rows.map((r, i) => (
-                    <tr key={i} className="border-b border-slate-100 last:border-0 align-top">
+                  {groupForDisplay(k, rows).map((g, gi) => (
+                    <React.Fragment key={gi}>
+                      {g.label && (
+                        <tr className="bg-slate-100/70">
+                          <td colSpan={7} className="py-1.5 px-4 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+                            {g.label} · {g.rows.length}
+                          </td>
+                        </tr>
+                      )}
+                      {g.rows.map((r, i) => (
+                    <tr key={`${gi}-${i}`} className="border-b border-slate-100 last:border-0 align-top">
                       <td className="py-2 px-4 text-slate-800 max-w-md">{r.indicador}</td>
                       <td className="py-2 px-3 text-slate-500 whitespace-nowrap">{r.um || '—'}</td>
                       <td className="py-2 px-3 text-slate-500 text-xs">{r.direccion}</td>
@@ -120,6 +145,8 @@ export default function DetallePorArea({ breakdowns }) {
                       </td>
                       <td className="py-2 px-3"><StatusPill cumple={r.cumple} /></td>
                     </tr>
+                      ))}
+                    </React.Fragment>
                   ))}
                 </tbody>
               </table>

@@ -7,8 +7,7 @@ import {
 } from '../utils/compensation.js'
 
 // Areas excluded from the benchmarks view.
-// TBX Servicios aún no tiene datos de 360 → se excluye para no mostrar un nivel falso.
-const EXCLUDED_AREAS = new Set(['Talleres', 'TBX Servicios'])
+const EXCLUDED_AREAS = new Set(['Talleres'])
 
 export default function BenchmarksPage({ breakdowns }) {
   const levels = BENCHMARK_LEVELS
