@@ -26,8 +26,12 @@ function groupForDisplay(metrica, rows) {
   return groups
 }
 
+const DEFAULT_AREA = 'Cadena de Suministro'
+
 export default function DetallePorArea({ breakdowns }) {
-  const [selected, setSelected] = useState(breakdowns[0]?.area ?? '')
+  const [selected, setSelected] = useState(
+    breakdowns.some((x) => x.area === DEFAULT_AREA) ? DEFAULT_AREA : (breakdowns[0]?.area ?? '')
+  )
   const b = breakdowns.find((x) => x.area === selected) ?? breakdowns[0]
   if (!b) return null
 
