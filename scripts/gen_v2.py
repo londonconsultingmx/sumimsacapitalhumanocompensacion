@@ -248,6 +248,20 @@ def main():
         r[0] in ('Auditoría', 'Capital Humano', 'TI') or
         (r[0] in OBJ_AREAS and r[1] == '00. Objetivos'))]
     keep = [r + [''] * (15 - len(r)) for r in keep]   # pad to 15
+
+    # CDS: sustituir el objetivo "Reducción de Costos por Innovación" por
+    # "Reducción estructural de costos vs año anterior (%)" (Meta 0.25, Real 0.13).
+    for row in keep:
+        if (row[0] == 'Cadena de Suministro' and row[1] == '00. Objetivos'
+                and 'reducción de costos por innovación' in row[2].lower()):
+            row[2] = '02. Reducción estructural de costos vs año anterior (%)'
+            row[4] = '%'                              # UM
+            row[5] = 'Arriba es bueno (>= Meta)'      # más reducción es mejor
+            row[6] = '0,25'                           # Meta
+            row[7] = '0,13'                           # Real
+            row[9] = '0'                              # Cumple #
+            row[10] = 'No'                            # Cumple?
+
     new25 = build_2025(data)
     final25 = [header] + keep + new25
     for p in CSV_2025:
