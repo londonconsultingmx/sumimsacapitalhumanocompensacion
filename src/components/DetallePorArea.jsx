@@ -36,7 +36,7 @@ export default function DetallePorArea({ breakdowns }) {
   const b = breakdowns.find((x) => x.area === selected) ?? breakdowns[0]
   if (!b) return null
 
-  const color = AREA_COLORS[b.area] ?? '#00897B'
+  const color = AREA_COLORS[b.area] ?? '#009BDB'
 
   return (
     <section className="flex flex-col gap-5">

@@ -11,16 +11,17 @@ export const EJE_LABELS = {
 }
 export const EJE_ORDER = ['02. Indicadores de Negocio', '03. 360']
 
-// Distinctive color per area
+// Distinctive color per area — anclados a la paleta SUMIMSA donde es posible,
+// manteniendo distinción visual entre las 7 áreas.
 export const AREA_COLORS = {
-  'Auditoría':            '#2563EB', // blue
+  'Auditoría':            '#12256F', // navy corporativo (Pantone 2748 C)
   'Capital Humano':       '#7C3AED', // purple
-  'Cadena de Suministro': '#EA580C', // orange (antes CDS)
-  'Finanzas':             '#0EA5E9', // sky
+  'Cadena de Suministro': '#EA580C', // orange
+  'Finanzas':             '#009BDB', // cyan corporativo (Process Cyan)
   'Talleres':             '#B91C1C', // red
   'TBX':                  '#CA8A04', // amber
   'TBX Servicios':        '#CA8A04', // alias usado en el catálogo 2026
-  'TI':                   '#0F766E', // teal-ish
+  'TI':                   '#5CB8B2', // teal corporativo (Pantone 7472 C)
 }
 
 // Subgrupos visuales dentro del eje Indicadores (no cambian el peso).

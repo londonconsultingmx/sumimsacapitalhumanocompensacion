@@ -39,17 +39,17 @@ export default function IntroPage({ onEnter }) {
         {/* main title — centered vertically in available space */}
         <div className="flex-1 min-h-0 flex flex-col justify-center">
           <h1
-            className="font-sans text-ink leading-[1.02] tracking-[-0.035em]"
+            className="font-display uppercase text-ink leading-[1.02] tracking-[-0.01em]"
             style={{ fontSize: 'clamp(44px, 8.5vw, 108px)' }}
           >
-            <span className="mask-wrap font-light">
+            <span className="mask-wrap font-medium">
               <span className="mask-rise" style={{ animationDelay: '0.1s' }}>Esquema</span>
             </span>{' '}
-            <span className="mask-wrap font-light text-muted">
+            <span className="mask-wrap font-medium text-blue">
               <span className="mask-rise" style={{ animationDelay: '0.25s' }}>de</span>
             </span>
             <br />
-            <span className="mask-wrap font-bold">
+            <span className="mask-wrap font-semibold">
               <span className="mask-rise" style={{ animationDelay: '0.45s' }}>Compensación</span>
             </span>
           </h1>

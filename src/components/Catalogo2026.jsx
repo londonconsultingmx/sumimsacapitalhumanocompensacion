@@ -35,7 +35,7 @@ export default function Catalogo2026() {
   }
 
   const areaRows = rows.filter((r) => r.area === selected)
-  const color = AREA_COLORS[selected] ?? '#00897B'
+  const color = AREA_COLORS[selected] ?? '#009BDB'
 
   return (
     <section className="flex flex-col gap-5">

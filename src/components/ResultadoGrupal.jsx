@@ -32,7 +32,7 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
           <div className="text-sm text-slate-500 mb-2">Calificación grupal (con tope)</div>
           <Gauge
             value={grupal.final}
-            color="#00897B"
+            color="#009BDB"
             sublabel="× 0.96 EBITDA"
             threshold={THRESHOLD_APROBATORIO}
           />
@@ -44,7 +44,7 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
           <div className="text-sm text-slate-500 mb-2">Calificación grupal bruta</div>
           <Gauge
             value={grupal.bruta}
-            color="#1E293B"
+            color="#12256F"
             sublabel="sin tope"
             threshold={THRESHOLD_APROBATORIO}
           />
@@ -86,7 +86,7 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
 }
 
 function AreaGauge({ b, excluded }) {
-  const color = AREA_COLORS[b.area] ?? '#00897B'
+  const color = AREA_COLORS[b.area] ?? '#009BDB'
   return (
     <div className="border border-slate-200 rounded-xl p-5 flex flex-col items-center gap-2 bg-slate-50/60">
       <div className="text-sm font-semibold text-ink text-center flex items-center gap-2">

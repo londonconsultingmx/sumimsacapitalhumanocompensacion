@@ -30,7 +30,7 @@ export default function DesgloseEjes({ breakdowns }) {
       .map((b) => ({
         area: b.area,
         score: Number((b.scores[eje] * 100).toFixed(2)),
-        color: AREA_COLORS[b.area] ?? '#00897B',
+        color: AREA_COLORS[b.area] ?? '#009BDB',
       })),
   }))
 
@@ -67,10 +67,10 @@ export default function DesgloseEjes({ breakdowns }) {
                   <Tooltip formatter={(v) => `${Number(v).toFixed(1)}%`} cursor={{ fill: '#F1F5F9' }} />
                   <ReferenceLine
                     x={THRESHOLD_APROBATORIO * 100}
-                    stroke="#1C1B17"
+                    stroke="#12256F"
                     strokeDasharray="4 3"
                     strokeWidth={1.5}
-                    label={{ value: '75% mínimo', position: 'insideTopRight', fill: '#1C1B17', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
+                    label={{ value: '75% mínimo', position: 'insideTopRight', fill: '#12256F', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
                   />
                   <Bar dataKey="score" radius={[0, 6, 6, 0]}>
                     {block.data.map((d) => (
@@ -103,7 +103,7 @@ export default function DesgloseEjes({ breakdowns }) {
                 <td className="py-2 pr-4 font-semibold text-ink">
                   <span
                     className="inline-block w-2 h-2 rounded-full mr-2 align-middle"
-                    style={{ background: AREA_COLORS[b.area] ?? '#00897B' }}
+                    style={{ background: AREA_COLORS[b.area] ?? '#009BDB' }}
                   />
                   {b.area}
                 </td>

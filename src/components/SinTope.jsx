@@ -35,13 +35,13 @@ export default function SinTope({ breakdowns, grupal }) {
         <SummaryCard
           label="Promedio grupal (con tope)"
           value={fmtPct(grupal.final)}
-          accent="#00897B"
+          accent="#009BDB"
           sub={`× ${EBITDA_CAP}`}
         />
         <SummaryCard
           label="Promedio grupal (sin tope)"
           value={fmtPct(grupal.bruta)}
-          accent="#1E293B"
+          accent="#12256F"
           sub="escenario EBITDA 100%"
         />
         <SummaryCard
@@ -63,13 +63,13 @@ export default function SinTope({ breakdowns, grupal }) {
               <Legend />
               <ReferenceLine
                 y={THRESHOLD_APROBATORIO * 100}
-                stroke="#1C1B17"
+                stroke="#12256F"
                 strokeDasharray="4 3"
                 strokeWidth={1.5}
-                label={{ value: '75% mínimo', position: 'insideRight', fill: '#1C1B17', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
+                label={{ value: '75% mínimo', position: 'insideRight', fill: '#12256F', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
               />
-              <Bar dataKey="final" name="Final (con tope)" fill="#00897B" radius={[6, 6, 0, 0]} />
-              <Bar dataKey="bruta" name="Bruta (sin tope)" fill="#1E293B" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="final" name="Final (con tope)" fill="#009BDB" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="bruta" name="Bruta (sin tope)" fill="#12256F" radius={[6, 6, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -92,7 +92,7 @@ export default function SinTope({ breakdowns, grupal }) {
                 <td className="py-2 pr-4 font-semibold text-ink">
                   <span
                     className="inline-block w-2 h-2 rounded-full mr-2 align-middle"
-                    style={{ background: AREA_COLORS[d.area] ?? '#00897B' }}
+                    style={{ background: AREA_COLORS[d.area] ?? '#009BDB' }}
                   />
                   {d.area}
                 </td>

@@ -23,8 +23,8 @@ export default function Header({ active, onChange, onBackToIntro }) {
               <div className="font-mono uppercase tracking-[0.22em] text-[10px] text-paper/70">
                 Esquema simplificado · Subdirecciones · Cierre 2025
               </div>
-              <h1 className="font-sans text-xl md:text-2xl font-bold mt-0.5 tracking-tight">
-                Compensación Variable
+              <h1 className="font-display uppercase text-xl md:text-2xl font-semibold mt-0.5 tracking-wide">
+                Compensación <span className="text-blue">Variable</span>
               </h1>
               <p className="text-xs text-paper/70 mt-0.5">
                 Tope EBITDA{' '}
