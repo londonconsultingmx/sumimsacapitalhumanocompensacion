@@ -18,7 +18,7 @@ export default function BrandMark({
     <LogoWithFallback
       src={src}
       alt="SUMIMSA — Un Solo Proveedor"
-      className={`${isLg ? 'h-16 md:h-20' : 'h-7'} w-auto`}
+      className={`${isLg ? 'h-16 md:h-20' : 'h-7'} w-auto max-w-none shrink-0 self-start object-contain`}
       tone={tone}
       isLg={isLg}
     />
