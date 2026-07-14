@@ -44,9 +44,10 @@ export const SUBDIRECTORES = {
   'Capital Humano':       { nombre: 'Héctor Loredo' },
   'Cadena de Suministro': { nombre: 'Salvador Turrubiates' },
   'Finanzas':             { nombre: 'Alberto Castillo' },
-  'Talleres':             { nombre: 'Federico Ortiz' },
-  'TBX':                  { nombre: 'Subdirector TBX' },
-  'TBX Servicios':        { nombre: 'Subdirector TBX' },
+  // Talleres y TBX comparten un mismo subdirector (Subdirector Técnico).
+  'Talleres':             { nombre: 'Subdirector Técnico' },
+  'TBX':                  { nombre: 'Subdirector Técnico' },
+  'TBX Servicios':        { nombre: 'Subdirector Técnico' },
   'TI':                   { nombre: 'Subdirector de TI' },
 }
 

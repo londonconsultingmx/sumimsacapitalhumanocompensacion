@@ -45,7 +45,7 @@ TBX,Operativos,09. Facturabilidad,100% de lo ejecutado facturado en ≤ 45 días
 TBX,Operativos,10. Integridad de la demanda,Pedidos de venta correctos ÷ Total · catálogo de clientes vigente,%,PV 100% · clientes 100%,Semanal
 TBX,Operativos,11. Seguridad y equipo operable,# accidentes incapacitantes · Tiempo operable ÷ Programado × 100,%,0 accidentes · equipo ≥ 90%,Semanal
 Capital Humano,Indicadores de Negocio,01. Rotación de personal,Bajas (renuncias) ÷ Plantilla promedio × 100 (anualizado),%,< 12–15%,Mensual
-Capital Humano,Indicadores de Negocio,02. Ausentismo injustificado,HH perdidas por inasistencia ÷ HH programadas × 100,%,< 3%,Semanal
+Capital Humano,Indicadores de Negocio,02. Ausentismo injustificado,HH perdidas por inasistencia ÷ HH programadas × 100,%,< 5%,Semanal
 Capital Humano,Indicadores de Negocio,03. Tiempo de cobertura de vacante,Días promedio entre requisición aprobada y alta del candidato,días,< 30–45 días,Mensual
 Capital Humano,Indicadores de Negocio,04. Costo de nómina / ingresos,Costo total de nómina ÷ Ingresos × 100,%,≤ 20%,Mensual
 Capital Humano,Indicadores de Negocio,05. Clima & desarrollo (eNPS),Clima organizacional = % satisfacción,%,Mín. 70%,Trimestral
