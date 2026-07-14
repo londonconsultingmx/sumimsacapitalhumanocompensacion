@@ -6,7 +6,7 @@ import React from 'react'
 export default function Gauge({
   value = 0,
   size = 160,
-  color = '#009BDB',
+  color = '#24437A',
   label,
   sublabel,
   threshold,
@@ -58,7 +58,7 @@ export default function Gauge({
                 y1={tick.y1}
                 x2={tick.x2}
                 y2={tick.y2}
-                stroke="#12256F"
+                stroke="#212B42"
                 strokeWidth={2}
                 strokeDasharray="3 2"
               />

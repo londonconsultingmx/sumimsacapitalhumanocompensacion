@@ -22,7 +22,7 @@ export default function SinTope({ breakdowns, grupal }) {
 
   return (
     <section className="flex flex-col gap-5">
-      <div className="bg-white rounded-2xl shadow-card p-6">
+      <div className="bg-white rounded-md shadow-card p-6">
         <h2 className="text-lg font-semibold text-ink">¿Qué hubieran sacado al 100% del EBITDA?</h2>
         <p className="text-sm text-slate-500 mt-1">
           El EBITDA corporativo cerró en <strong>96%</strong>, por lo que toda calificación se
@@ -35,13 +35,13 @@ export default function SinTope({ breakdowns, grupal }) {
         <SummaryCard
           label="Promedio grupal (con tope)"
           value={fmtPct(grupal.final)}
-          accent="#009BDB"
+          accent="#24437A"
           sub={`× ${EBITDA_CAP}`}
         />
         <SummaryCard
           label="Promedio grupal (sin tope)"
           value={fmtPct(grupal.bruta)}
-          accent="#12256F"
+          accent="#8B98AC"
           sub="escenario EBITDA 100%"
         />
         <SummaryCard
@@ -52,7 +52,7 @@ export default function SinTope({ breakdowns, grupal }) {
         />
       </div>
 
-      <div className="bg-white rounded-2xl shadow-card p-6">
+      <div className="bg-white rounded-md shadow-card p-6">
         <div className="h-[360px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} margin={{ left: 8, right: 24, top: 10, bottom: 8 }}>
@@ -63,19 +63,19 @@ export default function SinTope({ breakdowns, grupal }) {
               <Legend />
               <ReferenceLine
                 y={THRESHOLD_APROBATORIO * 100}
-                stroke="#12256F"
+                stroke="#212B42"
                 strokeDasharray="4 3"
                 strokeWidth={1.5}
-                label={{ value: '75% mínimo', position: 'insideRight', fill: '#12256F', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
+                label={{ value: '75% mínimo', position: 'insideRight', fill: '#212B42', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
               />
-              <Bar dataKey="final" name="Final (con tope)" fill="#009BDB" radius={[6, 6, 0, 0]} />
-              <Bar dataKey="bruta" name="Bruta (sin tope)" fill="#12256F" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="final" name="Final (con tope)" fill="#24437A" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="bruta" name="Bruta (sin tope)" fill="#8B98AC" radius={[6, 6, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-card p-6 overflow-x-auto">
+      <div className="bg-white rounded-md shadow-card p-6 overflow-x-auto">
         <h3 className="font-semibold text-ink mb-4">Comparativo por área</h3>
         <table className="min-w-full text-sm">
           <thead>
@@ -92,7 +92,7 @@ export default function SinTope({ breakdowns, grupal }) {
                 <td className="py-2 pr-4 font-semibold text-ink">
                   <span
                     className="inline-block w-2 h-2 rounded-full mr-2 align-middle"
-                    style={{ background: AREA_COLORS[d.area] ?? '#009BDB' }}
+                    style={{ background: AREA_COLORS[d.area] ?? '#24437A' }}
                   />
                   {d.area}
                 </td>
@@ -110,7 +110,7 @@ export default function SinTope({ breakdowns, grupal }) {
 
 function SummaryCard({ label, value, accent, sub }) {
   return (
-    <div className="bg-white rounded-2xl shadow-card p-5 border-l-4" style={{ borderColor: accent }}>
+    <div className="bg-white rounded-md shadow-card p-5 border-l-4" style={{ borderColor: accent }}>
       <div className="text-xs uppercase tracking-wider text-slate-500">{label}</div>
       <div className="text-3xl font-bold text-ink mt-2">{value}</div>
       {sub && <div className="text-xs text-slate-500 mt-1">{sub}</div>}

@@ -29,7 +29,7 @@ export default function BenchmarksPage({ breakdowns }) {
 
   return (
     <section className="flex flex-col gap-6">
-      <div className="bg-white rounded-2xl shadow-card p-6">
+      <div className="bg-white rounded-md shadow-card p-6">
         <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted mb-1">
           Capital Humano · Benchmark Consultorías Globales
         </div>
@@ -42,7 +42,7 @@ export default function BenchmarksPage({ breakdowns }) {
       </div>
 
       {/* Level table */}
-      <div className="bg-white rounded-2xl shadow-card overflow-hidden">
+      <div className="bg-white rounded-md shadow-card overflow-hidden">
         <div className="overflow-x-auto">
           <table className="min-w-full text-sm">
             <thead>
@@ -111,7 +111,7 @@ export default function BenchmarksPage({ breakdowns }) {
           ))}
       </div>
 
-      <div className="bg-paper border border-rule rounded-2xl p-5 flex items-start gap-4">
+      <div className="bg-paper border border-rule rounded-md p-5 flex items-start gap-4">
         <div className="w-1.5 self-stretch bg-blue rounded-sm" />
         <div>
           <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted">Principio</div>
@@ -143,7 +143,7 @@ function AreaCard({ p }) {
   const dot = AREA_COLORS[p.area] ?? '#6B6A62'
   const lvl = p.level
   return (
-    <div className="bg-white rounded-2xl shadow-card p-5 flex flex-col gap-3">
+    <div className="bg-white rounded-md shadow-card p-5 flex flex-col gap-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full" style={{ background: dot }} />

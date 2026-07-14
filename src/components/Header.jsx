@@ -13,31 +13,30 @@ const TABS = [
 
 export default function Header({ active, onChange, onBackToIntro }) {
   return (
-    <header className="bg-ink text-paper">
-      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-5">
+    <header className="bg-white border-b border-rule">
+      <div className="max-w-7xl mx-auto px-6 pt-5 flex flex-col gap-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-5">
-            <BrandMark size="sm" tone="paper" caption="Dirección de Capital Humano" />
-            <div className="hidden md:block h-10 w-px bg-paper/20 mx-1" />
+            <BrandMark size="sm" tone="ink" caption="Dirección de Capital Humano" />
+            <div className="hidden md:block h-10 w-px bg-rule mx-1" />
             <div className="hidden md:block">
-              <div className="font-mono uppercase tracking-[0.22em] text-[10px] text-paper/70">
+              <div className="text-[11px] uppercase tracking-[0.14em] text-muted">
                 Esquema simplificado · Subdirecciones · Cierre 2025
               </div>
-              <h1 className="font-display uppercase text-xl md:text-2xl font-semibold mt-0.5 tracking-wide">
-                Compensación <span className="text-blue">Variable</span>
+              <h1 className="text-lg font-bold text-ink mt-0.5 leading-tight">
+                Compensación Variable
               </h1>
-              <p className="text-xs text-paper/70 mt-0.5">
-                Tope EBITDA{' '}
-                <span className="font-semibold text-gold">{fmtPct(EBITDA_CAP, 0)}</span>{' '}
+              <p className="text-xs text-muted mt-0.5">
+                Tope EBITDA <span className="font-semibold text-ink">{fmtPct(EBITDA_CAP, 0)}</span>{' '}
                 · Indicadores 70% · 360° 30%
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             {onBackToIntro && (
               <button
                 onClick={onBackToIntro}
-                className="font-mono text-[11px] uppercase tracking-[0.2em] text-paper/70 hover:text-paper transition px-3 py-2"
+                className="text-xs text-muted hover:text-ink transition"
               >
                 ← Intro
               </button>
@@ -46,24 +45,23 @@ export default function Header({ active, onChange, onBackToIntro }) {
               href={EVIDENCIAS_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-blue hover:bg-blue/80 transition px-4 py-2 rounded-sm text-sm font-semibold"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue hover:text-teal-dark transition"
             >
-              Ver evidencias
-              <span aria-hidden>↗</span>
+              Ver evidencias <span aria-hidden className="text-xs">↗</span>
             </a>
           </div>
         </div>
-        <nav className="flex flex-wrap gap-1 -mb-2">
+        <nav className="flex flex-wrap gap-x-6 gap-y-1 -mb-px overflow-x-auto">
           {TABS.map((t) => {
             const isActive = t.id === active
             return (
               <button
                 key={t.id}
                 onClick={() => onChange(t.id)}
-                className={`px-4 py-2 rounded-t-sm text-sm font-medium transition ${
+                className={`pb-3 text-sm border-b-2 transition whitespace-nowrap ${
                   isActive
-                    ? 'bg-paper text-ink'
-                    : 'bg-white/0 text-paper/70 hover:text-paper hover:bg-white/10'
+                    ? 'border-ink text-ink font-semibold'
+                    : 'border-transparent text-muted hover:text-ink'
                 }`}
               >
                 {t.label}

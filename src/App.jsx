@@ -87,7 +87,7 @@ function Loading() {
 
 function ErrorBox({ error }) {
   return (
-    <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl p-5">
+    <div className="bg-red-50 border border-red-200 text-red-700 rounded-md p-5">
       <div className="font-semibold mb-1">No se pudo cargar el CSV</div>
       <div className="text-sm">{String(error?.message ?? error)}</div>
     </div>

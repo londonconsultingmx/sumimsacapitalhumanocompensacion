@@ -36,11 +36,11 @@ export default function DetallePorArea({ breakdowns }) {
   const b = breakdowns.find((x) => x.area === selected) ?? breakdowns[0]
   if (!b) return null
 
-  const color = AREA_COLORS[b.area] ?? '#009BDB'
+  const color = AREA_COLORS[b.area] ?? '#24437A'
 
   return (
     <section className="flex flex-col gap-5">
-      <div className="bg-white rounded-2xl shadow-card p-5 flex flex-wrap items-center gap-3">
+      <div className="bg-white rounded-md shadow-card p-5 flex flex-wrap items-center gap-3">
         <label htmlFor="area-select" className="text-sm font-semibold text-slate-600">
           Subdirector / Área:
         </label>
@@ -48,7 +48,7 @@ export default function DetallePorArea({ breakdowns }) {
           id="area-select"
           value={b.area}
           onChange={(e) => setSelected(e.target.value)}
-          className="border border-slate-300 rounded-lg px-3 py-2 text-sm font-medium focus:border-teal focus:outline-none"
+          className="border border-slate-300 rounded-sm px-3 py-2 text-sm font-medium focus:border-teal focus:outline-none"
         >
           {breakdowns.map((x) => (
             <option key={x.area} value={x.area}>{x.area}</option>
@@ -58,7 +58,7 @@ export default function DetallePorArea({ breakdowns }) {
           href={EVIDENCIAS_URL}
           target="_blank"
           rel="noreferrer"
-          className="ml-auto inline-flex items-center gap-2 bg-teal hover:bg-teal-dark transition text-white px-4 py-2 rounded-lg text-sm font-semibold"
+          className="ml-auto inline-flex items-center gap-2 bg-teal hover:bg-teal-dark transition text-white px-4 py-2 rounded-sm text-sm font-semibold"
         >
           Ver evidencias de {b.area}
           <span aria-hidden>↗</span>
@@ -66,13 +66,13 @@ export default function DetallePorArea({ breakdowns }) {
       </div>
 
       <div className="grid md:grid-cols-3 gap-4">
-        <div className="rounded-2xl p-5 text-white shadow-card" style={{ background: color }}>
-          <div className="text-xs uppercase tracking-wider opacity-80">Calificación final</div>
-          <div className="text-4xl font-bold mt-1">{fmtPct(b.final)}</div>
-          <div className="text-xs opacity-80 mt-1">bruta {fmtPct(b.bruta)} · × 0.96 EBITDA</div>
+        <div className="rounded-md p-5 bg-white shadow-card border-l-4" style={{ borderLeftColor: color }}>
+          <div className="text-xs uppercase tracking-wider text-muted">Calificación final</div>
+          <div className="text-4xl font-bold mt-1 text-ink">{fmtPct(b.final)}</div>
+          <div className="text-xs text-muted mt-1">bruta {fmtPct(b.bruta)} · × 0.96 EBITDA</div>
         </div>
         {EJE_ORDER.map((k) => (
-          <div key={k} className="rounded-2xl p-5 bg-white shadow-card">
+          <div key={k} className="rounded-md p-5 bg-white shadow-card">
             <div className="text-xs uppercase tracking-wider text-slate-500">
               {EJE_LABELS[k]}
             </div>
@@ -92,7 +92,7 @@ export default function DetallePorArea({ breakdowns }) {
         const rows = b.rowsByEje[k]
         if (!rows.length) return null
         return (
-          <div key={k} className="bg-white rounded-2xl shadow-card overflow-hidden">
+          <div key={k} className="bg-white rounded-md shadow-card overflow-hidden">
             <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
               <div>
                 <h3 className="font-semibold text-ink">{EJE_LABELS[k]}</h3>
@@ -169,19 +169,15 @@ export default function DetallePorArea({ breakdowns }) {
   )
 }
 
-// % de cumplimiento relativo del indicador vs. su benchmark (tope 100%).
+// % de cumplimiento relativo del indicador vs. su benchmark (tope 100%),
+// semaforizado en el color del texto.
 function CumplimientoChip({ row, eje }) {
   if (row.sinDato) return <span className="text-xs text-slate-400">—</span>
   if (eje === '03. 360') return <span className="text-xs text-slate-400">—</span>
   const ratio = achievementRatio(row)
-  const styles =
-    ratio >= 0.999
-      ? 'bg-green-100 text-green-700'
-      : ratio >= 0.75
-      ? 'bg-amber-100 text-amber-700'
-      : 'bg-red-100 text-red-700'
+  const color = ratio >= 0.999 ? '#15803D' : ratio >= 0.75 ? '#B45309' : '#B91C1C'
   return (
-    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold tabular-nums ${styles}`}>
+    <span className="text-sm font-semibold tabular-nums" style={{ color }}>
       {Math.round(ratio * 100)}%
     </span>
   )

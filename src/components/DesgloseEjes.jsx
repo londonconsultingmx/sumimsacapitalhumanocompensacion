@@ -30,13 +30,13 @@ export default function DesgloseEjes({ breakdowns }) {
       .map((b) => ({
         area: b.area,
         score: Number((b.scores[eje] * 100).toFixed(2)),
-        color: AREA_COLORS[b.area] ?? '#009BDB',
+        color: AREA_COLORS[b.area] ?? '#24437A',
       })),
   }))
 
   return (
     <section className="flex flex-col gap-6">
-      <div className="bg-white rounded-2xl shadow-card p-6">
+      <div className="bg-white rounded-md shadow-card p-6">
         <h2 className="text-lg font-semibold text-ink">Score por eje y área</h2>
         <p className="text-sm text-slate-500 mt-1">
           Cumplimiento relativo de cada indicador vs. su benchmark, promediado por eje.
@@ -47,7 +47,7 @@ export default function DesgloseEjes({ breakdowns }) {
 
       <div className="grid lg:grid-cols-2 gap-5">
         {dataByEje.map((block) => (
-          <div key={block.eje} className="bg-white rounded-2xl shadow-card p-5 flex flex-col">
+          <div key={block.eje} className="bg-white rounded-md shadow-card p-5 flex flex-col">
             <div className="flex items-baseline justify-between mb-3">
               <h3 className="font-semibold text-ink">{block.label}</h3>
               <span className="text-xs px-2 py-0.5 rounded-full bg-teal/10 text-teal-dark font-semibold">
@@ -67,10 +67,10 @@ export default function DesgloseEjes({ breakdowns }) {
                   <Tooltip formatter={(v) => `${Number(v).toFixed(1)}%`} cursor={{ fill: '#F1F5F9' }} />
                   <ReferenceLine
                     x={THRESHOLD_APROBATORIO * 100}
-                    stroke="#12256F"
+                    stroke="#212B42"
                     strokeDasharray="4 3"
                     strokeWidth={1.5}
-                    label={{ value: '75% mínimo', position: 'insideTopRight', fill: '#12256F', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
+                    label={{ value: '75% mínimo', position: 'insideTopRight', fill: '#212B42', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
                   />
                   <Bar dataKey="score" radius={[0, 6, 6, 0]}>
                     {block.data.map((d) => (
@@ -84,7 +84,7 @@ export default function DesgloseEjes({ breakdowns }) {
         ))}
       </div>
 
-      <div className="bg-white rounded-2xl shadow-card p-6 overflow-x-auto">
+      <div className="bg-white rounded-md shadow-card p-6 overflow-x-auto">
         <h3 className="font-semibold text-ink mb-4">Matriz de scores (%)</h3>
         <table className="min-w-full text-sm">
           <thead>
@@ -103,7 +103,7 @@ export default function DesgloseEjes({ breakdowns }) {
                 <td className="py-2 pr-4 font-semibold text-ink">
                   <span
                     className="inline-block w-2 h-2 rounded-full mr-2 align-middle"
-                    style={{ background: AREA_COLORS[b.area] ?? '#009BDB' }}
+                    style={{ background: AREA_COLORS[b.area] ?? '#24437A' }}
                   />
                   {b.area}
                 </td>
