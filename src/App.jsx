@@ -69,7 +69,9 @@ function Dashboard({ onBackToIntro }) {
         )}
       </main>
       <footer className="max-w-7xl w-full mx-auto px-6 py-6 text-xs text-muted">
-        Esquema 2025 · datos al corte 2025-12-31 · Tope EBITDA 96% aplicado a la calificación final.
+        Esquema simplificado (Indicadores 70% · 360° 30%) · benchmarks batería London · datos al
+        cierre 2025-12-31 y Consejo de Administración ene-2026 · Tope EBITDA 96% aplicado a la
+        calificación final.
       </footer>
     </div>
   )

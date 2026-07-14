@@ -18,10 +18,11 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
       acc.si += b.counts.si
       acc.parcial += b.counts.parcial
       acc.no += b.counts.no
+      acc.sinDato += b.counts.sinDato
       acc.total += b.total
       return acc
     },
-    { si: 0, parcial: 0, no: 0, total: 0 }
+    { si: 0, parcial: 0, no: 0, sinDato: 0, total: 0 }
   )
 
   return (
@@ -53,8 +54,10 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
         </div>
         <div className="bg-white rounded-2xl shadow-card p-6 flex flex-col justify-center gap-3">
           <div className="text-sm text-slate-500">Resumen de indicadores</div>
-          <div className="text-4xl font-bold text-ink">{totals.total}</div>
-          <div className="text-xs text-slate-500 -mt-2">Indicadores evaluados</div>
+          <div className="text-4xl font-bold text-ink">{totals.total - totals.sinDato}</div>
+          <div className="text-xs text-slate-500 -mt-2">
+            Indicadores evaluados{totals.sinDato > 0 ? ` · ${totals.sinDato} sin dato (no afectan)` : ''}
+          </div>
           <CountPills counts={totals} />
           <div className="text-xs text-slate-500 mt-2">
             Diferencia grupal por tope EBITDA:{' '}

@@ -21,7 +21,7 @@ export default function Header({ active, onChange, onBackToIntro }) {
             <div className="hidden md:block h-10 w-px bg-paper/20 mx-1" />
             <div className="hidden md:block">
               <div className="font-mono uppercase tracking-[0.22em] text-[10px] text-paper/70">
-                Esquema 2025 · Subdirecciones
+                Esquema simplificado · Subdirecciones · Cierre 2025
               </div>
               <h1 className="font-sans text-xl md:text-2xl font-bold mt-0.5 tracking-tight">
                 Compensación Variable
@@ -29,7 +29,7 @@ export default function Header({ active, onChange, onBackToIntro }) {
               <p className="text-xs text-paper/70 mt-0.5">
                 Tope EBITDA{' '}
                 <span className="font-semibold text-gold">{fmtPct(EBITDA_CAP, 0)}</span>{' '}
-                · pesos 40 / 40 / 20
+                · Indicadores 70% · 360° 30%
               </p>
             </div>
           </div>

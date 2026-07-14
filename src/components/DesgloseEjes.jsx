@@ -25,11 +25,13 @@ export default function DesgloseEjes({ breakdowns }) {
     eje,
     label: EJE_LABELS[eje],
     weight: EJE_WEIGHTS[eje],
-    data: breakdowns.map((b) => ({
-      area: b.area,
-      score: Number((b.scores[eje] * 100).toFixed(2)),
-      color: AREA_COLORS[b.area] ?? '#00897B',
-    })),
+    data: breakdowns
+      .filter((b) => b.scores[eje] !== null)
+      .map((b) => ({
+        area: b.area,
+        score: Number((b.scores[eje] * 100).toFixed(2)),
+        color: AREA_COLORS[b.area] ?? '#00897B',
+      })),
   }))
 
   return (
@@ -37,12 +39,13 @@ export default function DesgloseEjes({ breakdowns }) {
       <div className="bg-white rounded-2xl shadow-card p-6">
         <h2 className="text-lg font-semibold text-ink">Score por eje y área</h2>
         <p className="text-sm text-slate-500 mt-1">
-          Promedio ponderado por Importancia dentro de cada eje. Pesos finales: Objetivos 40% ·
-          Indicadores 40% · 360° 20%.
+          Cumplimiento relativo de cada indicador vs. su benchmark, promediado por eje.
+          Pesos finales: Indicadores de Negocio 70% · 360° 30%. Talleres y TBX no tienen
+          evaluación 360°, por lo que se califican solo con indicadores.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-5">
+      <div className="grid lg:grid-cols-2 gap-5">
         {dataByEje.map((block) => (
           <div key={block.eje} className="bg-white rounded-2xl shadow-card p-5 flex flex-col">
             <div className="flex items-baseline justify-between mb-3">
@@ -105,7 +108,9 @@ export default function DesgloseEjes({ breakdowns }) {
                   {b.area}
                 </td>
                 {EJE_ORDER.map((k) => (
-                  <td key={k} className="py-2 px-3 text-slate-700">{fmtPct(b.scores[k])}</td>
+                  <td key={k} className="py-2 px-3 text-slate-700">
+                    {b.scores[k] === null ? <span className="text-slate-400">Sin dato</span> : fmtPct(b.scores[k])}
+                  </td>
                 ))}
                 <td className="py-2 px-3 font-semibold text-slate-700">{fmtPct(b.bruta)}</td>
                 <td className="py-2 px-3 font-bold text-teal-dark">{fmtPct(b.final)}</td>

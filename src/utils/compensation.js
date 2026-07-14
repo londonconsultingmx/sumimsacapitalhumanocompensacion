@@ -1,16 +1,15 @@
-// Compensation scheme constants per CLAUDE.md
+// Esquema simplificado (batería benchmark London): 2 ejes, 70% Indicadores + 30% 360°.
+// Áreas sin evaluación 360° (Talleres, TBX) se califican 100% con indicadores.
 export const EBITDA_CAP = 0.96
 export const EJE_WEIGHTS = {
-  '00. Objetivos': 0.40,
-  '02. Indicadores de Negocio': 0.40,
-  '03. 360': 0.20,
+  '02. Indicadores de Negocio': 0.70,
+  '03. 360': 0.30,
 }
 export const EJE_LABELS = {
-  '00. Objetivos': 'Objetivos',
   '02. Indicadores de Negocio': 'Indicadores de Negocio',
   '03. 360': '360°',
 }
-export const EJE_ORDER = ['00. Objetivos', '02. Indicadores de Negocio', '03. 360']
+export const EJE_ORDER = ['02. Indicadores de Negocio', '03. 360']
 
 // Distinctive color per area
 export const AREA_COLORS = {
@@ -19,17 +18,18 @@ export const AREA_COLORS = {
   'Cadena de Suministro': '#EA580C', // orange (antes CDS)
   'Finanzas':             '#0EA5E9', // sky
   'Talleres':             '#B91C1C', // red
-  'TBX Servicios':        '#CA8A04', // amber (solo catálogo 2026; fuera del esquema 2025)
+  'TBX':                  '#CA8A04', // amber
+  'TBX Servicios':        '#CA8A04', // alias usado en el catálogo 2026
   'TI':                   '#0F766E', // teal-ish
 }
 
-// Subgrupos visuales dentro del eje Indicadores de Negocio (no cambian el peso 40%).
-// "Negocio" = corporativos/compartidos (Sumimsa: Macro + Resultado U. Negocio).
-// "Operativos" = específicos del área (Resultados Operativos).
-export const SUBGRUPO_ORDER = ['Negocio', 'Operativos']
+// Subgrupos visuales dentro del eje Indicadores (no cambian el peso).
+// Talleres y TBX se dividen en Financieros (hoja 01) y Operativos (hoja 02),
+// como en la batería de Operaciones de la presentación.
+export const SUBGRUPO_ORDER = ['Financieros', 'Operativos']
 export const SUBGRUPO_LABELS = {
-  Negocio: 'Indicadores Negocio',
-  Operativos: 'Indicadores Operativos',
+  Financieros: 'Financieros · se miden por unidad',
+  Operativos: 'Operativos · se miden por unidad',
 }
 
 export const EVIDENCIAS_URL =
@@ -45,6 +45,7 @@ export const SUBDIRECTORES = {
   'Cadena de Suministro': { nombre: 'Salvador Turrubiates' },
   'Finanzas':             { nombre: 'Alberto Castillo' },
   'Talleres':             { nombre: 'Federico Ortiz' },
+  'TBX':                  { nombre: 'Subdirector TBX' },
   'TBX Servicios':        { nombre: 'Subdirector TBX' },
   'TI':                   { nombre: 'Subdirector de TI' },
 }
@@ -175,6 +176,7 @@ export function normalizeCumple(raw) {
 
 // Map rows (positionally pre-keyed by the CSV loader) to normalized objects.
 export function normalizeRow(row) {
+  const cumpleLabel = String(row['Cumple?'] ?? '').trim()
   return {
     eje: String(row['Eje'] ?? '').trim(),
     metrica: String(row['Metrica'] ?? '').trim(),
@@ -187,7 +189,10 @@ export function normalizeRow(row) {
     importancia: Number(String(row['Importancia'] ?? '').replace(',', '.')) || 0,
     cumpleRaw: String(row['Cumple #'] ?? ''),
     cumple: normalizeCumple(row['Cumple #']),
-    cumpleLabel: String(row['Cumple?'] ?? '').trim(),
+    cumpleLabel,
+    // "Sin dato": el indicador aplica pero aún no hay valor real; se excluye del
+    // cálculo (no suma ni resta) y se muestra en gris.
+    sinDato: cumpleLabel.toLowerCase() === 'sin dato',
     corte: String(row['Corte'] ?? '').trim(),
     anio: String(row['Año Esquema'] ?? '').trim(),
     fuente: String(row['Fuente'] ?? '').trim(),
@@ -230,28 +235,30 @@ export function achievementRatio(r) {
   return Math.min(1, real / meta)
 }
 
+// Score de un eje, o null si el eje no aplica para el área (sin filas con dato).
 export function scoreEje(rowsOfEje, metrica) {
+  const conDato = rowsOfEje.filter((r) => !r.sinDato)
+  if (conDato.length === 0) return null
   // 360° is a simple average of the Real values (5 behavioral ratings),
   // then rounded up to the nearest whole percent per user request.
   if (metrica === '03. 360') {
-    const reals = rowsOfEje
+    const reals = conDato
       .map((r) => parseEuroNumber(r.realRaw))
       .filter((n) => Number.isFinite(n))
-    if (reals.length === 0) return 0
+    if (reals.length === 0) return null
     const avg = reals.reduce((s, n) => s + n, 0) / reals.length
     return ceilPct(avg)
   }
-  // Indicadores de Negocio: relative (proportional achievement) per indicator.
-  // Objetivos: absolute compliance (Cumple # = 0 / 0.5 / 1).
-  const relative = metrica === '02. Indicadores de Negocio'
+  // Indicadores: cumplimiento relativo (Real vs benchmark, tope 100%) por
+  // indicador, ponderado por importancia. Los "sin dato" no suman ni restan.
   let num = 0
   let den = 0
-  for (const r of rowsOfEje) {
+  for (const r of conDato) {
     const w = Number(r.importancia) || 0
-    num += (relative ? achievementRatio(r) : r.cumple) * w
+    num += achievementRatio(r) * w
     den += w
   }
-  return den === 0 ? 0 : num / den
+  return den === 0 ? null : num / den
 }
 
 export function computeAreaBreakdown(rows, area) {
@@ -264,15 +271,24 @@ export function computeAreaBreakdown(rows, area) {
   for (const key of EJE_ORDER) {
     scores[key] = scoreEje(byMetrica[key], key)
   }
-  const bruta =
-    scores['00. Objetivos'] * EJE_WEIGHTS['00. Objetivos'] +
-    scores['02. Indicadores de Negocio'] * EJE_WEIGHTS['02. Indicadores de Negocio'] +
-    scores['03. 360'] * EJE_WEIGHTS['03. 360']
+
+  // 70% Indicadores + 30% 360°. Si un eje no aplica (p. ej. Talleres y TBX no
+  // tienen 360°), el peso se renormaliza para que no castigue: el área se
+  // califica solo con los ejes que sí tienen dato.
+  let num = 0
+  let den = 0
+  for (const key of EJE_ORDER) {
+    if (scores[key] === null) continue
+    num += scores[key] * EJE_WEIGHTS[key]
+    den += EJE_WEIGHTS[key]
+  }
+  const bruta = den === 0 ? 0 : num / den
   const finalScore = bruta * EBITDA_CAP
 
-  const counts = { si: 0, parcial: 0, no: 0 }
+  const counts = { si: 0, parcial: 0, no: 0, sinDato: 0 }
   for (const r of areaRows) {
-    if (r.cumple === 1) counts.si += 1
+    if (r.sinDato) counts.sinDato += 1
+    else if (r.cumple === 1) counts.si += 1
     else if (r.cumple === 0.5) counts.parcial += 1
     else counts.no += 1
   }
@@ -331,6 +347,8 @@ export function fmtMetaReal(raw, um) {
   if (!s) return '—'
   const n = parseEuroNumber(s)
   if (!Number.isFinite(n)) return s
-  if (um === '%') return `${(n * (n <= 1 ? 100 : 1)).toLocaleString('es-MX', { maximumFractionDigits: 2 })}%`
+  // Los % vienen como fracción (0,95 = 95%). Valores hasta 3 se tratan como
+  // fracción para cubrir sobrecumplimientos (1,8 = 180%); mayores ya son puntos.
+  if (um === '%') return `${(n * (n <= 3 ? 100 : 1)).toLocaleString('es-MX', { maximumFractionDigits: 2 })}%`
   return n.toLocaleString('es-MX', { maximumFractionDigits: 2 })
 }

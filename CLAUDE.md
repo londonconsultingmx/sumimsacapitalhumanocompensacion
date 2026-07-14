@@ -1,7 +1,23 @@
 # Proyecto: Dashboard de Compensación Variable — Subdirectores SUMIMSA 2025
 
-## Objetivo
-Construir una app web (React + Vite o Next.js) que lea los datos de indicadores desde un CSV y muestre un dashboard ejecutivo del esquema de compensación variable para los subdirectores de SUMIMSA.
+> **ESQUEMA VIGENTE (jul-2026): simplificado 70/30.** Lo de abajo describe el esquema
+> original 40/40/20; se conserva como referencia histórica. Reglas actuales:
+> - Solo 2 ejes: `02. Indicadores de Negocio` (peso **70%**) y `03. 360` (peso **30%**).
+>   El eje `00. Objetivos` se eliminó.
+> - Los indicadores son la batería benchmark por giro (presentación London
+>   "SUMIMSA-Indicadores-por-Subdireccion"): slide 1 de cada subdirección, y para
+>   Operaciones las hojas 01 (Financieros) y 02 (Operativos), separada en
+>   **Talleres** y **TBX** (columna `Subgrupo` = Financieros / Operativos).
+> - El score de indicadores es **cumplimiento relativo**: `achievementRatio`
+>   (Real vs Meta según `Dirección`, tope 100%), promediado por importancia.
+> - Filas con `Cumple?` = `Sin dato` (Real vacío) **no suman ni restan** — se
+>   excluyen del promedio y se muestran en gris.
+> - **Talleres y TBX no tienen 360°**: su calificación es 100% indicadores (los
+>   pesos se renormalizan; ver `computeAreaBreakdown`).
+> - El tope EBITDA 96% se mantiene, igual que el escenario "sin tope".
+> - Reales alimentados del cierre 2025 + Consejo de Administración ene-2026
+>   (P&L por unidad, TBX Cumplimiento Presupuesto, CxP, madurez documental de
+>   Auditoría) y datos confirmados por el usuario (OTIF 36%, abasto 59%, etc.).
 
 ## Datos
 - Archivo fuente: `data/indicadores_2025.csv`

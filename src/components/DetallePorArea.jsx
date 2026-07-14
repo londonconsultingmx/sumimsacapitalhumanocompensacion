@@ -8,6 +8,7 @@ import {
   EVIDENCIAS_URL,
   SUBGRUPO_LABELS,
   SUBGRUPO_ORDER,
+  achievementRatio,
   fmtMetaReal,
   fmtPct,
 } from '../utils/compensation.js'
@@ -64,7 +65,7 @@ export default function DetallePorArea({ breakdowns }) {
         </a>
       </div>
 
-      <div className="grid md:grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
         <div className="rounded-2xl p-5 text-white shadow-card" style={{ background: color }}>
           <div className="text-xs uppercase tracking-wider opacity-80">Calificación final</div>
           <div className="text-4xl font-bold mt-1">{fmtPct(b.final)}</div>
@@ -75,9 +76,13 @@ export default function DetallePorArea({ breakdowns }) {
             <div className="text-xs uppercase tracking-wider text-slate-500">
               {EJE_LABELS[k]}
             </div>
-            <div className="text-3xl font-bold text-ink mt-1">{fmtPct(b.scores[k])}</div>
+            <div className="text-3xl font-bold text-ink mt-1">
+              {b.scores[k] === null ? <span className="text-slate-400">Sin dato</span> : fmtPct(b.scores[k])}
+            </div>
             <div className="text-xs text-slate-500 mt-1">
-              peso {Math.round(EJE_WEIGHTS[k] * 100)}% · {b.rowsByEje[k].length} indicadores
+              {b.scores[k] === null
+                ? 'no aplica · no afecta la calificación'
+                : `peso ${Math.round(EJE_WEIGHTS[k] * 100)}% · ${b.rowsByEje[k].length} indicadores`}
             </div>
           </div>
         ))}
@@ -92,7 +97,9 @@ export default function DetallePorArea({ breakdowns }) {
               <div>
                 <h3 className="font-semibold text-ink">{EJE_LABELS[k]}</h3>
                 <p className="text-xs text-slate-500">
-                  Score {fmtPct(b.scores[k])} · peso {Math.round(EJE_WEIGHTS[k] * 100)}%
+                  {b.scores[k] === null
+                    ? 'Sin dato · no afecta'
+                    : `Score ${fmtPct(b.scores[k])} · peso ${Math.round(EJE_WEIGHTS[k] * 100)}%`}
                 </p>
               </div>
               <div className="text-xs text-slate-500">{rows.length} indicadores</div>
@@ -104,9 +111,9 @@ export default function DetallePorArea({ breakdowns }) {
                     <th className="py-2 px-4">Indicador</th>
                     <th className="py-2 px-3">UM</th>
                     <th className="py-2 px-3">Dirección</th>
-                    <th className="py-2 px-3">Meta</th>
+                    <th className="py-2 px-3">Meta / Benchmark</th>
                     <th className="py-2 px-3">Real</th>
-                    <th className="py-2 px-3">Imp.</th>
+                    <th className="py-2 px-3">% Cumpl.</th>
                     <th className="py-2 px-3">Status</th>
                   </tr>
                 </thead>
@@ -145,9 +152,9 @@ export default function DetallePorArea({ breakdowns }) {
                         )}
                       </td>
                       <td className="py-2 px-3">
-                        <ImportanciaChip value={r.importancia} />
+                        <CumplimientoChip row={r} eje={k} />
                       </td>
-                      <td className="py-2 px-3"><StatusPill cumple={r.cumple} /></td>
+                      <td className="py-2 px-3"><StatusPill cumple={r.cumple} sinDato={r.sinDato} /></td>
                     </tr>
                       ))}
                     </React.Fragment>
@@ -162,16 +169,20 @@ export default function DetallePorArea({ breakdowns }) {
   )
 }
 
-function ImportanciaChip({ value }) {
+// % de cumplimiento relativo del indicador vs. su benchmark (tope 100%).
+function CumplimientoChip({ row, eje }) {
+  if (row.sinDato) return <span className="text-xs text-slate-400">—</span>
+  if (eje === '03. 360') return <span className="text-xs text-slate-400">—</span>
+  const ratio = achievementRatio(row)
   const styles =
-    value >= 3
-      ? 'bg-ink text-white'
-      : value === 2
-      ? 'bg-slate-300 text-slate-800'
-      : 'bg-slate-100 text-slate-600'
+    ratio >= 0.999
+      ? 'bg-green-100 text-green-700'
+      : ratio >= 0.75
+      ? 'bg-amber-100 text-amber-700'
+      : 'bg-red-100 text-red-700'
   return (
-    <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${styles}`}>
-      {value || '—'}
+    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold tabular-nums ${styles}`}>
+      {Math.round(ratio * 100)}%
     </span>
   )
 }

@@ -3,9 +3,8 @@ import BrandMark from './BrandMark.jsx'
 import { useData } from '../data/useData.js'
 
 const PILLARS = [
-  { k: '01', label: 'Objetivos', pct: 40, desc: 'Metas individuales del periodo', accent: 'bg-ink' },
-  { k: '02', label: 'Indicadores de Negocio', pct: 40, desc: 'Resultados financieros y operativos', accent: 'bg-blue' },
-  { k: '03', label: 'Evaluación 360°', pct: 20, desc: 'Retroalimentación multi-nivel', accent: 'bg-gold' },
+  { k: '01', label: 'Indicadores de Negocio', pct: 70, desc: 'Batería benchmark por giro — financieros y operativos vs. objetivo', accent: 'bg-blue' },
+  { k: '02', label: 'Evaluación 360°', pct: 30, desc: 'Retroalimentación multi-nivel', accent: 'bg-gold' },
 ]
 
 export default function IntroPage({ onEnter }) {
@@ -64,7 +63,7 @@ export default function IntroPage({ onEnter }) {
         </div>
 
         {/* pillar cards */}
-        <div className="grid grid-cols-3 gap-4 md:gap-5 shrink-0">
+        <div className="grid grid-cols-2 gap-4 md:gap-5 shrink-0">
           {PILLARS.map((p, i) => (
             <PillarCard key={p.k} data={p} delay={1.1 + i * 0.15} />
           ))}

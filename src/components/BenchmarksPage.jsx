@@ -6,8 +6,8 @@ import {
   fmtPct,
 } from '../utils/compensation.js'
 
-// Areas excluded from the benchmarks view.
-const EXCLUDED_AREAS = new Set(['Talleres'])
+// Areas excluded from the benchmarks view (sin evaluación 360°).
+const EXCLUDED_AREAS = new Set(['Talleres', 'TBX'])
 
 export default function BenchmarksPage({ breakdowns }) {
   const levels = BENCHMARK_LEVELS
