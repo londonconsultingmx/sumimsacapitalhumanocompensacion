@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import Papa from 'papaparse'
 
-// Catálogo de referencia 2026: todas las subdirecciones, todos los indicadores.
-// A diferencia del esquema 2025, este CSV sí trae un header limpio.
+// Catálogo 2026: la misma batería benchmark del esquema simplificado 2025,
+// aplicada al ejercicio 2026 (fórmula, meta y frecuencia; sin reales aún).
 export function useCatalog2026() {
   const [state, setState] = useState({ loading: true, rows: null, error: null })
 
@@ -21,10 +21,7 @@ export function useCatalog2026() {
             racional: (r['Racional'] ?? '').trim(),
             um: (r['UM'] ?? '').trim(),
             objetivo: (r['Objetivo'] ?? '').trim(),
-            real2026: (r['Real2026'] ?? '').trim(),
-            real2025: (r['Real2025'] ?? '').trim(),
-            fuente: (r['Fuente'] ?? '').trim(),
-            compartido: (r['Compartido'] ?? '').trim(),
+            frecuencia: (r['Frecuencia'] ?? '').trim(),
           }))
           .filter((r) => r.area && r.indicador)
         setState({ loading: false, rows, error: null })

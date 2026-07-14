@@ -1,270 +1,80 @@
-﻿Area,Eje,Indicador,Racional,UM,Objetivo,Real2026,Real2025,Fuente,Compartido
-TBX Servicios,02. Indicadores Negocio,01. Ingresos (Revenue),Revenue 2026,USD,$46.20 MUSD,,34637000.0,,
-TBX Servicios,02. Indicadores Negocio,01. Ingresos contratos de Gobierno.,Cumplir con el presupuesto de ventas en los contratos de gobierno.,USD,$15 MUSD,,,,
-TBX Servicios,02. Indicadores Negocio,02. EBITDA,Activa el bono sólo si se alcanza un porcentaje mínimo del EBITDA planeado.,%,0.28,,,,x
-TBX Servicios,02. Indicadores Negocio,02. EBITDA / Headcount,Incorpora eficiencia estructural y evita crecimiento desordenado de la nómina.,USD,$60 Kusd,,,,x
-TBX Servicios,02. Indicadores Negocio,02. Utilidad antes de impuestos,Elimina distorsiones contables y refleja el resultado económico real.,USD,$9 MUSD,,,,x
-TBX Servicios,02. Indicadores Negocio,03. Cumplimiento al Presupuesto de Renta de Contenedores.,Evalúa el cumplimiento del presupuesto de renta.,USD,$20 MUSD,,12366258.76,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,02. Indicadores Negocio,03. Cumplimiento al Presupuesto de Venta de Consumibles.,Mide si las ventas cumplen el presupuesto.,USD,$2.2 MUSD,,22383795.8699999,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,02. Indicadores Negocio,08. Productividad de Contenedores.,Cumplimiento con el presupuesto del número de contenedores por mes.,%,1.0,,0.6,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,02. Indicadores Negocio,11. Trabajos conciliados y estimados TBX y Gobierno.,"Todos los servicios realizados en el 2026 deberán estar conciliados y estimados, listo para facturarse.",%,1.0,,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,03. Indicadores Operativos,09. Herramientas Dañadas.,Indica máximo permitido de herramientas dañadas.,%,0.1,,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,03. Indicadores Operativos,10. Herramientas perdidas.,Indica máximo permitido de herramientas perdidas.,%,0.03,,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,01. Objetivos,"12. Implementación y uso de los dashboards del proyecto Géminis. (One pages, inventarios, pedidos de ventas, licitaciones) en Q2 2026.",Aplicación y seguimientos en los dashboards implementados proyecto Géminis.,%,1.0,,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,01. Objetivos,13. Cumplimiento en Capacitaciones en todos los contenedores en campo en las solicitudes de herramientas.,Capacitaciones obligatorias como requisito en los usos de herramientas y equipos en los contenedores.,%,0.95,,,,
-TBX Servicios,01. Objetivos,14. Tener operables 37 hidrolavadoras con Programa de mantenimiento desarrollado en Q2 2026.,Tener las hidrolavadoras en condiciones para rentarlas y mantenerlas en buen estado.,%,1.0,,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,x
-TBX Servicios,01. Objetivos,15. Reducción de Inventario de consumibles. Mínimo de $ 4MUSD en el 2026.,Reducir el inventario en el 2026,USD,> $ 4 MUSD,,5280000.0,,x
-TBX Servicios,01. Objetivos,16. Cero accidentes de trabajo incapacitantes.,No debemos tener ningún accidente laboral de nuestro headcount TBX.,%,0.0,,,,
-TBX Servicios,01. Objetivos,17. Todos los contratos de gobierno no deberán quedar sin ejercer ventas.,Todos los contratos deberán ejercerse y tener consumo de monto.,%,1.0,,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,01. Objetivos,18. Visitas operativas a campo,"Visitas a campo por parte de los líderes operativos para revisar las condiciones de trabajo y seguridad de la gente, contenedores y equipos.",%,1.0,,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=120863a8-f564-4b1b-ab9c-ebbcc9657349&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-TBX Servicios,01. Objetivos,19. Visitas periódicas con el cliente.,"Visitas al cliente de niveles claves, por parte de las subgerencias, gerencia y subdirección.",%,1.0,,,,
-TBX Servicios,01. Objetivos,20. Incursionar en nuevo mercado.,"Ingresar contenedores a nuevas áreas como: Producción Activos Pemex, Logística Pemex, Mantenimiento y construcción Pemex, Minería ó construcción. Empresas privadas.",1.0,> 1,,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=120863a8-f564-4b1b-ab9c-ebbcc9657349&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Auditoría,04. Resultados 360,01. Integridad,Evaluar la consistencia y ética del comportamiento del individuo dentro de la organización.,%,0.85,0.97,0.97,,
-Auditoría,04. Resultados 360,02. Efectividad,Medir la capacidad para lograr resultados de manera eficiente y con calidad.,%,0.85,0.87,0.87,,
-Auditoría,04. Resultados 360,03. Trabajo Colaborativo,Valorar la habilidad para trabajar de manera constructiva y en equipo con otros.,%,0.85,0.93,0.93,,
-Auditoría,04. Resultados 360,04. Responsabilidad,Determinar la capacidad de asumir y gestionar compromisos y responsabilidades laborales.,%,0.85,0.92,0.92,,
-Auditoría,04. Resultados 360,05. Enfoque al Cliente,Evaluar la orientación hacia la satisfacción y necesidades del cliente interno o externo,%,0.85,0.88,0.88,,
-Talleres,02. Indicadores Negocio,01. Ingresos (Ventas),,USD,,,170189000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,02. Indicadores Negocio,01. Ingresos (Ventas),,USD,,,170189000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Finanzas,02. Indicadores Negocio,01. Ingresos (Ventas),,USD,,,170189000.0,,
-Capital Humano,02. Indicadores Negocio,01. Ingresos (Ventas),,USD,,,170189000.0,,
-TI,02. Indicadores Negocio,01. Ingresos (Ventas),,USD,,,170189000.0,,
-Auditoría,02. Indicadores Negocio,01. Ingresos (Ventas),,USD,,,170189000.0,,
-Talleres,02. Indicadores Negocio,02. Costos,,,,,113378000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,02. Indicadores Negocio,02. Costos,,,,,113378000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Finanzas,02. Indicadores Negocio,02. Costos,,,,,113378000.0,,
-Talleres,02. Indicadores Negocio,01. Ingresos (Ventas Netas),Representa la facturación real atribuible a la unidad.,USD,108910000.0,77410693.0,125675000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,02. Indicadores Negocio,04. EBITDA,Activa el bono solo si se alcanza un porcentaje minimo del EBITDA planeado,USD,38845000.0,,34247000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,02. Indicadores Negocio,02. Costo de Ventas,"Incluye MP, MOD, costos logísticos, empaques, etc.",USD,74818000.0,52168000.0,90226000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,02. Indicadores Negocio,03. Margen Bruto (%),Permite comparar rentabilidad entre unidades.,%,0.31,0.27,0.28,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,02. Indicadores Negocio,04. EBITDA / Ingresos (%),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,0.31,0.27,0.27250447583051524,,
-Talleres,02. Indicadores Negocio,05. EBITDA / Headcount (),Mide eficiencia del equipo local.,USD,18000.0,35000.0,179000.0,,
-Talleres,02. Indicadores Negocio,03. Margen Operativo,Controla que el crecimiento en ventas no sacrifique la rentabilidad,%,0.26,0.21,0.33,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,02. Indicadores Negocio,05. EBITDA,Activa el bono solo si se alcanza un porcentaje minimo del EBITDA planeado,USD,36573000.0,19649000.0,37940000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,02. Indicadores Negocio,06. EBITDA / Headcount,Incorpora eficiencia estructural y evita crecimiento desordenado de la nomina,USD,60000.0,35000.0,64000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,02. Indicadores Negocio,07. Utilidad Neta Ajustada,Elimina distorsiones contables y refleja el resultado economico real,USD,22180000.0,8364000.0,12713000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,02. Indicadores Negocio,08. Flujo de Efectivo Operativo,Asegura que las utilidades se conviertan en liquidez real para la empresa,USD,110885000.0,95745000.0,,,
-Talleres,02. Indicadores Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,Asegura disciplina en la ejecucion de inversiones en empresas en expansion,%,0.9,0.87,,,
-Talleres,03. Indicadores Operativos,"01. Cumplimiento al Presupuesto a Contratos (601, 602  625) (%)",Evalúa si el presupuesto de contratos está siendo ejecutado correctamente.,%,1.0,0.6107,1.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,03. Indicadores Operativos,01. Trabajos no aceptados por el cliente por problemas de calidad,,,,,,,
-Talleres,03. Indicadores Operativos,02. Accidentes de Trabajo,,,,,,,
-Talleres,03. Indicadores Operativos,02. Cumplimiento a las Ventas (Valcamex) (%),Mide el rendimiento de las ventas comparándolo con el presupuesto.,%,1.0,0.66,0.66,,
-Talleres,01. Objetivos,02. Trabajos No Aceptados por el Cliente por Calidad o por Tiempo (%),Mide la calidad del servicio en base a trabajos rechazados por clientes.,%,0.0199,0.04,,,
-Talleres,03. Indicadores Operativos,"03. Cumplimiento EBITDA Talleres (601, 625) (%)","Evalúa la rentabilidad antes de intereses, impuestos, depreciación y amortización.",%,0.9,0.7,0.3991841423301146,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,03. Indicadores Operativos,03. Eventos ambientales,,,,,,,
-Talleres,03. Indicadores Operativos,04. Costo de Soporte de acuerdo al Proyecto,,,,,,,
-Talleres,03. Indicadores Operativos,04. Cumplimiento a EBIT Talleres (602  Valcamex) (%),Mide la rentabilidad operativa de los talleres.,%,0.9,0.7,0.9088368548079773,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,03. Indicadores Operativos,05. Hacer un Score Card para el Proyecto,,,,,,,
-Talleres,03. Indicadores Operativos,06. EBIT,,,,,,,
-Talleres,01. Objetivos,07. Monto de ahorro por proyecto/servicio (),Mide la eficacia en el ahorro de costos por cada proyecto.,USD,250000.0,0.0,,,
-Capital Humano,04. Resultados 360,01. Integridad,Evaluar la consistencia y ética del comportamiento del individuo dentro de la organización.,%,0.85,0.94,0.94,,
-Capital Humano,04. Resultados 360,02. Efectividad,Medir la capacidad para lograr resultados de manera eficiente y con calidad.,%,0.85,0.89,0.89,,
-Capital Humano,04. Resultados 360,03. Trabajo Colaborativo,Valorar la habilidad para trabajar de manera constructiva y en equipo con otros.,%,0.85,0.9,0.9,,
-Capital Humano,04. Resultados 360,04. Responsabilidad,Determinar la capacidad de asumir y gestionar compromisos y responsabilidades laborales.,%,0.85,0.92,0.92,,
-Capital Humano,04. Resultados 360,05. Enfoque al Cliente,Evaluar la orientación hacia la satisfacción y necesidades del cliente interno o externo,%,0.85,0.84,0.84,,
-Talleres,03. Indicadores Operativos,07. Revision de Desempeño de N-1 evaluando sus KPIs,,,,,,,
-Talleres,03. Indicadores Operativos,07. Rotación de Inventario (),Mide la eficiencia en la gestión del inventario.,Número,3.0,1.1,3.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Talleres,03. Indicadores Operativos,08. Reporte de Satisfaccion del Cliente,,,,,,,
-Talleres,01. Objetivos,08. Unbilled (Monto de servicios y ventas no Estimados a Cliente),,%,0.2,0.0,,,
-Talleres,03. Indicadores Operativos,10. Rotacion del Personal,,,,,,,
-Talleres,03. Indicadores Operativos,11. Numero de dias para cobrar los servicios realizados,,,,,,,
-Talleres,03. Indicadores Operativos,13. Ahorros logrados por parte de Pemex debido al Contrato de Talleres,,,,,,,
-Talleres,03. Indicadores Operativos,14. Porcentaje de Servicios no Facturados,,,,,,,
-Talleres,01. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,5.0,5.0,5.0,,
-Talleres,01. Objetivos,01. Tiempo de Entrega Soporte Operativo para Generación de Estimaciones (días),Evalúa la eficiencia en la entrega de soporte operativo.,Días,6.0,6.0,,,
-Talleres,01. Objetivos,02. Reducción de Costos por Innovación,,%,1.0,1.0,1.0,,
-Talleres,01. Objetivos,03. Éxito Proyectos Implementados,,%,1.0,1.0,1.0,,
-Capital Humano,02. Indicadores Negocio,02. Costos,,,,,113378000.0,,
-TI,02. Indicadores Negocio,02. Costos,,,,,113378000.0,,
-Auditoría,02. Indicadores Negocio,02. Costos,,,,,113378000.0,,
-Talleres,01. Objetivos,03. Reporte de Satisfacción de cliente (%),Evalúa la satisfacción del cliente a través de encuestas.,%,0.9,0.89,,,
-Cadena de Suministro,02. Indicadores Negocio,03. Margen Operativo,Controla que el crecimiento en ventas no sacrifique la rentabilidad,%,0.26,0.21,0.33,,
-Finanzas,02. Indicadores Negocio,03. Margen Operativo,Controla que el crecimiento en ventas no sacrifique la rentabilidad,%,0.26,0.21,0.33,,
-Cadena de Suministro,02. Indicadores Negocio,01. EBITDA atribuible a la CDS (),Mide la contribución total del área a la rentabilidad de la empresa.,USD,10000000.0,8000000.0,,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,02. Indicadores Negocio,04. Reducción estructural de costos vs año anterior (%),"Premia eficiencia financiera sostenida, no acciones puntuales.",%,0.25,0.13,,,
-Cadena de Suministro,03. Indicadores Operativos,03. Costo Total de Inventario,Cuál es el Costo Total del Inventario de SUMIMSA,USD,20000000.0,24184197.0,23202000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,04. Incrementar la Rotación a 3 vueltas por año / Inventarios,Cuántas veces/ vueltas se le da al inventario,Número,3.0,2.29,2.29,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,02. Confiabilidad de Inventario (%),Qué materiales se tienen en inventario,%,0.98,0.98,0.99,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=84f66aa5c8cc4e7dc833&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,10. Incrementar a 90% el promedio de las BDs contra contrato,,,,,0.89,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=28a480ae-62b3-4273-800a-efe1d6b096d7&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=90ea397d47447f31915d&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,02. Incrementar la satisfacción del cliente a 90% / Compras,,,,,0.87,,
-Cadena de Suministro,03. Indicadores Operativos,08. Mantener un servicio a cliente a un 90% / Inventarios,,,,,0.87,,
-Cadena de Suministro,03. Indicadores Operativos,01. Compras a proveedores aprobados (%) en un 95%.,,,,,0.83,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=9277e812-b72a-4dcc-9e02-02fe484c2ef8&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=4054e62453e2d81188a4&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,05. Cumplimiento a SLAs,En qué porcentaje de los pedidos se cumplieron los SLAs internos,%,0.9,0.5,0.94,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=14a2099c-e954-41d1-87bb-a44e0ad5d320&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=cdc56100917931a099c6&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,04. Compras a Crédito (%) en un 70%,Qué proporción de las compras realizadas impactan el flujo de efectivo,%,0.7,0.2,0.82,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=9277e812-b72a-4dcc-9e02-02fe484c2ef8&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=4054e62453e2d81188a4&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,02. Indicadores Negocio,02. Costo de Ventas / Ingresos Netos (%),Evalúa eficiencia de abastecimiento. Impacto directo de compras en el margen.,%,0.45,0.38,0.48,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,05. Mantener el margen operativo en un 40%,,,,,0.5,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=14a2099c-e954-41d1-87bb-a44e0ad5d320&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=cdc56100917931a099c6&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,06. Cumplimiento a OTIF,En qué porcentaje de los pedidos se entregó a tiempo y completo,%,0.9,0.5,0.94,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=14a2099c-e954-41d1-87bb-a44e0ad5d320&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=cdc56100917931a099c6&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,02. Indicadores Negocio,03. Margen Bruto (%),Refleja el resultado de la gestión de compras y abastecimiento.,%,0.3,0.25,0.33,,
-Cadena de Suministro,03. Indicadores Operativos,08. Proveedores con contrato o acuerdo comercial,Con qué porcentaje de nuestros proveedores aprobados se tienen firmados acuerdos contractuales,%,0.5,0.15,0.34,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=9277e812-b72a-4dcc-9e02-02fe484c2ef8&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=4054e62453e2d81188a4&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,06. Ahorros del 2% de las compras en 2026,,,,,0.012,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=9277e812-b72a-4dcc-9e02-02fe484c2ef8&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=4054e62453e2d81188a4&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,09. Ahorros del 2% de las compras en 2026 / Compras,,,,,0.012,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=9277e812-b72a-4dcc-9e02-02fe484c2ef8&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=4054e62453e2d81188a4&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Cadena de Suministro,03. Indicadores Operativos,07. Accidentes en Almacén (),Qué tan seguras son las operaciones en almacén,Número,0.0,0.0,0.0,,
-Capital Humano,02. Indicadores Negocio,03. Margen Operativo,Controla que el crecimiento en ventas no sacrifique la rentabilidad,%,0.26,0.21,0.33,,
-TI,02. Indicadores Negocio,03. Margen Operativo,Controla que el crecimiento en ventas no sacrifique la rentabilidad,%,0.26,0.21,0.33,,
-Auditoría,02. Indicadores Negocio,03. Margen Operativo,Controla que el crecimiento en ventas no sacrifique la rentabilidad,%,0.26,0.21,0.33,,
-Cadena de Suministro,04. Resultados 360,01. Integridad,Evaluar la consistencia y ética del comportamiento del individuo dentro de la organización.,%,0.85,0.86,0.86,,
-Cadena de Suministro,04. Resultados 360,02. Efectividad,Medir la capacidad para lograr resultados de manera eficiente y con calidad.,%,0.85,0.84,0.84,,
-Cadena de Suministro,04. Resultados 360,03. Trabajo Colaborativo,Valorar la habilidad para trabajar de manera constructiva y en equipo con otros.,%,0.85,0.84,0.84,,
-Cadena de Suministro,01. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,5.0,5.0,,,
-Cadena de Suministro,01. Objetivos,02. Reducción de Costos por Innovación,,%,1.0,1.0,,,
-Cadena de Suministro,01. Objetivos,03. Éxito Proyectos Implementados,,%,1.0,1.0,,,
-Cadena de Suministro,01. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,1.0,1.0,,,
-Talleres,01. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,1.0,1.0,,,
-Cadena de Suministro,02. Indicadores Negocio,04. EBITDA / Ingresos (%),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,,,0.22292862640946243,,
-Finanzas,02. Indicadores Negocio,04. EBITDA / Ingresos (%),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,,,0.22292862640946243,,
-Capital Humano,02. Indicadores Negocio,04. EBITDA / Ingresos (%),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,,,0.22292862640946243,,
-TI,02. Indicadores Negocio,04. EBITDA / Ingresos (%),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,,,0.22292862640946243,,
-Auditoría,02. Indicadores Negocio,04. EBITDA / Ingresos (%),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,,,0.22292862640946243,,
-Talleres,01. Objetivos,04. Rotación de personal (%),Indica la estabilidad del personal dentro de la empresa.,%,0.05,0.07,,,
-Cadena de Suministro,02. Indicadores Negocio,05. EBITDA,Activa el bono solo si se alcanza un porcentaje minimo del EBITDA planeado,USD,36573000.0,19649000.0,37940000.0,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=d6a9b2f994156707e930&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,
-Finanzas,02. Indicadores Negocio,05. EBITDA,Activa el bono solo si se alcanza un porcentaje minimo del EBITDA planeado,USD,36573000.0,19649000.0,37940000.0,,
-Finanzas,02. Indicadores Negocio,01. Flujo de Efectivo Operativo / EBITDA (%),Mide la capacidad de conversión de utilidad en caja. Alta correlación con sostenibilidad financiera.,%,0.24,0.44,0.44,,
-Finanzas,02. Indicadores Negocio,02. Exactitud Presupuestal (%),Evalúa disciplina financiera en la planeación y control del negocio.,%,0.9,0.6,0.6,,
-Finanzas,02. Indicadores Negocio,03. Ciclo de Conversión de Efectivo (Días),Mide la eficiencia en capital de trabajo y liquidez operativa.,Días,90.0,230.0,230.0,,
-Finanzas,03. Indicadores Operativos,08. Cuentas por Pagar,Deslizamiento de cartera,%,0.7,0.0,0.0,,
-Finanzas,03. Indicadores Operativos,09. Cuentas por Cobrar,Deslizamiento de cartera,%,0.95,0.0,0.0,,
-Finanzas,03. Indicadores Operativos,01. Implementación de proceso Presupuesto Anual,,,,,,,
-Finanzas,03. Indicadores Operativos,02. Creación de Centros de costos por subdirección y subsegmentos,,,,,,,
-Finanzas,03. Indicadores Operativos,03. Presentaciones de Consejo y Comité de Productividad (eficiencia interna vs ACAD),,,,,,,
-Finanzas,03. Indicadores Operativos,04. Creación de reportes ejecutivos para DG  (Mencionar los reportes requeridos vs los entregados),,,,,,,
-Finanzas,03. Indicadores Operativos,05. Desviaciones de presupuesto de pagarés (Se mostrará semaforo rojo a verde),,,,,,,
-Cadena de Suministro,04. Resultados 360,04. Responsabilidad,Determinar la capacidad de asumir y gestionar compromisos y responsabilidades laborales.,%,0.85,0.87,0.87,,
-Cadena de Suministro,04. Resultados 360,05. Enfoque al Cliente,Evaluar la orientación hacia la satisfacción y necesidades del cliente interno o externo,%,0.85,0.83,0.83,,
-Finanzas,04. Resultados 360,01. Integridad,Evaluar la consistencia y ética del comportamiento del individuo dentro de la organización.,%,0.85,0.91,0.91,,
-Finanzas,04. Resultados 360,02. Efectividad,Medir la capacidad para lograr resultados de manera eficiente y con calidad.,%,0.85,0.9,0.9,,
-Finanzas,04. Resultados 360,03. Trabajo Colaborativo,Valorar la habilidad para trabajar de manera constructiva y en equipo con otros.,%,0.85,0.92,0.92,,
-Finanzas,04. Resultados 360,04. Responsabilidad,Determinar la capacidad de asumir y gestionar compromisos y responsabilidades laborales.,%,0.85,0.94,0.94,,
-Finanzas,04. Resultados 360,05. Enfoque al Cliente,Evaluar la orientación hacia la satisfacción y necesidades del cliente interno o externo,%,0.85,0.89,0.89,,
-Finanzas,01. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,5.0,5.0,5.0,,
-Finanzas,01. Objetivos,02. Reducción de Costos por Innovación,,%,1.0,1.0,1.0,,
-Finanzas,01. Objetivos,03. Éxito Proyectos Implementados,,%,1.0,1.0,1.0,,
-Finanzas,01. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,1.0,1.0,1.0,,
-Finanzas,01. Objetivos,01. Cierre Contable al día 13 (día),Asegurar la prontitud y precisión en el cierre de los estados financieros mensuales.,días,13.0,13.0,13.0,,
-Finanzas,01. Objetivos,02. Ahorro en las cuentas de gastos - Administrativos - Ventas (%),Evaluar la efectividad en la gestión y control de costos administrativos y de ventas.,%,0.2,0.1,0.1,,
-Finanzas,01. Objetivos,03. Desviación del Presupuesto de Pagarés (%),Medir la precisión en la planificación financiera respecto a los compromisos de pago.,%,0.05,0.02,0.02,,
-Finanzas,01. Objetivos,04. Portal de Proveedores Fase 1 (%),Facilitar y mejorar la comunicación y gestión de las relaciones con proveedores.,%,1.0,0.8,0.8,,
-Finanzas,01. Objetivos,"06. Reporte de Rentabilidad por marca, familia, segmento (%)",Proveer análisis detallado de la rentabilidad para estrategias de negocio ajustadas.,%,1.0,0.9,0.9,,
-Finanzas,01. Objetivos,07. Depuración en la Contabilidad (%),Mejorar la exactitud y claridad de los registros contables mediante revisiones y ajustes rutinarios.,%,1.0,0.9,0.9,,
-Capital Humano,02. Indicadores Negocio,05. EBITDA,Activa el bono solo si se alcanza un porcentaje minimo del EBITDA planeado,USD,36573000.0,19649000.0,37940000.0,,
-TI,02. Indicadores Negocio,05. EBITDA,Activa el bono solo si se alcanza un porcentaje minimo del EBITDA planeado,USD,36573000.0,19649000.0,37940000.0,,
-Auditoría,02. Indicadores Negocio,05. EBITDA,Activa el bono solo si se alcanza un porcentaje minimo del EBITDA planeado,USD,36573000.0,19649000.0,37940000.0,,
-Talleres,01. Objetivos,05. Accidentes de trabajo (),Mide la frecuencia de accidentes para mejorar la seguridad.,Número,0.0,0.0,,,
-Cadena de Suministro,02. Indicadores Negocio,06. EBITDA / Headcount,Incorpora eficiencia estructural y evita crecimiento desordenado de la nomina,USD,60000.0,35000.0,64000.0,,
-Finanzas,02. Indicadores Negocio,06. EBITDA / Headcount,Incorpora eficiencia estructural y evita crecimiento desordenado de la nomina,USD,60000.0,35000.0,64000.0,,
-Capital Humano,02. Indicadores Negocio,06. EBITDA / Headcount,Incorpora eficiencia estructural y evita crecimiento desordenado de la nomina,USD,60000.0,35000.0,64000.0,,
-TI,02. Indicadores Negocio,06. EBITDA / Headcount,Incorpora eficiencia estructural y evita crecimiento desordenado de la nomina,USD,60000.0,35000.0,64000.0,,
-Auditoría,02. Indicadores Negocio,06. EBITDA / Headcount,Incorpora eficiencia estructural y evita crecimiento desordenado de la nomina,USD,60000.0,35000.0,64000.0,,
-Capital Humano,02. Indicadores Negocio,01. EBITDA / Headcount (),Mide la eficiencia estructural del headcount frente al valor generado.,USD,18000.0,35000.0,35000.0,,
-Capital Humano,02. Indicadores Negocio,02. Costo Total de Nómina / Ingresos (%),Evalúa el peso financiero del personal sobre la operación controla sobredimensionamiento.,%,0.13,0.14,0.14,,
-Capital Humano,02. Indicadores Negocio,03. EBITDA / Ingresos (%) (TBX  Talleres),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,0.3,0.27,0.27,,
-Capital Humano,01. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,5.0,5.0,5.0,,
-Capital Humano,01. Objetivos,02. Reducción de Costos por Innovación,,%,1.0,1.0,1.0,,
-Capital Humano,01. Objetivos,03. Éxito Proyectos Implementados,,%,1.0,1.0,1.0,,
-Capital Humano,01. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,1.0,1.0,1.0,,
-Capital Humano,03. Indicadores Operativos,Reducir el índice de rotación (Renuncias),,,,,,,
-Capital Humano,03. Indicadores Operativos,"Lograr REPSE de SUMIMSA (Adicional, se logró el de VALCAMEX)",,,,,,,
-Capital Humano,03. Indicadores Operativos,Implementación línea Letica,,,,,,,
-Capital Humano,03. Indicadores Operativos,Tasa óptima de ausentismo (injustificado),,,,,,,
-Capital Humano,03. Indicadores Operativos,Reclutamiento: filtros completos e integrales,,,,,,,
-Capital Humano,03. Indicadores Operativos,Progamas de BIENESTAR (SUMIMSALUD),,,,,,,
-Capital Humano,03. Indicadores Operativos,Desarrollo modelo de liderazgo,,,,,,,
-Capital Humano,03. Indicadores Operativos,Mejorar el clima laboral,,,,,,,
-Capital Humano,03. Indicadores Operativos,Regularización aspectos legales nomina (IMSS/INFONAVIT/) estrategia minimizar impactos de costos por reclasificación,,,,,,,
-Capital Humano,03. Indicadores Operativos,"Optimización costos TI (Impresoras, Telefonía, Estructura, segmentación equipos cómputo, migración licencias de correo a Microsoft)",,,,,,,
-Capital Humano,03. Indicadores Operativos,Laboral: Reducción % de demandas laborales,,,,,,,
-Capital Humano,03. Indicadores Operativos,Capital Humano: Ahorros en desvinculaciones,,,,,,,
-Capital Humano,03. Indicadores Operativos,Proceso de PTU (Alineado y justificado a los procesos de ley),,,,,,,
-Talleres,01. Objetivos,06. Monto de Eventos Ambientales (Alineados a ASG) (),Evalúa el impacto ambiental y alineación con sostenibilidad.,USD,200000.0,23000.0,,,
-Talleres,01. Objetivos,09. Reporte vs Desempeño de N1 evaluando sus KPIs,,%,1.0,0.5,,,
-Talleres,01. Objetivos,10. Eventos ambientales,,,0.0,0.0,,,
-Talleres,04. Resultados 360,01. Integridad,Evaluar la consistencia y ética del comportamiento del individuo dentro de la organización.,%,0.85,0.83,0.83,,
-Talleres,04. Resultados 360,02. Efectividad,Medir la capacidad para lograr resultados de manera eficiente y con calidad.,%,0.85,0.78,0.78,,
-Cadena de Suministro,02. Indicadores Negocio,07. Utilidad Neta Ajustada,Elimina distorsiones contables y refleja el resultado economico real,USD,22180000.0,8364000.0,12713000.0,,
-Finanzas,02. Indicadores Negocio,07. Utilidad Neta Ajustada,Elimina distorsiones contables y refleja el resultado economico real,USD,22180000.0,8364000.0,12713000.0,,
-Capital Humano,02. Indicadores Negocio,07. Utilidad Neta Ajustada,Elimina distorsiones contables y refleja el resultado economico real,USD,22180000.0,8364000.0,12713000.0,,
-TI,02. Indicadores Negocio,07. Utilidad Neta Ajustada,Elimina distorsiones contables y refleja el resultado economico real,USD,22180000.0,8364000.0,12713000.0,,
-Auditoría,02. Indicadores Negocio,07. Utilidad Neta Ajustada,Elimina distorsiones contables y refleja el resultado economico real,USD,22180000.0,8364000.0,12713000.0,,
-Finanzas,02. Indicadores Negocio,08. Flujo de Efectivo Operativo,Asegura que las utilidades se conviertan en liquidez real para la empresa,USD,110885000.0,95745000.0,0.0,,
-TI,02. Indicadores Negocio,01. EBITDA / Ingresos (%) (TBX  Talleres),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,0.3,0.27,,,
-TI,03. Indicadores Operativos,01. Proyectos de TI Entregados a Tiempo (%),Medir la eficiencia en la ejecución de proyectos dentro del tiempo planificado.,%,1.0,0.9,,,
-TI,03. Indicadores Operativos,02. Tiempo Promedio de Resolución de Tickets (hrs),Evaluar la eficiencia en la resolución de incidencias o solicitudes técnicas.,Horas,1.5,4.0,,,
-TI,03. Indicadores Operativos,03. Ahorro por Automatización (),Cuantificar el ahorro de costos a través de procesos automatizados.,USD,200000.0,0.0,,,
-TI,03. Indicadores Operativos,04. Reducción en Tiempo de Proceso (%),Medir la mejora en la eficiencia de los procesos operativos.,%,0.25,0.12,,,
-TI,03. Indicadores Operativos,05. Datos Críticos con Diccionario Publicado (%),Asegurar la accesibilidad y comprensión de datos críticos mediante documentación adecuada.,%,0.9,0.7,,,
-TI,03. Indicadores Operativos,06. Horas Hombre Ahorradas (HH),Determinar el tiempo de trabajo humano reducido por mejoras o automatización de procesos.,Horas Hombre,48000.0,0.0,,,
-TI,03. Indicadores Operativos,07. Tiempo de Disponibilidad del Sistema (%),Evaluar la confiabilidad y funcionamiento ininterrumpido de un sistema.,%,0.99,0.99,,,
-TI,03. Indicadores Operativos,08. Tiempo de Disponibilidad de Servicios (%),Medir la disponibilidad y continuidad de servicios ofrecidos.,%,0.99,0.99,,,
-TI,03. Indicadores Operativos,09. Incremento de Cultura de la Tecnología (%),Evaluar el aumento en la adopción y adaptación a tecnologías dentro de la organización.,%,0.3,0.1,,,
-TI,01. Objetivos,10. Prueba funcional anual de plan recuperación anti desastres (DRP),Infraestructura,,52.0,52.0,,,
-TI,01. Objetivos,11. Aseguramiento de los 5 sites Sumimsa,Infraestructura,,5.0,5.0,,,
-TI,01. Objetivos,12. Reducir en 10% el gasto de planes móviles de los líneas celulares activas anual,Ahorros,%,0.1,0.05,,,
-TI,01. Objetivos,13.  Implementar EDR en los 398 equipos de colaboradores,Ciberceguridad,%,1.0,1.0,,,
-TI,01. Objetivos,"14. Concientizar a los 398 colaboradores con campañas antiphishing, para reducir a 0 incidentes",Ciberceguridad,%,1.0,1.0,,,
-TI,01. Objetivos,"15. Elaboración de los 5 conjuntos de datos (dashboards)  para toma de decisiones de acuerdo con plan anual en el segundo trimestre del 2026: Ventas, compras, inventarios, tesorería y finanzas",Inteligencia de Negocios,%,1.0,1.0,,,
-TI,01. Objetivos,16. Asegurar el manejo de los datos con la totalidad de los tableros que se generaran durante 2026 y alinearlos a un modelos corporativo sostenible,Gobierno de Datos,%,0.5,0.2,,,
-TI,01. Objetivos,17. Asegurar durante el 4Q que se colocan candados en el sistema para que las OC y PV tengan consistencia,Gobierno de Datos,%,0.3,0.05,,,
-TI,01. Objetivos,18. Realizar un tablero que contenga la información necesaria validada por DG y subdirectores que se dé visibilidad del seguimiento del pedido. Esta actividad quedara resuelta para el 3Q,Gobierno de Datos,%,1.0,0.3,,,
-TI,01. Objetivos,19. Durante 4Q realizar la certificación de usuarios con respecto a permisos y capacitación de los sistemas actuales.,Regulatorio,%,1.0,0.9,,,
-TI,01. Objetivos,"Al finalizar 2026 colocar al menos 5 power apps que ayuden a la aceleración de negocio y transformación digital alineado a los objetivos planteados por London.  Adicionalmente, terminar la intranet de Sumimsa como plataforma de comunicación y gestión",Transformación Digital,,5.0,2.0,,,
-Talleres,04. Resultados 360,03. Trabajo Colaborativo,Valorar la habilidad para trabajar de manera constructiva y en equipo con otros.,%,0.85,0.76,0.76,,
-Talleres,04. Resultados 360,04. Responsabilidad,Determinar la capacidad de asumir y gestionar compromisos y responsabilidades laborales.,%,0.85,0.78,0.78,,
-Talleres,04. Resultados 360,05. Enfoque al Cliente,Evaluar la orientación hacia la satisfacción y necesidades del cliente interno o externo,%,0.85,0.75,0.75,,
-TI,01. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,5.0,5.0,,,
-TI,01. Objetivos,02. Reducción de Costos por Innovación,,%,1.0,1.0,,,
-TI,01. Objetivos,03. Éxito Proyectos Implementados,,%,1.0,1.0,,,
-TI,01. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,1.0,1.0,,,
-TBX Servicios,04. Resultados 360,01. Integridad,Evaluar la consistencia y ética del comportamiento del individuo dentro de la organización.,%,NA,NA,NA,,
-TBX Servicios,04. Resultados 360,02. Efectividad,Medir la capacidad para lograr resultados de manera eficiente y con calidad.,%,NA,NA,NA,,
-TBX Servicios,04. Resultados 360,03. Trabajo Colaborativo,Valorar la habilidad para trabajar de manera constructiva y en equipo con otros.,%,NA,NA,NA,,
-TBX Servicios,04. Resultados 360,04. Responsabilidad,Determinar la capacidad de asumir y gestionar compromisos y responsabilidades laborales.,%,NA,NA,NA,,
-TBX Servicios,04. Resultados 360,05. Enfoque al Cliente,Evaluar la orientación hacia la satisfacción y necesidades del cliente interno o externo,%,NA,NA,NA,,
-Capital Humano,02. Indicadores Negocio,08. Flujo de Efectivo Operativo,Asegura que las utilidades se conviertan en liquidez real para la empresa,USD,110885000.0,95745000.0,0.0,,
-TI,02. Indicadores Negocio,08. Flujo de Efectivo Operativo,Asegura que las utilidades se conviertan en liquidez real para la empresa,USD,110885000.0,95745000.0,0.0,,
-Auditoría,02. Indicadores Negocio,08. Flujo de Efectivo Operativo,Asegura que las utilidades se conviertan en liquidez real para la empresa,USD,110885000.0,95745000.0,0.0,,
-Finanzas,02. Indicadores Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,Asegura disciplina en la ejecucion de inversiones en empresas en expansion,%,0.9,0.87,0.0,,
-Capital Humano,02. Indicadores Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,Asegura disciplina en la ejecucion de inversiones en empresas en expansion,%,0.9,0.87,0.0,,
-TI,02. Indicadores Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,Asegura disciplina en la ejecucion de inversiones en empresas en expansion,%,0.9,0.87,0.0,,
-Auditoría,02. Indicadores Negocio,09. Cumplimiento del Plan de Inversion / CAPEX,Asegura disciplina en la ejecucion de inversiones en empresas en expansion,%,0.9,0.87,0.0,,
-Auditoría,02. Indicadores Negocio,01. EBITDA / Ingresos (%) (TBX  Talleres),"Relación de rentabilidad sobre ventas, útil para benchmarking interno.",%,0.3,0.27,,,
-Auditoría,01. Objetivos,01. Métricas ASG cumplidas (MNJ) (%),"Evaluar el cumplimiento de objetivos ambientales, sociales y de gobernanza dentro de la organización.",%,0.9,0.9,,,
-Auditoría,01. Objetivos,02. Documentación de las 71 métricas ASG (%),Asegurar la transparencia y la responsabilidad mediante la documentación exhaustiva de métricas ASG.,%,0.9,0.95,,,
-Auditoría,01. Objetivos,03. Cumplimiento del Plan de Auditorías SGI (%),Verificar la adherencia al plan de auditorías y asegurar la cobertura adecuada de control interno.,%,1.0,1.0,,,
-Auditoría,01. Objetivos,04. Avance de certificación ISO / AsmeB30.9-2026 de Talleres y Estrobos (%),"Medir el progreso hacia la obtención o renovación de certificaciones clave para la organización. (por etapas: inclusión SGI, auditorías, certificación final)",%,0.9,1.0,,,
-Auditoría,01. Objetivos,05. Denuncias Cerradas en 3 Semanas por Robos Internos (%),Robos internos: % de denuncias cerradas dentro del plazo de 3 semanas. Evaluar la eficiencia en la investigación y resolución de incidentes de robo interno.,%,0.9,1.0,,,
-Auditoría,01. Objetivos,"06. Cumplimiento en la entrega y calidad del informe MMRDD (Matriz de Monitoreo, Reporte y Diagnóstico de Denuncias) de PEMEX (%)","Cumplimiento en la entrega y calidad del informe MMRDD (Matriz de Monitoreo, Reporte y Diagnóstico de Denuncias) de PEMEX..Monitorear la eficacia y puntualidad en la entrega de informes críticos para la toma de decisiones.",%,0.9,1.0,,,
-Auditoría,01. Objetivos,07. Tiempo promedio de cierre de denuncias (días),"Línea Ética...Medir la rapidez en la atención y resolución de denuncias éticas, promoviendo confianza en los canales formales.",días,21.0,15.0,,,
-Auditoría,01. Objetivos,08. Número de deductivas contractuales por incumplimiento de cursos vigentes y experiencia (),Evaluar la efectividad de controles internos mediante el seguimiento a sanciones contractuales.,Número,0.0,0.0,,,
-Auditoría,01. Objetivos,09. Responsables SSPA con cursos y experiencia vigente (%),"Asegurar que el personal clave está debidamente capacitado en Seguridad, Salud y Protección Ambiental.",%,0.95,0.88,,,
-Auditoría,01. Objetivos,10. Auditorías Ejecutadas vs Planificadas (%),Verificar el cumplimiento del calendario de auditorías para asegurar un control eficaz.,%,0.95,0.95,,,
-Auditoría,01. Objetivos,11. Hallazgos Críticos Corregidos dentro del Plazo Establecido (%),Evaluar la efectividad de auditorías regulares en procesos operativos críticos.,%,0.9,1.0,,,
-Auditoría,01. Objetivos,12. KPIs alineados al Marco de Objetivos de Riesgos Empresariales (%),Monitorear el alineamiento de actividades y reportes con los objetivos estratégicos de la organización.,%,0.95,0.96,,,
-Auditoría,01. Objetivos,"13. Alertas de incumplimiento de KPIs estratégicos, tácticos y operativos atendidas en plazo (%)",Asegurar que los contratos de validación cumplen con los indicadores clave de rendimiento establecidos.,%,0.9,0.91,,,
-Auditoría,01. Objetivos,"14. Entrega del informe mensual de actividades, resultados y avances del área de Seguridad Patrimonial (%)",Medir la eficiencia en la gestión de procesos de verificación planificados.,%,1.0,1.0,,,
-Auditoría,01. Objetivos,"15. Tasa de novedades detectadas en filtros de seguridad (alcoholimetría, revisión de mochilas, uso de uniforme) (%)",Identificar y corregir fallas en los controles preventivos para garantizar la seguridad organizacional.,%,0.02,0.04,,,
-TI,04. Resultados 360,01. Integridad,Evaluar la consistencia y ética del comportamiento del individuo dentro de la organización.,%,0.85,0.85,0.85,,
-TI,04. Resultados 360,02. Efectividad,Medir la capacidad para lograr resultados de manera eficiente y con calidad.,%,0.85,0.86,0.86,,
-TI,04. Resultados 360,03. Trabajo Colaborativo,Valorar la habilidad para trabajar de manera constructiva y en equipo con otros.,%,0.85,0.88,0.88,,
-TI,04. Resultados 360,04. Responsabilidad,Determinar la capacidad de asumir y gestionar compromisos y responsabilidades laborales.,%,0.85,0.86,0.86,,
-TI,04. Resultados 360,05. Enfoque al Cliente,Evaluar la orientación hacia la satisfacción y necesidades del cliente interno o externo,%,0.85,0.85,0.85,,
-Auditoría,01. Objetivos,01. Cumplimiento Plan Desarrollo institucional,,,5.0,5.0,,,
-Auditoría,01. Objetivos,02. Reducción de Costos por Innovación,,%,1.0,1.0,,,
-Auditoría,01. Objetivos,03. Éxito Proyectos Implementados,,%,1.0,1.0,,,
-Auditoría,01. Objetivos,04. Cumplimiento total de requisitos legales contractuales proveedores y clientes,,%,1.0,1.0,,,
-Auditoría,03. Indicadores Operativos,01. Matrices de Control,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,02. Seguimiento a PAC,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,03. Estrategias a Riesgos (Act. Comerciales),,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,04. Certificación ISO,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,05. Aseguramiento de los inventarios,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,06. Monitoreo de Procesos,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,07. Revisión de trabajos especiales (DG),,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,08. Inventarios de BDs,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,"09. Informes de MMRDD, SSPA y CN a PEMEX",,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,10. Seguimiento Línea Ética y CEC,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,"11. Cumplimiento Factores ASG (802, 601 y 602)",,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,12. Validación SGI-Talleres,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,13. Revisión Integridad Terceros W.Check,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,14. Tiempos y personal destinado a SSPA (Efectividad),,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,15. Requisitos Legales y Ambientales Anexo SSPA,,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,16. Análisis y Concentraciones informes (0 multas),,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,17. Cumplimiento Indicadores (SSPA y SGI),,,0.0,0.0,,,
-Auditoría,03. Indicadores Operativos,18. Validación del Anexo SSPA y SGI TBX,,,0.0,0.0,,,
+Area,Eje,Indicador,Racional,UM,Objetivo,Frecuencia
+Cadena de Suministro,Indicadores de Negocio,01. OTIF · Nivel de servicio,(Entregas completas y a tiempo ÷ Total de entregas) × 100,%,≥ 95%,Semanal
+Cadena de Suministro,Indicadores de Negocio,02. Confiabilidad de inventario,(Registros exactos físico vs. sistema ÷ Registros contados) × 100,%,≥ 98%,Mensual
+Cadena de Suministro,Indicadores de Negocio,03. Rotación de inventario,Costo de ventas ÷ Inventario promedio (vueltas/año),Número,≥ 3 vueltas,Mensual
+Cadena de Suministro,Indicadores de Negocio,04. Costo de la cadena,Costo de ventas ÷ Ingresos netos · Ahorro en compras vs. base,%,CV/Ing ≤ 45% · ahorro ≥ 2%,Mensual
+Cadena de Suministro,Indicadores de Negocio,05. Cumplimiento de abasto,Entregas de proveedores a tiempo ÷ Total × 100,%,≥ 95%,Mensual
+Cadena de Suministro,Indicadores de Negocio,06. Catálogos y costos actualizados,"Registros correctos y vigentes ÷ Total, por catálogo (productos, costos, proveedores) + OC cargadas",%,≥ 80% (100% recurrentes),Mensual
+Cadena de Suministro,Indicadores de Negocio,07. Proveedores con contrato o acuerdo comercial,Proveedores con contrato o acuerdo ÷ Total,%,≥ 50%,Mensual
+Cadena de Suministro,360,01. Integridad,Consistencia y ética del comportamiento dentro de la organización.,%,≥ 85%,Anual
+Cadena de Suministro,360,02. Efectividad,Capacidad para lograr resultados de manera eficiente y con calidad.,%,≥ 85%,Anual
+Cadena de Suministro,360,03. Trabajo Colaborativo,Habilidad para trabajar de manera constructiva y en equipo.,%,≥ 85%,Anual
+Cadena de Suministro,360,04. Responsabilidad,Capacidad de asumir y gestionar compromisos laborales.,%,≥ 85%,Anual
+Cadena de Suministro,360,05. Enfoque al Cliente,Orientación hacia la satisfacción del cliente interno o externo.,%,≥ 85%,Anual
+Auditoría,Indicadores de Negocio,01. Cumplimiento del plan de auditoría,Auditorías ejecutadas ÷ Auditorías planeadas × 100,%,100%,Mensual
+Auditoría,Indicadores de Negocio,02. Remediación de hallazgos en plazo,Hallazgos cerrados dentro del plazo ÷ Total de hallazgos × 100,%,≥ 90%,Mensual
+Auditoría,Indicadores de Negocio,03. Cobertura documental,Autoevaluación de madurez documental (escala 1–5),%,≥ 3/5 (60%),Semestral
+Auditoría,Indicadores de Negocio,04. Calidad documental vs COSO/NIF,Autoevaluación de madurez de control (escala 1–5),%,≥ 3/5 (60%),Semestral
+Auditoría,Indicadores de Negocio,05. Hallazgos recurrentes,Hallazgos que reaparecen ÷ Total de hallazgos × 100,%,< 10% → 0,Trimestral
+Auditoría,Indicadores de Negocio,06. Exposición mitigada,$ en riesgo corregido ÷ $ en riesgo identificado × 100,%,↑ cobertura,Trimestral
+Auditoría,360,01. Integridad,Consistencia y ética del comportamiento dentro de la organización.,%,≥ 75%,Anual
+Auditoría,360,02. Efectividad,Capacidad para lograr resultados de manera eficiente y con calidad.,%,≥ 75%,Anual
+Auditoría,360,03. Trabajo Colaborativo,Habilidad para trabajar de manera constructiva y en equipo.,%,≥ 75%,Anual
+Auditoría,360,04. Responsabilidad,Capacidad de asumir y gestionar compromisos laborales.,%,≥ 75%,Anual
+Auditoría,360,05. Enfoque al Cliente,Orientación hacia la satisfacción del cliente interno o externo.,%,≥ 75%,Anual
+Talleres,Financieros,01. Margen EBITDA de la unidad,EBITDA ÷ Ingresos × 100 (P&L de Talleres por separado),%,≥ plan (ref. 28–31%),Mensual
+Talleres,Financieros,02. Margen bruto,(Ingresos − Costo de ventas) ÷ Ingresos × 100,%,≥ 30%,Mensual
+Talleres,Financieros,03. Ingresos vs. presupuesto,Ventas netas reales ÷ Presupuesto de ventas × 100,%,≥ 100%,Mensual
+Talleres,Financieros,"04. Contratos de gobierno (601, 602, 625)",Monto ejercido ÷ adjudicado · Ingreso one-shot ÷ Ingreso total,%,Ejercido 100% · mezcla monitoreada,Mensual
+Talleres,Financieros,05. EBITDA / Headcount,EBITDA de la unidad ÷ Plantilla equivalente (FTE),USD,≥ $60K USD,Mensual
+Talleres,Operativos,06. Cumplimiento de contratos / OTs,Servicios y OTs cerrados en plazo ÷ Programados × 100,%,≥ 95%,Semanal
+Talleres,Operativos,07. Productividad de la unidad,Horas productivas ÷ Horas disponibles,%,MO 80–85%,Semanal
+Talleres,Operativos,08. Calidad a la primera,Rechazos ÷ Entregados,%,< 2%,Semanal
+Talleres,Operativos,09. Facturabilidad,100% de lo ejecutado facturado en ≤ 45 días (ciclo OT → factura),%,Conciliado 100% · ciclo < 45 d,Semanal
+Talleres,Operativos,10. Integridad de la demanda,Pedidos de venta correctos ÷ Total · catálogo de clientes vigente,%,PV 100% · clientes 100%,Semanal
+Talleres,Operativos,11. Seguridad y equipo operable,# accidentes incapacitantes · Tiempo operable ÷ Programado × 100,%,0 accidentes · equipo ≥ 90%,Semanal
+TBX,Financieros,01. Margen EBITDA de la unidad,EBITDA ÷ Ingresos × 100 (P&L de TBX por separado),%,≥ plan (ref. 28–31%),Mensual
+TBX,Financieros,02. Margen bruto,(Ingresos − Costo de ventas) ÷ Ingresos × 100,%,≥ 30%,Mensual
+TBX,Financieros,03. Ingresos vs. presupuesto,Ventas netas reales ÷ Presupuesto de ventas × 100,%,≥ 100%,Mensual
+TBX,Financieros,04. Contratos de gobierno,Monto ejercido ÷ adjudicado (avance TBX II),%,Ejercido 100%,Mensual
+TBX,Financieros,05. EBITDA / Headcount,EBITDA de la unidad ÷ Plantilla equivalente (FTE),USD,≥ $60K USD,Mensual
+TBX,Operativos,06. Fill Rate BD · Kardex,Líneas surtidas completas ÷ Líneas pedidas × 100,%,≥ 90%,Semanal
+TBX,Operativos,07. Cumplimiento a Venta de Consumibles,Venta real de consumibles ÷ Presupuesto × 100,%,≥ 100%,Mensual
+TBX,Operativos,08. Cumplimiento a la Renta de Contenedores,Renta real ÷ Presupuesto de renta × 100,%,≥ 100%,Mensual
+TBX,Operativos,09. Facturabilidad,100% de lo ejecutado facturado en ≤ 45 días,%,Conciliado 100% · ciclo < 45 d,Semanal
+TBX,Operativos,10. Integridad de la demanda,Pedidos de venta correctos ÷ Total · catálogo de clientes vigente,%,PV 100% · clientes 100%,Semanal
+TBX,Operativos,11. Seguridad y equipo operable,# accidentes incapacitantes · Tiempo operable ÷ Programado × 100,%,0 accidentes · equipo ≥ 90%,Semanal
+Capital Humano,Indicadores de Negocio,01. Rotación de personal,Bajas (renuncias) ÷ Plantilla promedio × 100 (anualizado),%,< 12–15%,Mensual
+Capital Humano,Indicadores de Negocio,02. Ausentismo injustificado,HH perdidas por inasistencia ÷ HH programadas × 100,%,< 3%,Semanal
+Capital Humano,Indicadores de Negocio,03. Tiempo de cobertura de vacante,Días promedio entre requisición aprobada y alta del candidato,días,< 30–45 días,Mensual
+Capital Humano,Indicadores de Negocio,04. Costo de nómina / ingresos,Costo total de nómina ÷ Ingresos × 100,%,≤ 20%,Mensual
+Capital Humano,Indicadores de Negocio,05. Clima & desarrollo (eNPS),Clima organizacional = % satisfacción,%,Mín. 70%,Trimestral
+Capital Humano,360,01. Integridad,Consistencia y ética del comportamiento dentro de la organización.,%,≥ 75%,Anual
+Capital Humano,360,02. Efectividad,Capacidad para lograr resultados de manera eficiente y con calidad.,%,≥ 75%,Anual
+Capital Humano,360,03. Trabajo Colaborativo,Habilidad para trabajar de manera constructiva y en equipo.,%,≥ 75%,Anual
+Capital Humano,360,04. Responsabilidad,Capacidad de asumir y gestionar compromisos laborales.,%,≥ 75%,Anual
+Capital Humano,360,05. Enfoque al Cliente,Orientación hacia la satisfacción del cliente interno o externo.,%,≥ 75%,Anual
+TI,Indicadores de Negocio,01. Disponibilidad de sistemas críticos,Tiempo en operación ÷ Tiempo total comprometido × 100,%,≥ 99.5%,Mensual
+TI,Indicadores de Negocio,02. SLA / MTTR de tickets,Tickets resueltos en SLA ÷ Total · MTTR = Σ tiempo ÷ # tickets,%,SLA ≥ 95% · MTTR ≤ 1.5 h,Mensual
+TI,Indicadores de Negocio,03. Respaldos & recuperación (DRP),Respaldos exitosos ÷ Programados · prueba DRP (RTO/RPO validados),%,100% · DRP probado,Mensual
+TI,Indicadores de Negocio,04. Ciberseguridad,Equipos con EDR ÷ parque · # críticas abiertas · # incidentes,%,EDR 100% · 0 críticas > 30 d,Mensual
+TI,Indicadores de Negocio,05. Integridad de datos maestros,"Registros consistentes y correctos ÷ Total (catálogos, costos, PV, OC)",%,Prod./Costos ≥ 80% · Clientes 100% · PV/OC 100%,Mensual
+TI,Indicadores de Negocio,06. Automatización & adopción,Ahorro $ y HH liberadas · Transacciones en sistema ÷ Total,USD,↑ ahorro · ↑ adopción,Trimestral
+TI,360,01. Integridad,Consistencia y ética del comportamiento dentro de la organización.,%,≥ 75%,Anual
+TI,360,02. Efectividad,Capacidad para lograr resultados de manera eficiente y con calidad.,%,≥ 75%,Anual
+TI,360,03. Trabajo Colaborativo,Habilidad para trabajar de manera constructiva y en equipo.,%,≥ 75%,Anual
+TI,360,04. Responsabilidad,Capacidad de asumir y gestionar compromisos laborales.,%,≥ 75%,Anual
+TI,360,05. Enfoque al Cliente,Orientación hacia la satisfacción del cliente interno o externo.,%,≥ 75%,Anual
+Finanzas,Indicadores de Negocio,01. DSO & cartera vencida,Cuentas por cobrar ÷ Ventas a crédito × días · % cartera vencida,días,DSO < 90–120 d · cobranza ≥ 95%,Semanal
+Finanzas,Indicadores de Negocio,02. DPO & CxP vencida,Cuentas por pagar ÷ Compras a crédito × días · % CxP vencida,%,0 vencido sin gestión,Semanal
+Finanzas,Indicadores de Negocio,03. Ciclo de conversión de efectivo,Días inventario + DSO − DPO,días,CCC ≤ 90 d,Mensual
+Finanzas,Indicadores de Negocio,04. Margen EBITDA consolidado,EBITDA ÷ Ingresos × 100 (nivel SUMIMSA),USD,↑ vs. línea base,Mensual
+Finanzas,Indicadores de Negocio,05. Cierre contable oportuno,Día hábil de cierre,días,Cierre ≤ día 13,Mensual
+Finanzas,Indicadores de Negocio,06. Exactitud presupuestal,1 − |Real − Presupuesto| ÷ Presupuesto,%,≥ 90%,Mensual
+Finanzas,Indicadores de Negocio,07. Conciliación de activo fijo,Activos conciliados físico vs. libros ÷ Total registrado × 100,%,≥ 98% · inventario físico anual,Trimestral
+Finanzas,Indicadores de Negocio,08. Cumplimiento del plan de CAPEX,CAPEX ejercido ÷ CAPEX presupuestado × 100 (proyectos aprobados),%,≥ 90% en alcance y tiempo,Mensual
+Finanzas,360,01. Integridad,Consistencia y ética del comportamiento dentro de la organización.,%,≥ 85%,Anual
+Finanzas,360,02. Efectividad,Capacidad para lograr resultados de manera eficiente y con calidad.,%,≥ 85%,Anual
+Finanzas,360,03. Trabajo Colaborativo,Habilidad para trabajar de manera constructiva y en equipo.,%,≥ 85%,Anual
+Finanzas,360,04. Responsabilidad,Capacidad de asumir y gestionar compromisos laborales.,%,≥ 85%,Anual
+Finanzas,360,05. Enfoque al Cliente,Orientación hacia la satisfacción del cliente interno o externo.,%,≥ 85%,Anual

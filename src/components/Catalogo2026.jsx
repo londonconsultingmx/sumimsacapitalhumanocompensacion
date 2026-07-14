@@ -2,18 +2,14 @@ import React, { useMemo, useState } from 'react'
 import { AREA_COLORS } from '../utils/compensation.js'
 import { useCatalog2026 } from '../data/useCatalog2026.js'
 
-// Orden de ejes del catálogo (coincide con los prefijos del CSV).
-const EJE_ORDER = [
-  '01. Objetivos',
-  '02. Indicadores Negocio',
-  '03. Indicadores Operativos',
-  '04. Resultados 360',
-]
+// Bloques del esquema simplificado. Talleres y TBX dividen sus indicadores en
+// Financieros / Operativos; las demás áreas usan un solo bloque de indicadores.
+const EJE_ORDER = ['Indicadores de Negocio', 'Financieros', 'Operativos', '360']
 const EJE_LABEL = {
-  '01. Objetivos': 'Objetivos',
-  '02. Indicadores Negocio': 'Indicadores Negocio',
-  '03. Indicadores Operativos': 'Indicadores Operativos',
-  '04. Resultados 360': 'Resultados 360',
+  'Indicadores de Negocio': 'Indicadores de Negocio · peso 70%',
+  Financieros: 'Indicadores de Negocio · Financieros (peso 70% junto con Operativos)',
+  Operativos: 'Indicadores de Negocio · Operativos',
+  360: 'Evaluación 360° · peso 30%',
 }
 
 export default function Catalogo2026() {
@@ -40,13 +36,15 @@ export default function Catalogo2026() {
   return (
     <section className="flex flex-col gap-5">
       <div className="bg-white rounded-md shadow-card p-6">
-        <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted mb-1">
+        <div className="text-[11px] uppercase tracking-[0.14em] text-muted mb-1">
           Catálogo de indicadores · Esquema 2026
         </div>
-        <h2 className="text-lg font-semibold text-ink">Listado de indicadores</h2>
+        <h2 className="text-lg font-semibold text-ink">Batería benchmark 2026</h2>
         <p className="text-sm text-muted mt-1 max-w-3xl">
-          Inventario de los indicadores planeados para 2026 de todas las subdirecciones
-          (incluye Servicios/TBX), agrupados por eje. Solo el listado, sin metas ni montos.
+          Mismo esquema simplificado del cierre 2025 aplicado al ejercicio 2026: Indicadores de
+          Negocio 70% y Evaluación 360° 30% (Talleres y TBX sin 360°, solo indicadores). Cada
+          indicador declara su fórmula, su meta/benchmark y su frecuencia de medición; los
+          reales se capturan durante 2026.
         </p>
       </div>
 
@@ -79,18 +77,32 @@ export default function Catalogo2026() {
               </h3>
               <span className="text-xs text-slate-500">{ejeRows.length}</span>
             </div>
-            <ol className="px-5 py-3 grid sm:grid-cols-2 gap-x-8 gap-y-1.5 list-decimal list-inside marker:text-slate-400 marker:text-xs">
-              {ejeRows.map((r, i) => (
-                <li key={i} className="text-sm text-slate-800 leading-snug">
-                  {r.indicador}
-                  {r.compartido && (
-                    <span className="ml-2 text-[9px] font-semibold uppercase bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded-full align-middle">
-                      Compartido
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ol>
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-sm">
+                <thead>
+                  <tr className="text-left text-slate-500 bg-slate-50 border-b border-slate-200">
+                    <th className="py-2 px-5 font-medium">Indicador</th>
+                    <th className="py-2 px-3 font-medium">Fórmula</th>
+                    <th className="py-2 px-3 font-medium whitespace-nowrap">Meta / Benchmark</th>
+                    <th className="py-2 px-3 font-medium">Frecuencia</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ejeRows.map((r, i) => (
+                    <tr key={i} className="border-b border-slate-100 last:border-0 align-top">
+                      <td className="py-2.5 px-5 text-ink font-medium max-w-xs">{r.indicador}</td>
+                      <td className="py-2.5 px-3 text-slate-600 text-xs max-w-md">{r.racional || '—'}</td>
+                      <td className="py-2.5 px-3 text-slate-800 whitespace-nowrap font-medium">
+                        {r.objetivo || '—'}
+                      </td>
+                      <td className="py-2.5 px-3 text-slate-500 whitespace-nowrap text-xs uppercase tracking-wide">
+                        {r.frecuencia || '—'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         )
       })}
