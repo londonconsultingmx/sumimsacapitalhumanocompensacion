@@ -27,7 +27,7 @@ Talleres,Financieros,02. Margen bruto,(Ingresos − Costo de ventas) ÷ Ingresos
 Talleres,Financieros,03. Ingresos vs. presupuesto,Ventas netas reales ÷ Presupuesto de ventas × 100,%,≥ 100%,Mensual
 Talleres,Financieros,"04. Contratos de gobierno (601, 602, 625)",Monto ejercido ÷ adjudicado · Ingreso one-shot ÷ Ingreso total,%,Ejercido 100% · mezcla monitoreada,Mensual
 Talleres,Financieros,05. EBITDA / Headcount,EBITDA de la unidad ÷ Plantilla equivalente (FTE),USD,≥ $60K USD,Mensual
-Talleres,Operativos,06. Cumplimiento de contratos / OTs,Servicios y OTs cerrados en plazo ÷ Programados × 100,%,≥ 95%,Semanal
+Talleres,Operativos,06. OTIF · Entrega de cara al cliente,(Entregas completas y a tiempo ÷ Total de entregas) × 100,%,≥ 95%,Semanal
 Talleres,Operativos,07. Productividad de la unidad,Horas productivas ÷ Horas disponibles,%,MO 80–85%,Semanal
 Talleres,Operativos,08. Calidad a la primera,Rechazos ÷ Entregados,%,< 2%,Semanal
 Talleres,Operativos,09. Facturabilidad,100% de lo ejecutado facturado en ≤ 45 días (ciclo OT → factura),%,Conciliado 100% · ciclo < 45 d,Semanal
