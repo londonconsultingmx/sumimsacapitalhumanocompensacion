@@ -44,11 +44,11 @@ TBX,02. Indicadores de Negocio,08. Cumplimiento a la Renta de Contenedores (%),,
 TBX,02. Indicadores de Negocio,09. Facturabilidad (100% facturado en ≤45 días) (%),,%,Arriba es bueno (>= Meta),1,0,1,0,No,2025-12-31T08:00:00Z,25,https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&reportPage=ccbbeaf254334bcd18d3&pbi_source=appShareLink&portalSessionId=5340e8be-4313-484f-bfe7-d3a8759c75fd,Operativos
 TBX,02. Indicadores de Negocio,10. Integridad de la demanda (%),,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,,Operativos
 TBX,02. Indicadores de Negocio,11. Seguridad y equipo operable (0 accidentes · equipo ≥90%) (%),,%,Arriba es bueno (>= Meta),"0,9",1,1,1,Si,2025-12-31T08:00:00Z,25,,Operativos
-Capital Humano,02. Indicadores de Negocio,01. Rotación de personal · anualizada (%),,%,Arriba es malo (<= Meta),"0,15","0,027",1,1,Si,2025-12-31T08:00:00Z,25,,
+Capital Humano,02. Indicadores de Negocio,01. Rotación de personal · anualizada (%),,%,Arriba es malo (<= Meta),"0,15","0,027",1,1,Si,2025-12-31T08:00:00Z,25,https://reportingservice.sumimsa.mx/ModuloTablerosPowerBI/TableroHeadCount?IdSubseccion=3034,
 Capital Humano,02. Indicadores de Negocio,02. Ausentismo injustificado (%),,%,Arriba es malo (<= Meta),"0,05","0,015",1,1,Si,2025-12-31T08:00:00Z,25,https://reportingservice.sumimsa.mx/ModuloTablerosPowerBI/TableroAusentismo?IdSubseccion=3046,
 Capital Humano,02. Indicadores de Negocio,03. Tiempo de cobertura de vacante (días),,días,Arriba es malo (<= Meta),45,14,1,1,Si,2025-12-31T08:00:00Z,25,,
 Capital Humano,02. Indicadores de Negocio,04. Costo de nómina / ingresos (%),,%,Arriba es malo (<= Meta),"0,2","0,13",1,1,Si,2025-12-31T08:00:00Z,25,,
-Capital Humano,02. Indicadores de Negocio,05. Clima & desarrollo · eNPS (%),,%,Arriba es bueno (>= Meta),"0,7","0,8",1,1,Si,2025-12-31T08:00:00Z,25,,
+Capital Humano,02. Indicadores de Negocio,05. Clima & desarrollo · eNPS (%),,%,Arriba es bueno (>= Meta),"0,7","0,8",1,1,Si,2025-12-31T08:00:00Z,25,https://reportingservice.sumimsa.mx/ModuloEvaluaciones/ResultadosEncuestas?IdSubseccion=3044,
 Capital Humano,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,75","0,94",3,1,Si,2025-12-31T08:00:00Z,25,,
 Capital Humano,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,75","0,89",3,1,Si,2025-12-31T08:00:00Z,25,,
 Capital Humano,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,75","0,9",3,1,Si,2025-12-31T08:00:00Z,25,,
