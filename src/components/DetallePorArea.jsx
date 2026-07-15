@@ -91,6 +91,9 @@ export default function DetallePorArea({ breakdowns }) {
       {EJE_ORDER.map((k) => {
         const rows = b.rowsByEje[k]
         if (!rows.length) return null
+        // En 360° no aplica el % de cumplimiento relativo — se omite la columna.
+        const is360 = k === '03. 360'
+        const nCols = is360 ? 6 : 7
         return (
           <div key={k} className="bg-white rounded-md shadow-card overflow-hidden">
             <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
@@ -113,8 +116,8 @@ export default function DetallePorArea({ breakdowns }) {
                     <th className="py-2 px-3">Dirección</th>
                     <th className="py-2 px-3">Meta / Benchmark</th>
                     <th className="py-2 px-3">Real</th>
-                    <th className="py-2 px-3">% Cumpl.</th>
-                    <th className="py-2 px-3">Status</th>
+                    {!is360 && <th className="py-2 px-3">% Cumpl.</th>}
+                    <th className="py-2 px-3">Estatus</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -122,7 +125,7 @@ export default function DetallePorArea({ breakdowns }) {
                     <React.Fragment key={gi}>
                       {g.label && (
                         <tr className="bg-slate-100/70">
-                          <td colSpan={7} className="py-1.5 px-4 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+                          <td colSpan={nCols} className="py-1.5 px-4 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
                             {g.label} · {g.rows.length}
                           </td>
                         </tr>
@@ -151,9 +154,11 @@ export default function DetallePorArea({ breakdowns }) {
                           fmtMetaReal(r.realRaw, r.um)
                         )}
                       </td>
-                      <td className="py-2 px-3">
-                        <CumplimientoChip row={r} eje={k} />
-                      </td>
+                      {!is360 && (
+                        <td className="py-2 px-3">
+                          <CumplimientoChip row={r} eje={k} />
+                        </td>
+                      )}
                       <td className="py-2 px-3"><StatusPill cumple={r.cumple} sinDato={r.sinDato} /></td>
                     </tr>
                       ))}

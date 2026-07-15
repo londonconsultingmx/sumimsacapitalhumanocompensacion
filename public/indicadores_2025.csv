@@ -32,7 +32,7 @@ Talleres,02. Indicadores de Negocio,07. Productividad de la unidad (hrs producti
 Talleres,02. Indicadores de Negocio,08. Calidad a la primera (rechazos / entregados) (%),,%,Arriba es malo (<= Meta),"0,02",,1,,Sin dato,2025-12-31T08:00:00Z,25,,Operativos
 Talleres,02. Indicadores de Negocio,09. Facturabilidad (100% facturado en ≤45 días) (%),,%,Arriba es bueno (>= Meta),1,0,1,0,No,2025-12-31T08:00:00Z,25,,Operativos
 Talleres,02. Indicadores de Negocio,10. Integridad de la demanda (PV 100% correctos) (%),,%,Arriba es bueno (>= Meta),1,"0,5",1,0,No,2025-12-31T08:00:00Z,25,,Operativos
-Talleres,02. Indicadores de Negocio,11. Seguridad y equipo operable (0 accidentes · equipo ≥90%) (%),,%,Arriba es bueno (>= Meta),"0,9",,1,,Sin dato,2025-12-31T08:00:00Z,25,,Operativos
+Talleres,02. Indicadores de Negocio,11. Seguridad y equipo operable (0 accidentes · equipo ≥90%) (%),,%,Arriba es bueno (>= Meta),"0,9",1,1,1,Si,2025-12-31T08:00:00Z,25,,Operativos
 TBX,02. Indicadores de Negocio,01. Margen EBITDA de la unidad (%),,%,Arriba es bueno (>= Meta),"0,28","0,309",1,1,Si,2025-12-31T08:00:00Z,25,,Financieros
 TBX,02. Indicadores de Negocio,02. Margen bruto (%),,%,Arriba es bueno (>= Meta),"0,3","0,4",1,1,Si,2025-12-31T08:00:00Z,25,,Financieros
 TBX,02. Indicadores de Negocio,03. Ingresos vs. presupuesto (%),,%,Arriba es bueno (>= Meta),1,"1,57",1,1,Si,2025-12-31T08:00:00Z,25,,Financieros
@@ -43,7 +43,7 @@ TBX,02. Indicadores de Negocio,07. Cumplimiento a Venta de Consumibles (%),,%,Ar
 TBX,02. Indicadores de Negocio,08. Cumplimiento a la Renta de Contenedores (%),,%,Arriba es bueno (>= Meta),1,"1,42",1,1,Si,2025-12-31T08:00:00Z,25,,Operativos
 TBX,02. Indicadores de Negocio,09. Facturabilidad (100% facturado en ≤45 días) (%),,%,Arriba es bueno (>= Meta),1,0,1,0,No,2025-12-31T08:00:00Z,25,,Operativos
 TBX,02. Indicadores de Negocio,10. Integridad de la demanda (%),,%,Arriba es bueno (>= Meta),1,1,1,1,Si,2025-12-31T08:00:00Z,25,,Operativos
-TBX,02. Indicadores de Negocio,11. Seguridad y equipo operable (0 accidentes · equipo ≥90%) (%),,%,Arriba es bueno (>= Meta),"0,9",,1,,Sin dato,2025-12-31T08:00:00Z,25,,Operativos
+TBX,02. Indicadores de Negocio,11. Seguridad y equipo operable (0 accidentes · equipo ≥90%) (%),,%,Arriba es bueno (>= Meta),"0,9",1,1,1,Si,2025-12-31T08:00:00Z,25,,Operativos
 Capital Humano,02. Indicadores de Negocio,01. Rotación de personal · anualizada (%),,%,Arriba es malo (<= Meta),"0,15","0,027",1,1,Si,2025-12-31T08:00:00Z,25,,
 Capital Humano,02. Indicadores de Negocio,02. Ausentismo injustificado (%),,%,Arriba es malo (<= Meta),"0,05","0,015",1,1,Si,2025-12-31T08:00:00Z,25,,
 Capital Humano,02. Indicadores de Negocio,03. Tiempo de cobertura de vacante (días),,días,Arriba es malo (<= Meta),45,14,1,1,Si,2025-12-31T08:00:00Z,25,,
