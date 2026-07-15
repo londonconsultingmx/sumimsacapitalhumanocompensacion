@@ -37,7 +37,7 @@ export default function BenchmarksPage({ breakdowns }) {
         <p className="text-sm text-muted mt-1 max-w-3xl">
           Los scores de 360° de cada área se clasifican en la curva de desempeño
           calibrada contra firmas como Korn Ferry, Aon, PwC, Deloitte y GM. El mínimo
-          aprobatorio es <strong className="text-ink">75%</strong> (nivel 3 "Strong / Regularly demonstrated").
+          aprobatorio es <strong className="text-ink">80%</strong>.
         </p>
       </div>
 

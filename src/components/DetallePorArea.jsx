@@ -180,7 +180,7 @@ function CumplimientoChip({ row, eje }) {
   if (row.sinDato) return <span className="text-xs text-slate-400">—</span>
   if (eje === '03. 360') return <span className="text-xs text-slate-400">—</span>
   const ratio = achievementRatio(row)
-  const color = ratio >= 0.999 ? '#15803D' : ratio >= 0.75 ? '#B45309' : '#B91C1C'
+  const color = ratio >= 0.999 ? '#15803D' : ratio >= 0.8 ? '#B45309' : '#B91C1C'
   return (
     <span className="text-sm font-semibold tabular-nums" style={{ color }}>
       {Math.round(ratio * 100)}%

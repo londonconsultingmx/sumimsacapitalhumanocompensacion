@@ -70,7 +70,7 @@ export default function DesgloseEjes({ breakdowns }) {
                     stroke="#212B42"
                     strokeDasharray="4 3"
                     strokeWidth={1.5}
-                    label={{ value: '75% mínimo', position: 'insideTopRight', fill: '#212B42', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
+                    label={{ value: `${Math.round(THRESHOLD_APROBATORIO * 100)}% mínimo`, position: 'insideTopRight', fill: '#212B42', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
                   />
                   <Bar dataKey="score" radius={[0, 6, 6, 0]}>
                     {block.data.map((d) => (

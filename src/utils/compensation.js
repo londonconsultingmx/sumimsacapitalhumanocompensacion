@@ -66,8 +66,8 @@ export const KPIS_SISTEMA = [
 export const EVIDENCIAS_URL =
   'https://suministrosmarinos.sharepoint.com/sites/EsquemaObjetivosIndicadoresSubdirectores/Documentos%20compartidos/Forms/AllItems.aspx'
 
-// Passing threshold: 75% across all ejes, shown as a reference line in charts.
-export const THRESHOLD_APROBATORIO = 0.75
+// Passing threshold: 80% across all ejes, shown as a reference line in charts.
+export const THRESHOLD_APROBATORIO = 0.80
 
 // Subdirector per area (from 2024 evaluation PDF).
 export const SUBDIRECTORES = {

@@ -119,7 +119,7 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
         </div>
         <div className="px-5 py-3 border-t border-rule text-xs text-muted">
           Ordenado por calificación final. La línea vertical de cada barra marca el mínimo
-          aprobatorio de 75%.
+          aprobatorio de {Math.round(THRESHOLD_APROBATORIO * 100)}%.
         </div>
       </div>
     </section>

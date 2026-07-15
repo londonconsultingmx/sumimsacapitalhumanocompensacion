@@ -66,7 +66,7 @@ export default function SinTope({ breakdowns, grupal }) {
                 stroke="#212B42"
                 strokeDasharray="4 3"
                 strokeWidth={1.5}
-                label={{ value: '75% mínimo', position: 'insideRight', fill: '#212B42', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
+                label={{ value: `${Math.round(THRESHOLD_APROBATORIO * 100)}% mínimo`, position: 'insideRight', fill: '#212B42', fontSize: 10, fontFamily: 'JetBrains Mono, monospace' }}
               />
               <Bar dataKey="final" name="Final (con tope)" fill="#24437A" radius={[6, 6, 0, 0]} />
               <Bar dataKey="bruta" name="Bruta (sin tope)" fill="#8B98AC" radius={[6, 6, 0, 0]} />
