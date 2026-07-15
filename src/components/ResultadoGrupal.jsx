@@ -3,6 +3,7 @@ import {
   AREA_COLORS,
   EBITDA_CAP,
   EXCLUDED_FROM_GRUPAL,
+  KPIS_SISTEMA,
   SUBDIRECTORES,
   THRESHOLD_APROBATORIO,
   fmtPct,
@@ -25,6 +26,14 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
     )
 
   const rows = breakdowns.slice().sort((a, b) => b.final - a.final)
+
+  // Origen de los KPIs: cuántos salen de sistema vs. captura manual.
+  // Base = indicadores de negocio de todas las áreas (los 360° no cuentan).
+  const totalKpis = breakdowns.reduce(
+    (s, b) => s + (b.rowsByEje['02. Indicadores de Negocio']?.length ?? 0),
+    0
+  )
+  const sistemaKpis = KPIS_SISTEMA.reduce((s, k) => s + k.sistema, 0)
 
   return (
     <section className="flex flex-col gap-5">
@@ -59,6 +68,9 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
           />
         </div>
       </div>
+
+      {/* Origen de los KPIs: sistema vs. manual */}
+      <OrigenKpis total={totalKpis} sistema={sistemaKpis} />
 
       {/* Tabla por área */}
       <div className="bg-white rounded-md shadow-card overflow-hidden">
@@ -111,6 +123,74 @@ export default function ResultadoGrupal({ breakdowns, grupal }) {
         </div>
       </div>
     </section>
+  )
+}
+
+// Panel de origen de los datos: cuántos KPIs salen de sistema (Business
+// Central / Power BI) y cuántos se capturan manualmente. Los 360° no cuentan.
+function OrigenKpis({ total, sistema }) {
+  const manual = total - sistema
+  const pctSistema = total ? sistema / total : 0
+  const areasSistema = KPIS_SISTEMA.reduce((s, k) => s + k.sistema, 0)
+  return (
+    <div className="bg-white rounded-md shadow-card">
+      <div className="px-5 py-4 border-b border-rule flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="text-base font-semibold text-ink">Origen de los KPIs</h2>
+        <div className="text-xs text-muted">
+          Base: {total} indicadores de negocio · los 360° no cuentan
+        </div>
+      </div>
+      <div className="px-5 py-4 flex flex-col gap-3">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <div>
+            <span className="text-2xl font-semibold text-ink tabular-nums">{sistema}</span>{' '}
+            <span className="text-sm text-slate-700">
+              de sistema · <strong className="text-ink">{fmtPct(pctSistema, 0)}</strong>
+            </span>
+          </div>
+          <div>
+            <span className="text-2xl font-semibold text-muted tabular-nums">{manual}</span>{' '}
+            <span className="text-sm text-slate-700">
+              manuales · <strong className="text-ink">{fmtPct(1 - pctSistema, 0)}</strong>
+            </span>
+          </div>
+        </div>
+        {/* Barra apilada sistema vs manual */}
+        <div className="flex h-2 rounded-sm overflow-hidden bg-rule/60">
+          <div style={{ width: `${pctSistema * 100}%`, background: '#24437A' }} />
+        </div>
+        <div className="flex flex-col gap-1.5 mt-1">
+          {KPIS_SISTEMA.map((k) => (
+            <div key={k.area} className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+              <span
+                className="inline-block w-2 h-2 rounded-full"
+                style={{ background: AREA_COLORS[k.area] ?? '#24437A' }}
+              />
+              <span className="font-medium text-ink">{k.area}</span>
+              <span className="text-slate-600 tabular-nums">{k.sistema} de sistema</span>
+              {k.links.map((l) => (
+                <a
+                  key={l.url}
+                  href={l.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs font-semibold text-blue hover:text-teal-dark underline decoration-dotted underline-offset-2"
+                >
+                  {l.label} ↗
+                </a>
+              ))}
+              {!k.links.length && (
+                <span className="text-xs text-muted">sistema de RH</span>
+              )}
+            </div>
+          ))}
+          <div className="text-xs text-muted mt-1">
+            Auditoría, TI y Finanzas: captura manual ({areasSistema} de {total} KPIs del
+            esquema salen de sistema).
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

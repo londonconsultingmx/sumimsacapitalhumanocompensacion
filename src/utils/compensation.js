@@ -32,6 +32,37 @@ export const SUBGRUPO_LABELS = {
   Operativos: 'Operativos · se miden por unidad',
 }
 
+// KPIs cuyo dato sale de sistema (Business Central / Power BI), por área.
+// Solo el conteo (confirmado por el usuario); los 360° no cuentan. Las ligas
+// son los reportes de Power BI del excel original del proyecto.
+const PBI = 'https://app.powerbi.com/Redirect?action=OpenReport&appId=0ef6ece6-9451-4ebe-af19-80bb1da7889c&ctid=9bb7b321-c671-47d3-897e-cd5e1a950253&pbi_source=appShareLink'
+export const KPIS_SISTEMA = [
+  {
+    area: 'Cadena de Suministro',
+    sistema: 7,
+    links: [
+      { label: 'Servicio · OTIF/SLA', url: `${PBI}&reportObjectId=14a2099c-e954-41d1-87bb-a44e0ad5d320&reportPage=cdc56100917931a099c6` },
+      { label: 'Inventarios', url: `${PBI}&reportObjectId=f718c8b8-e07f-4afe-abf9-675511161781&reportPage=84f66aa5c8cc4e7dc833` },
+      { label: 'Compras', url: `${PBI}&reportObjectId=9277e812-b72a-4dcc-9e02-02fe484c2ef8&reportPage=4054e62453e2d81188a4` },
+    ],
+  },
+  {
+    area: 'TBX',
+    sistema: 6,
+    links: [
+      { label: 'Reporte TBX', url: `${PBI}&reportObjectId=c5d468b7-a9af-4641-a9db-f21086296f62&reportPage=ccbbeaf254334bcd18d3` },
+    ],
+  },
+  {
+    area: 'Talleres',
+    sistema: 3,
+    links: [
+      { label: 'P&L por unidad', url: `${PBI}&reportObjectId=4263319a-5e62-4a0c-9b47-b4a301b464db&reportPage=d6a9b2f994156707e930` },
+    ],
+  },
+  { area: 'Capital Humano', sistema: 3, links: [] },
+]
+
 export const EVIDENCIAS_URL =
   'https://suministrosmarinos.sharepoint.com/sites/EsquemaObjetivosIndicadoresSubdirectores/Documentos%20compartidos/Forms/AllItems.aspx'
 
