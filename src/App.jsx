@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
+import LoginGate, { isAuthed } from './components/LoginGate.jsx'
 import IntroPage from './components/IntroPage.jsx'
 import Header from './components/Header.jsx'
 import ResultadoGrupal from './components/ResultadoGrupal.jsx'
@@ -30,6 +31,10 @@ function useHashRoute() {
 
 export default function App() {
   const [route, go] = useHashRoute()
+  const [authed, setAuthed] = useState(isAuthed)
+  if (!authed) {
+    return <LoginGate onSuccess={() => setAuthed(true)} />
+  }
   if (route === 'intro') {
     return <IntroPage onEnter={() => go('dashboard')} />
   }
