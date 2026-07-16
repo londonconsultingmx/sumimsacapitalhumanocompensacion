@@ -9,7 +9,11 @@ const PILLARS = [
 
 export default function IntroPage({ onEnter }) {
   const { rows } = useData()
-  const nIndicadores = rows ? rows.length : null
+  // Solo indicadores de negocio — las evaluaciones 360° no se cuentan aquí,
+  // igual que en el panel "Origen de los KPIs" del dashboard.
+  const nIndicadores = rows
+    ? rows.filter((r) => r.metrica === '02. Indicadores de Negocio').length
+    : null
   const nAreas = rows ? new Set(rows.map((r) => r.eje)).size : 6
   return (
     <div className="h-screen w-full bg-bg text-ink relative overflow-hidden flex flex-col">
@@ -79,7 +83,7 @@ export default function IntroPage({ onEnter }) {
             <span className="h-3 w-px bg-rule" />
             <span>{nAreas} Subdirecciones</span>
             <span className="h-3 w-px bg-rule" />
-            <span>{nIndicadores ?? '—'} Indicadores</span>
+            <span>{nIndicadores ?? '—'} Indicadores de negocio</span>
           </div>
 
           <button
