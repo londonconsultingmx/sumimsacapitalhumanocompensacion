@@ -55,9 +55,6 @@ export default function LoginGate({ onSuccess }) {
       >
         <div className="flex flex-col items-center gap-2">
           <BrandMark size="lg" caption={null} />
-          <div className="text-[11px] uppercase tracking-[0.18em] text-muted mt-2">
-            Compensación Variable · Subdirecciones
-          </div>
         </div>
 
         <div className="flex flex-col gap-1.5">
