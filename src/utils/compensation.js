@@ -79,7 +79,7 @@ export const SUBDIRECTORES = {
   'Talleres':             { nombre: 'Subdirector Técnico' },
   'TBX':                  { nombre: 'Subdirector Técnico' },
   'TBX Servicios':        { nombre: 'Subdirector Técnico' },
-  'TI':                   { nombre: 'Subdirector de TI' },
+  'TI':                   { nombre: 'Felipe Chávez' },
 }
 
 // Benchmark levels (Korn Ferry / Aon / Deloitte / PwC style bell curve) —
