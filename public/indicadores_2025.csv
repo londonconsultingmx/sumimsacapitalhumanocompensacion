@@ -71,7 +71,7 @@ Finanzas,02. Indicadores de Negocio,03. Días del ciclo del negocio (CxC + Inv -
 Finanzas,02. Indicadores de Negocio,04. EBITDA consolidado (USD),,USD,Arriba es bueno (>= Meta),36573000,37940000,1,1,Si,2025-12-31T08:00:00Z,25,,
 Finanzas,02. Indicadores de Negocio,05. Cierre contable oportuno (día hábil),,días,Arriba es malo (<= Meta),13,13,1,1,Si,2025-12-31T08:00:00Z,25,,
 Finanzas,02. Indicadores de Negocio,06. Check List de Auditoría · normatividad contable,,%,Arriba es bueno (>= Meta),> 85% de pendientes atendidos,No cumple,1,0,No,2025-12-31T08:00:00Z,25,,
-Finanzas,02. Indicadores de Negocio,07. Control de Activos Fijos · inversión / depreciación,,%,Arriba es bueno (>= Meta),Eficiencia en activos 100%,No cumple,1,0,No,2025-12-31T08:00:00Z,25,,
+Finanzas,02. Indicadores de Negocio,07. Control de Activos Fijos · inversión / depreciación,,%,Arriba es bueno (>= Meta),Eficiencia en activos 100%,Parcial,1,0.5,Parcial,2025-12-31T08:00:00Z,25,,
 Finanzas,03. 360,01. Integridad,,%,Arriba es bueno (>= Meta),"0,85","0,91",1,1,Si,2025-12-31T08:00:00Z,25,,
 Finanzas,03. 360,02. Efectividad,,%,Arriba es bueno (>= Meta),"0,85","0,9",1,1,Si,2025-12-31T08:00:00Z,25,,
 Finanzas,03. 360,03. Trabajo Colaborativo,,%,Arriba es bueno (>= Meta),"0,85","0,92",1,1,Si,2025-12-31T08:00:00Z,25,,
