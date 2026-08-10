@@ -69,6 +69,32 @@ export const EVIDENCIAS_URL =
 // Passing threshold: 80% across all ejes, shown as a reference line in charts.
 export const THRESHOLD_APROBATORIO = 0.80
 
+// Bono variable: la calificación se convierte a meses de sueldo. El tope son 6
+// meses (100% de cumplimiento con EBITDA al 100%).
+//   meses = calificación × 6
+// La hoja del Director de Capital Humano publica la columna "EBITDA 100%"
+// (calificación bruta × 6). El pago real usa la calificación con tope, que es
+// lo mismo que aplicar el 96% a los meses: bruta × 0.96 × 6.
+export const BASE_MESES_BONO = 6
+
+export function mesesBono(score, base = BASE_MESES_BONO) {
+  if (!Number.isFinite(score)) return 0
+  return score * base
+}
+
+// Puntos de cada eje sobre la escala de 100 de la hoja de RH. Cuando un área no
+// tiene 360° (Talleres, TBX) el peso se renormaliza, así que indicadores vale
+// los 100 puntos. Siempre se cumple: puntosInd + puntos360 = bruta × 100.
+export function puntosPorEje(breakdown) {
+  const ind = breakdown.scores['02. Indicadores de Negocio']
+  const t360 = breakdown.scores['03. 360']
+  const sin360 = t360 === null
+  return {
+    indicadores: ind === null ? null : ind * (sin360 ? 100 : 70),
+    ev360: sin360 ? null : t360 * 30,
+  }
+}
+
 // Subdirector per area (from 2024 evaluation PDF).
 export const SUBDIRECTORES = {
   'Auditoría':            { nombre: 'Arturo Reyes' },

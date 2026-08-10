@@ -7,6 +7,7 @@ const TABS = [
   { id: 'ejes', label: 'Desglose por eje' },
   { id: 'detalle', label: 'Detalle por área' },
   { id: 'sintope', label: '¿Y sin el tope?' },
+  { id: 'mesesbono', label: 'Compensación 2025 (Meses Bono)' },
   { id: 'benchmarks', label: 'Benchmarks' },
   { id: 'catalogo2026', label: 'Catálogo 2026' },
 ]

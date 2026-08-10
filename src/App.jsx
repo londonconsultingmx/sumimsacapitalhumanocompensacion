@@ -6,6 +6,7 @@ import ResultadoGrupal from './components/ResultadoGrupal.jsx'
 import DesgloseEjes from './components/DesgloseEjes.jsx'
 import DetallePorArea from './components/DetallePorArea.jsx'
 import SinTope from './components/SinTope.jsx'
+import MesesBono from './components/MesesBono.jsx'
 import BenchmarksPage from './components/BenchmarksPage.jsx'
 import Catalogo2026 from './components/Catalogo2026.jsx'
 import { useData } from './data/useData.js'
@@ -67,6 +68,7 @@ function Dashboard({ onBackToIntro }) {
                 {tab === 'ejes' && <DesgloseEjes breakdowns={breakdowns} />}
                 {tab === 'detalle' && <DetallePorArea breakdowns={breakdowns} />}
                 {tab === 'sintope' && <SinTope breakdowns={breakdowns} grupal={grupal} />}
+                {tab === 'mesesbono' && <MesesBono breakdowns={breakdowns} />}
                 {tab === 'benchmarks' && <BenchmarksPage breakdowns={breakdowns} />}
               </>
             )}
