@@ -13,7 +13,8 @@ import {
 const fmtMeses = (n) => n.toFixed(4).replace(/0+$/, '').replace(/\.$/, '')
 
 export default function MesesBono({ breakdowns }) {
-  const todas = breakdowns
+  const filas = breakdowns
+    .filter((b) => tieneBono(b.area))
     .map((b) => {
       const { indicadores, ev360 } = puntosPorEje(b)
       return {
@@ -29,8 +30,6 @@ export default function MesesBono({ breakdowns }) {
     })
     .sort((a, b) => b.mesesPago - a.mesesPago)
 
-  const filas = todas.filter((f) => tieneBono(f.area))
-  const sinBono = todas.filter((f) => !tieneBono(f.area))
   const totalPleno = filas.reduce((s, f) => s + f.mesesPleno, 0)
   const totalPago = filas.reduce((s, f) => s + f.mesesPago, 0)
 
@@ -148,36 +147,6 @@ export default function MesesBono({ breakdowns }) {
           </table>
         </div>
       </div>
-
-      {sinBono.length > 0 && (
-        <div className="bg-white rounded-md shadow-card p-6">
-          <h3 className="font-semibold text-ink">Subdirecciones sin bono variable</h3>
-          <p className="text-xs text-slate-500 mt-0.5">
-            Se evalúan con el mismo esquema y aparecen en el resto del portal, pero no devengan
-            meses de bono.
-          </p>
-          <table className="min-w-full text-sm mt-4">
-            <thead>
-              <tr className="text-left text-slate-400 border-b border-slate-200">
-                <th className="py-2 pr-4">Área</th>
-                <th className="py-2 px-3">Subdirector</th>
-                <th className="py-2 px-3 text-right">Calf. final</th>
-                <th className="py-2 px-3 text-right">Meses</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sinBono.map((f) => (
-                <tr key={f.area} className="border-b border-slate-100 last:border-0 text-slate-400">
-                  <td className="py-2 pr-4">{f.area}</td>
-                  <td className="py-2 px-3">{f.subdirector}</td>
-                  <td className="py-2 px-3 text-right tabular-nums">{(f.bruta * 100).toFixed(2)}</td>
-                  <td className="py-2 px-3 text-right">sin bono</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
     </section>
   )
 }
