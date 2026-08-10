@@ -21,6 +21,9 @@
 >   columna "Meses a pago (EBITDA 100%)" = `bruta × 6`; el pago real usa la
 >   calificación con tope (`bruta × 0.96 × 6`). El EBITDA castiga **una sola vez**:
 >   o sobre la calificación (como aquí) o sobre los meses, nunca las dos.
+>   Solo **4 subdirecciones devengan bono**: TI, Capital Humano, Auditoría y
+>   Finanzas. El Subdirector Técnico (Talleres / TBX) y Cadena de Suministro se
+>   evalúan igual pero no tienen bono (`AREAS_CON_BONO`).
 > - Reales alimentados del cierre 2025 + Consejo de Administración ene-2026
 >   (P&L por unidad, TBX Cumplimiento Presupuesto, CxP, madurez documental de
 >   Auditoría) y datos confirmados por el usuario (OTIF 36%, abasto 59%, etc.).

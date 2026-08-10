@@ -77,6 +77,16 @@ export const THRESHOLD_APROBATORIO = 0.80
 // lo mismo que aplicar el 96% a los meses: bruta × 0.96 × 6.
 export const BASE_MESES_BONO = 6
 
+// Solo estas subdirecciones tienen bono variable (confirmado por el usuario,
+// ago-2026). El resto se evalúa igual y aparece en el resto del portal, pero no
+// devenga meses: el Subdirector Técnico (Talleres / TBX) y Cadena de Suministro
+// quedan fuera del esquema de pago.
+export const AREAS_CON_BONO = new Set(['TI', 'Capital Humano', 'Auditoría', 'Finanzas'])
+
+export function tieneBono(area) {
+  return AREAS_CON_BONO.has(area)
+}
+
 export function mesesBono(score, base = BASE_MESES_BONO) {
   if (!Number.isFinite(score)) return 0
   return score * base
