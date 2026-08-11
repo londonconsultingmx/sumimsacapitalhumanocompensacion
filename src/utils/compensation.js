@@ -87,6 +87,41 @@ export function tieneBono(area) {
   return AREAS_CON_BONO.has(area)
 }
 
+// Escenarios de pago del bono. Cada uno es un factor corporativo que multiplica
+// los meses base (calificación × 6). Los factores salen de la hoja del Director
+// de Capital Humano y reproducen sus cuatro renglones al decimal:
+//   Alberto 5.0776 × 0.594 = 3.0160944 · × 0.96 = 4.874496
+// El bottom line sin Goldman Sachs llega al 100%; incluyéndolo se queda en 59.4%.
+export const BOTTOM_LINE_CON_GS = 0.594
+export const BOTTOM_LINE_SIN_GS = 1
+
+export const ESCENARIOS_BONO = [
+  {
+    id: 'ebitda100',
+    label: 'EBITDA 100%',
+    factor: 1,
+    desc: 'Tope pleno: la calificación sin castigo corporativo.',
+  },
+  {
+    id: 'ebitda96',
+    label: `EBITDA ${EBITDA_CAP * 100}%`,
+    factor: EBITDA_CAP,
+    desc: 'Cierre real del EBITDA corporativo.',
+  },
+  {
+    id: 'blConGS',
+    label: 'Bottom Line con GS',
+    factor: BOTTOM_LINE_CON_GS,
+    desc: 'Bottom line incluyendo Goldman Sachs, que cerró en 59.4%.',
+  },
+  {
+    id: 'blSinGS',
+    label: 'Bottom Line sin GS',
+    factor: BOTTOM_LINE_SIN_GS,
+    desc: 'Bottom line excluyendo Goldman Sachs: llega al 100%.',
+  },
+]
+
 export function mesesBono(score, base = BASE_MESES_BONO) {
   if (!Number.isFinite(score)) return 0
   return score * base

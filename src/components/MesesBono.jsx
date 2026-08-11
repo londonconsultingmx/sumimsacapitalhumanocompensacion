@@ -2,7 +2,10 @@ import React from 'react'
 import {
   AREA_COLORS,
   BASE_MESES_BONO,
+  BOTTOM_LINE_CON_GS,
+  BOTTOM_LINE_SIN_GS,
   EBITDA_CAP,
+  ESCENARIOS_BONO,
   SUBDIRECTORES,
   fmtPct,
   mesesBono,
@@ -17,21 +20,22 @@ export default function MesesBono({ breakdowns }) {
     .filter((b) => tieneBono(b.area))
     .map((b) => {
       const { indicadores, ev360 } = puntosPorEje(b)
+      const base = mesesBono(b.bruta)
       return {
         area: b.area,
         subdirector: SUBDIRECTORES[b.area]?.nombre ?? '—',
         indicadores,
         ev360,
         bruta: b.bruta,
-        final: b.final,
-        mesesPleno: mesesBono(b.bruta),
-        mesesPago: mesesBono(b.final),
+        base,
+        escenarios: Object.fromEntries(ESCENARIOS_BONO.map((e) => [e.id, base * e.factor])),
       }
     })
-    .sort((a, b) => b.mesesPago - a.mesesPago)
+    .sort((a, b) => b.base - a.base)
 
-  const totalPleno = filas.reduce((s, f) => s + f.mesesPleno, 0)
-  const totalPago = filas.reduce((s, f) => s + f.mesesPago, 0)
+  const total = (id) => filas.reduce((s, f) => s + f.escenarios[id], 0)
+  const totalConGS = total('blConGS')
+  const totalSinGS = total('blSinGS')
 
   return (
     <section className="flex flex-col gap-5">
@@ -41,37 +45,40 @@ export default function MesesBono({ breakdowns }) {
           La calificación se convierte a meses de sueldo sobre una base tope de{' '}
           <strong>{BASE_MESES_BONO} meses</strong>:{' '}
           <code className="bg-slate-100 px-1 rounded">meses = calificación × {BASE_MESES_BONO}</code>.
-          La columna <em>EBITDA 100%</em> es el escenario pleno; la de pago aplica el cierre real de
-          EBITDA ({fmtPct(EBITDA_CAP, 0)}), que es lo mismo que usar la calificación con tope.
+          Sobre esa base se aplica el factor corporativo de cada escenario. El pago se calcula
+          contra <strong>Bottom Line</strong>: incluyendo Goldman Sachs el bottom line cerró en{' '}
+          <strong>{fmtPct(BOTTOM_LINE_CON_GS, 1)}</strong>; excluyéndolo llega al{' '}
+          <strong>{fmtPct(BOTTOM_LINE_SIN_GS, 0)}</strong>.
         </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-5">
         <SummaryCard
-          label={`Base tope`}
-          value={`${BASE_MESES_BONO}.00`}
-          sub="meses al 100% de cumplimiento"
-          accent="#8B98AC"
+          label="Bottom Line con GS"
+          value={fmtMeses(totalConGS)}
+          sub={`meses en total · factor ${BOTTOM_LINE_CON_GS}`}
+          accent="#B45309"
         />
         <SummaryCard
-          label="Promedio a pagar"
-          value={fmtMeses(totalPago / (filas.length || 1))}
-          sub={`meses · EBITDA ${fmtPct(EBITDA_CAP, 0)}`}
+          label="Bottom Line sin GS"
+          value={fmtMeses(totalSinGS)}
+          sub={`meses en total · factor ${BOTTOM_LINE_SIN_GS.toFixed(2)}`}
           accent="#24437A"
         />
         <SummaryCard
-          label="Meses no devengados"
-          value={fmtMeses(totalPleno - totalPago)}
-          sub={`suma de los ${filas.length} subdirectores por el tope EBITDA`}
+          label="Efecto Goldman Sachs"
+          value={`-${fmtMeses(totalSinGS - totalConGS)}`}
+          sub={`meses que GS le cuesta a los ${filas.length} subdirectores`}
           accent="#DC2626"
         />
       </div>
 
       <div className="bg-white rounded-md shadow-card overflow-hidden">
         <div className="px-6 py-4 border-b border-slate-200">
-          <h3 className="font-semibold text-ink">Meses de bono por subdirector</h3>
+          <h3 className="font-semibold text-ink">Meses de bono por escenario</h3>
           <p className="text-xs text-slate-500 mt-0.5">
-            Indicadores y Ev. 360 en puntos sobre 100 · ordenado por meses a pagar
+            Indicadores y Ev. 360 en puntos sobre 100 · meses = calificación × {BASE_MESES_BONO} ×
+            factor del escenario
           </p>
         </div>
         <div className="overflow-x-auto">
@@ -84,9 +91,18 @@ export default function MesesBono({ breakdowns }) {
                 <th className="py-2 px-3 text-right">Indicadores</th>
                 <th className="py-2 px-3 text-right">Ev. 360</th>
                 <th className="py-2 px-3 text-right">Calf. final</th>
-                <th className="py-2 px-3 text-right">Meses (EBITDA 100%)</th>
-                <th className="py-2 px-3 text-right">Meses a pagar</th>
-                <th className="py-2 px-3 text-right">Δ</th>
+                {ESCENARIOS_BONO.map((e) => (
+                  <th
+                    key={e.id}
+                    title={e.desc}
+                    className={`py-2 px-3 text-right whitespace-nowrap ${
+                      e.id === 'blConGS' ? 'text-ink' : ''
+                    }`}
+                  >
+                    {e.label}
+                    <div className="font-normal text-[10px] text-slate-400">×{e.factor}</div>
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
@@ -107,26 +123,25 @@ export default function MesesBono({ breakdowns }) {
                     {f.indicadores === null ? '—' : f.indicadores.toFixed(2)}
                   </td>
                   <td className="py-2.5 px-3 text-right text-slate-700 tabular-nums">
-                    {f.ev360 === null ? (
-                      <span className="text-slate-400" title="El área no tiene evaluación 360°">
-                        n/a
-                      </span>
-                    ) : (
-                      f.ev360.toFixed(2)
-                    )}
+                    {f.ev360 === null ? '—' : f.ev360.toFixed(2)}
                   </td>
                   <td className="py-2.5 px-3 text-right text-slate-700 tabular-nums">
                     {(f.bruta * 100).toFixed(2)}
                   </td>
-                  <td className="py-2.5 px-3 text-right text-slate-500 tabular-nums">
-                    {fmtMeses(f.mesesPleno)}
-                  </td>
-                  <td className="py-2.5 px-3 text-right font-bold text-ink tabular-nums">
-                    {fmtMeses(f.mesesPago)}
-                  </td>
-                  <td className="py-2.5 px-3 text-right text-red-600 tabular-nums">
-                    -{fmtMeses(f.mesesPleno - f.mesesPago)}
-                  </td>
+                  {ESCENARIOS_BONO.map((e) => (
+                    <td
+                      key={e.id}
+                      className={`py-2.5 px-3 text-right tabular-nums ${
+                        e.id === 'blConGS'
+                          ? 'font-bold text-ink'
+                          : e.id === 'blSinGS'
+                            ? 'text-slate-700'
+                            : 'text-slate-400'
+                      }`}
+                    >
+                      {fmtMeses(f.escenarios[e.id])}
+                    </td>
+                  ))}
                 </tr>
               ))}
             </tbody>
@@ -135,17 +150,40 @@ export default function MesesBono({ breakdowns }) {
                 <td className="py-2.5 px-4" colSpan={6}>
                   Total ({filas.length} subdirectores)
                 </td>
-                <td className="py-2.5 px-3 text-right tabular-nums text-slate-500">
-                  {fmtMeses(totalPleno)}
-                </td>
-                <td className="py-2.5 px-3 text-right tabular-nums">{fmtMeses(totalPago)}</td>
-                <td className="py-2.5 px-3 text-right tabular-nums text-red-600">
-                  -{fmtMeses(totalPleno - totalPago)}
-                </td>
+                {ESCENARIOS_BONO.map((e) => (
+                  <td
+                    key={e.id}
+                    className={`py-2.5 px-3 text-right tabular-nums ${
+                      e.id === 'blConGS' || e.id === 'blSinGS' ? '' : 'text-slate-400'
+                    }`}
+                  >
+                    {fmtMeses(total(e.id))}
+                  </td>
+                ))}
               </tr>
             </tfoot>
           </table>
         </div>
+      </div>
+
+      <div className="bg-white rounded-md shadow-card p-6">
+        <h3 className="font-semibold text-ink mb-3">Qué significa cada escenario</h3>
+        <dl className="grid md:grid-cols-2 gap-x-8 gap-y-3 text-sm">
+          {ESCENARIOS_BONO.map((e) => (
+            <div key={e.id} className="flex gap-3">
+              <dt className="font-semibold text-ink whitespace-nowrap min-w-[9.5rem]">
+                {e.label}
+                <span className="font-normal text-slate-400"> ×{e.factor}</span>
+              </dt>
+              <dd className="text-slate-500">{e.desc}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="text-xs text-muted mt-4">
+          El escenario <strong>EBITDA {EBITDA_CAP * 100}%</strong> es el que la herramienta aplica a
+          la calificación en el resto del portal. Aquí se muestra solo como referencia: el castigo
+          corporativo debe aplicarse una sola vez, y el criterio de pago es el Bottom Line.
+        </p>
       </div>
     </section>
   )

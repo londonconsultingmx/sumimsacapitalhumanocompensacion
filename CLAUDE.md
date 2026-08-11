@@ -24,6 +24,9 @@
 >   Solo **4 subdirecciones devengan bono**: TI, Capital Humano, Auditoría y
 >   Finanzas. El Subdirector Técnico (Talleres / TBX) y Cadena de Suministro se
 >   evalúan igual pero no tienen bono (`AREAS_CON_BONO`).
+>   Los meses se pagan contra **Bottom Line**, no contra EBITDA: factor **0.594**
+>   incluyendo Goldman Sachs y **1.00** excluyéndolo (`ESCENARIOS_BONO`). El
+>   escenario EBITDA 96% queda solo como referencia.
 > - Reales alimentados del cierre 2025 + Consejo de Administración ene-2026
 >   (P&L por unidad, TBX Cumplimiento Presupuesto, CxP, madurez documental de
 >   Auditoría) y datos confirmados por el usuario (OTIF 36%, abasto 59%, etc.).
