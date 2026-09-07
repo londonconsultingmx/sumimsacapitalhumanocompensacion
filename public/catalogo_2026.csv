@@ -65,14 +65,13 @@ TI,360,02. Efectividad,Capacidad para lograr resultados de manera eficiente y co
 TI,360,03. Trabajo Colaborativo,Habilidad para trabajar de manera constructiva y en equipo.,%,≥ 75%,Anual
 TI,360,04. Responsabilidad,Capacidad de asumir y gestionar compromisos laborales.,%,≥ 75%,Anual
 TI,360,05. Enfoque al Cliente,Orientación hacia la satisfacción del cliente interno o externo.,%,≥ 75%,Anual
-Finanzas,Indicadores de Negocio,01. DSO & cartera vencida,Cuentas por cobrar ÷ Ventas a crédito × días · % cartera vencida,días,DSO < 90–120 d · cobranza ≥ 95%,Semanal
-Finanzas,Indicadores de Negocio,02. DPO & CxP vencida,Cuentas por pagar ÷ Compras a crédito × días · % CxP vencida,%,0 vencido sin gestión,Semanal
-Finanzas,Indicadores de Negocio,03. Ciclo de conversión de efectivo,Días inventario + DSO − DPO,días,CCC ≤ 90 d,Mensual
-Finanzas,Indicadores de Negocio,04. Margen EBITDA consolidado,EBITDA ÷ Ingresos × 100 (nivel SUMIMSA),USD,↑ vs. línea base,Mensual
-Finanzas,Indicadores de Negocio,05. Cierre contable oportuno,Día hábil de cierre,días,Cierre ≤ día 13,Mensual
-Finanzas,Indicadores de Negocio,06. Exactitud presupuestal,1 − |Real − Presupuesto| ÷ Presupuesto,%,≥ 90%,Mensual
-Finanzas,Indicadores de Negocio,07. Conciliación de activo fijo,Activos conciliados físico vs. libros ÷ Total registrado × 100,%,≥ 98% · inventario físico anual,Trimestral
-Finanzas,Indicadores de Negocio,08. Cumplimiento del plan de CAPEX,CAPEX ejercido ÷ CAPEX presupuestado × 100 (proyectos aprobados),%,≥ 90% en alcance y tiempo,Mensual
+Finanzas,Indicadores de Negocio,01. Proyección y seguimiento del flujo de efectivo,Reportes de flujo de efectivo elaborados y con seguimiento ÷ Programados × 100 · estimación por evento (cada pagaré),%,100% de los reportes en tiempo,Mensual
+Finanzas,Indicadores de Negocio,02. Ciclo de conversión de efectivo,Días inventario + DSO − DPO · medido hasta la estimación,%,≥ 95% de cumplimiento,Mensual
+Finanzas,Indicadores de Negocio,03. EBITDA consolidado,EBITDA del ejercicio a nivel SUMIMSA,miles USD,≥ presupuesto aprobado,Mensual
+Finanzas,Indicadores de Negocio,04. Cierre contable oportuno,Día hábil en que queda cerrada la contabilidad,días,Cierre ≤ día 10,Mensual
+Finanzas,Indicadores de Negocio,05. Control presupuestal · ahorros vs año anterior,Ahorro en cuentas de gasto ÷ Gasto del año anterior × 100,%,≥ 15% de ahorro,Mensual
+Finanzas,Indicadores de Negocio,06. Conciliación de activo fijo,Activos conciliados físico vs. libros ÷ Total registrado × 100,%,100% · inventario físico anual,Trimestral
+Finanzas,Indicadores de Negocio,07. Check list de auditoría externa,Pendientes del check list de auditores externos atendidos ÷ Total marcado × 100,%,100% atendido,Trimestral
 Finanzas,360,01. Integridad,Consistencia y ética del comportamiento dentro de la organización.,%,≥ 85%,Anual
 Finanzas,360,02. Efectividad,Capacidad para lograr resultados de manera eficiente y con calidad.,%,≥ 85%,Anual
 Finanzas,360,03. Trabajo Colaborativo,Habilidad para trabajar de manera constructiva y en equipo.,%,≥ 85%,Anual
