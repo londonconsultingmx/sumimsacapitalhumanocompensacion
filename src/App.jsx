@@ -8,6 +8,7 @@ import DetallePorArea from './components/DetallePorArea.jsx'
 import SinTope from './components/SinTope.jsx'
 import MesesBono from './components/MesesBono.jsx'
 import BenchmarksPage from './components/BenchmarksPage.jsx'
+import GerenciasPage from './components/GerenciasPage.jsx'
 import Catalogo2026 from './components/Catalogo2026.jsx'
 import { useData } from './data/useData.js'
 import { computeAllAreas, computeGrupal } from './utils/compensation.js'
@@ -58,6 +59,8 @@ function Dashboard({ onBackToIntro }) {
       <main className="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
         {tab === 'catalogo2026' ? (
           <Catalogo2026 />
+        ) : tab === 'gerencias' ? (
+          <GerenciasPage />
         ) : (
           <>
             {loading && <Loading />}

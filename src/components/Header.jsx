@@ -9,6 +9,7 @@ const TABS = [
   { id: 'sintope', label: '¿Y sin el tope?' },
   { id: 'mesesbono', label: 'Compensación 2025 (Meses Bono)' },
   { id: 'benchmarks', label: 'Benchmarks' },
+  { id: 'gerencias', label: 'Indicadores por gerencia' },
   { id: 'catalogo2026', label: 'Catálogo 2026' },
 ]
 
