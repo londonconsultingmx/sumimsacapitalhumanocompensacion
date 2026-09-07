@@ -21,6 +21,7 @@ export function useGerencias() {
             puesto: (r['Puesto'] ?? '').trim(),
             titular: (r['Titular'] ?? '').trim(),
             ubicacion: (r['Ubicacion'] ?? '').trim(),
+            perfil: (r['Perfil'] ?? '').trim(),
             indicador: (r['Indicador'] ?? '').trim(),
             formula: (r['Formula'] ?? '').trim(),
             meta: (r['Meta'] ?? '').trim(),

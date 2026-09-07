@@ -27,6 +27,26 @@ const COLOR_SUB = {
 
 const TODAS = 'Todas'
 
+// Perfil de la gerencia: define el peso de la batería. En Servicios y Proyectos
+// los gerentes son sobre todo comerciales — dueños del P&L de su línea — y
+// además responden por que la operación del cliente quede atendida con
+// refaccionamiento y servicio.
+const PERFIL_STYLE = {
+  'Comercial · P&L de línea': 'bg-amber-50 text-amber-800 border-amber-200',
+  'Operación': 'bg-sky-50 text-sky-800 border-sky-200',
+  'Staff corporativo': 'bg-slate-100 text-slate-600 border-slate-200',
+}
+
+function PerfilChip({ perfil }) {
+  if (!perfil) return null
+  const cls = PERFIL_STYLE[perfil] ?? PERFIL_STYLE['Staff corporativo']
+  return (
+    <span className={`text-[10px] uppercase tracking-wide font-semibold px-2 py-0.5 rounded-sm border ${cls}`}>
+      {perfil}
+    </span>
+  )
+}
+
 export default function GerenciasPage() {
   const { loading, rows, error } = useGerencias()
   const [filtro, setFiltro] = useState(TODAS)
@@ -76,6 +96,13 @@ export default function GerenciasPage() {
           subdirección. Cada indicador lleva su fórmula, la meta propuesta para SUMIMSA y la
           referencia de industria contra la que se calibró.
         </p>
+        <p className="text-sm text-slate-500 mt-3 max-w-4xl">
+          En <strong>Servicios</strong> y <strong>Proyectos</strong> las gerencias son{' '}
+          <strong>sobre todo comerciales</strong>: cada una es dueña del P&amp;L de su línea, así
+          que la batería arranca con ingreso contra meta, colocación del activo y margen. El cuarto
+          indicador cubre lo que sostiene esa venta — que la operación del cliente quede atendida
+          con refaccionamiento y servicio.
+        </p>
         <p className="text-xs text-muted mt-3 max-w-4xl">
           Los benchmarks son rangos de referencia de servicios petroleros y renta de equipo en
           México (APQC, IADC, IOGP, API, PMI, IIA, SHRM/ATD, Gartner) y de la operación con Pemex
@@ -121,6 +148,7 @@ export default function GerenciasPage() {
               <div className="px-5 py-3.5 border-b border-slate-200 flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 <h4 className="font-semibold text-ink">{ger.puesto}</h4>
                 <span className="text-sm text-slate-600">{ger.titular}</span>
+                <PerfilChip perfil={ger.perfil} />
                 <span className="text-xs text-muted ml-auto">
                   {ger.departamento} · {ger.ubicacion}
                 </span>
