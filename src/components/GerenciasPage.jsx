@@ -91,17 +91,19 @@ export default function GerenciasPage() {
       <div className="bg-white rounded-md shadow-card p-6">
         <h2 className="text-lg font-semibold text-ink">Indicadores por gerencia · 2026</h2>
         <p className="text-sm text-slate-500 mt-1 max-w-4xl">
-          Los <strong>4 indicadores más relevantes</strong> de cada una de las{' '}
+          Los <strong>4 indicadores de gestión más relevantes</strong> de cada una de las{' '}
           <strong>{totalGerencias} gerencias y subgerencias</strong> de la estructura, ordenados por
-          subdirección. Cada indicador lleva su fórmula, la meta propuesta para SUMIMSA y la
-          referencia de industria contra la que se calibró.
+          subdirección, más un <strong>quinto de EBITDA</strong>: las gerencias comerciales
+          responden por el EBITDA de su línea y las de soporte por el EBITDA consolidado como
+          objetivo compartido. Cada indicador lleva su fórmula, la meta propuesta para SUMIMSA y la
+          referencia con la que se calibró.
         </p>
         <p className="text-sm text-slate-500 mt-3 max-w-4xl">
           En <strong>Servicios</strong> y <strong>Proyectos</strong> las gerencias son{' '}
           <strong>sobre todo comerciales</strong>: cada una es dueña del P&amp;L de su línea, así
           que la batería arranca con ingreso contra meta, colocación del activo y margen. El cuarto
           indicador cubre lo que sostiene esa venta — que la operación del cliente quede atendida
-          con refaccionamiento y servicio.
+          con refaccionamiento y servicio — y el quinto es el EBITDA que le corresponde a su línea.
         </p>
         <p className="text-xs text-muted mt-3 max-w-4xl">
           Los benchmarks son rangos de referencia de servicios petroleros y renta de equipo en
@@ -166,7 +168,12 @@ export default function GerenciasPage() {
                   </thead>
                   <tbody>
                     {ger.kpis.map((k, i) => (
-                      <tr key={i} className="border-b border-slate-100 last:border-0 align-top">
+                      <tr
+                        key={i}
+                        className={`border-b border-slate-100 last:border-0 align-top ${
+                          k.indicador.includes('EBITDA') ? 'bg-slate-50/70' : ''
+                        }`}
+                      >
                         <td className="py-2.5 px-4 font-medium text-ink">{k.indicador}</td>
                         <td className="py-2.5 px-3 text-slate-500 text-xs leading-relaxed">
                           {k.formula}
