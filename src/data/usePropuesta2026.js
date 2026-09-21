@@ -17,6 +17,7 @@ export function usePropuesta2026() {
       complete: (results) => {
         const rows = results.data
           .map((r) => ({
+            clave: (r['Clave'] ?? '').trim(),
             subdireccion: (r['Subdireccion'] ?? '').trim(),
             eje: (r['Eje'] ?? '').trim(),
             indicador: (r['Indicador'] ?? '').trim(),
@@ -29,6 +30,7 @@ export function usePropuesta2026() {
             vs2025: (r['Vs2025'] ?? '').trim(),
             compartido: (r['Compartido'] ?? '').trim() === 'X',
             origen: (r['Origen'] ?? '').trim(),
+            ejemplo: (r['Ejemplo'] ?? '').trim(),
             nota: (r['Nota'] ?? '').trim(),
           }))
           .filter((r) => r.subdireccion && r.indicador)
