@@ -27,6 +27,11 @@
 >   Los meses se pagan contra **Bottom Line**, no contra EBITDA: factor **0.594**
 >   incluyendo Goldman Sachs y **1.00** excluyéndolo (`ESCENARIOS_BONO`). El
 >   escenario EBITDA 96% queda solo como referencia.
+> - **Propuesta 2026 (pestaña "Propuesta 2026", `public/propuesta_2026.csv`)**: batería
+>   propuesta por Dirección en 5 ejes (vender más · entregar mejor · resultados
+>   financieros · data correcta y actualizada · control interno y procesos), por
+>   subdirección más 3 objetivos compartidos. **No sustituye el esquema 2025** ni
+>   entra al cálculo de compensación; sin pesos hasta que se apruebe.
 > - Reales alimentados del cierre 2025 + Consejo de Administración ene-2026
 >   (P&L por unidad, TBX Cumplimiento Presupuesto, CxP, madurez documental de
 >   Auditoría) y datos confirmados por el usuario (OTIF 36%, abasto 59%, etc.).

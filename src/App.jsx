@@ -9,6 +9,7 @@ import SinTope from './components/SinTope.jsx'
 import MesesBono from './components/MesesBono.jsx'
 import BenchmarksPage from './components/BenchmarksPage.jsx'
 import GerenciasPage from './components/GerenciasPage.jsx'
+import Propuesta2026 from './components/Propuesta2026.jsx'
 import Catalogo2026 from './components/Catalogo2026.jsx'
 import { useData } from './data/useData.js'
 import { computeAllAreas, computeGrupal } from './utils/compensation.js'
@@ -61,6 +62,8 @@ function Dashboard({ onBackToIntro }) {
           <Catalogo2026 />
         ) : tab === 'gerencias' ? (
           <GerenciasPage />
+        ) : tab === 'propuesta2026' ? (
+          <Propuesta2026 />
         ) : (
           <>
             {loading && <Loading />}
