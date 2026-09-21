@@ -28,6 +28,7 @@ export function usePropuesta2026() {
             estadoDato: (r['EstadoDato'] ?? '').trim(),
             vs2025: (r['Vs2025'] ?? '').trim(),
             compartido: (r['Compartido'] ?? '').trim() === 'X',
+            origen: (r['Origen'] ?? '').trim(),
             nota: (r['Nota'] ?? '').trim(),
           }))
           .filter((r) => r.subdireccion && r.indicador)

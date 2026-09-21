@@ -46,6 +46,10 @@ const ESTADO_STYLE = {
   'Parcial': 'bg-amber-50 text-amber-800 border-amber-200',
   'Por construir': 'bg-rose-50 text-rose-800 border-rose-200',
 }
+const ORIGEN_STYLE = {
+  'Catálogo 2026': 'bg-sky-50 text-sky-800 border-sky-200',
+  'Propuesta Dirección': 'bg-slate-100 text-slate-600 border-slate-200',
+}
 const VS_STYLE = {
   'Se mantiene': 'text-slate-500',
   'Ajustado': 'text-amber-700',
@@ -78,6 +82,7 @@ export default function Propuesta2026() {
     const totales = {
       indicadores: rows.length,
       nuevos: rows.filter((r) => r.vs2025 === 'Nuevo').length,
+      catalogo: rows.filter((r) => r.origen === 'Catálogo 2026').length,
       sistema: rows.filter((r) => r.estadoDato === 'Existe en sistema').length,
       construir: rows.filter((r) => r.estadoDato === 'Por construir').length,
     }
@@ -113,8 +118,15 @@ export default function Propuesta2026() {
           Cada eje se traduce al giro de cada subdirección: en Finanzas "vender más" es convertir la
           venta en caja; en Auditoría es que la empresa pueda licitar sin trabas.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+        <p className="text-sm text-slate-500 mt-2 max-w-4xl">
+          Es <strong>aditiva</strong>: conserva todo el Catálogo 2026 vigente, clasificado en el eje
+          que le corresponde, y le suma lo que pidió Dirección. En Cadena de Suministros se refuerza
+          la <strong>gestión de proveedores</strong>: scorecard, penalizaciones cobradas, precio igual
+          a la orden, proveedor alterno y anticipos amortizados.
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-4">
           <Stat label="Indicadores" value={totales.indicadores} />
+          <Stat label="Del catálogo 2026" value={totales.catalogo} tone="text-sky-800" />
           <Stat label="Nuevos vs. 2025" value={totales.nuevos} />
           <Stat label="Ya salen de sistema" value={totales.sistema} tone="text-emerald-700" />
           <Stat label="Por construir el dato" value={totales.construir} tone="text-rose-700" />
@@ -157,7 +169,9 @@ export default function Propuesta2026() {
           </>
         )}
         <div className="ml-auto flex flex-wrap gap-2 text-xs text-muted items-center">
-          <span>Dato:</span>
+          <span>Origen:</span>
+          {Object.keys(ORIGEN_STYLE).map((k) => <Chip key={k} text={k} styles={ORIGEN_STYLE} />)}
+          <span className="ml-2">Dato:</span>
           {Object.keys(ESTADO_STYLE).map((k) => <Chip key={k} text={k} styles={ESTADO_STYLE} />)}
         </div>
       </div>
@@ -221,6 +235,9 @@ function Matriz({ subs, porSub }) {
                         <ul className="flex flex-col gap-1.5">
                           {celda.map((r, i) => (
                             <li key={i} className="leading-snug">
+                              {r.origen === 'Catálogo 2026' && (
+                                <span className="inline-block w-1.5 h-1.5 rounded-full bg-sky-500 mr-1.5 align-middle" title="Catálogo 2026" />
+                              )}
                               <span className="text-slate-800">{r.indicador}</span>
                               <span className="text-teal-dark font-semibold whitespace-nowrap"> · {r.meta}</span>
                               {r.vs2025 === 'Nuevo' && (
@@ -269,6 +286,7 @@ function Detalle({ sub, rows }) {
                     <th className="py-2 px-3">Meta 2026</th>
                     <th className="py-2 px-3">Base 2025</th>
                     <th className="py-2 px-3">Fuente · frecuencia</th>
+                    <th className="py-2 px-3">Origen</th>
                     <th className="py-2 px-3">Dato</th>
                     <th className="py-2 px-3">vs. 2025</th>
                   </tr>
@@ -287,6 +305,7 @@ function Detalle({ sub, rows }) {
                         {r.fuente}
                         <div className="text-slate-400">{r.frecuencia}</div>
                       </td>
+                      <td className="py-2.5 px-3"><Chip text={r.origen} styles={ORIGEN_STYLE} /></td>
                       <td className="py-2.5 px-3"><Chip text={r.estadoDato} styles={ESTADO_STYLE} /></td>
                       <td className={`py-2.5 px-3 text-xs whitespace-nowrap ${VS_STYLE[r.vs2025] ?? ''}`}>{r.vs2025}</td>
                     </tr>
