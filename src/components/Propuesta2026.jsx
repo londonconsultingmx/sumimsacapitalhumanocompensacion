@@ -208,24 +208,26 @@ export default function Propuesta2026() {
 function TablaSub({ sub, rows }) {
   return (
     <div id={`prop-${slug(sub)}`} className="bg-white rounded-md shadow-card overflow-hidden scroll-mt-4">
-      <div className="px-5 py-4 border-b border-rule flex flex-wrap items-baseline gap-x-4 gap-y-1">
-        <h3 className="text-base font-semibold text-ink">{sub}</h3>
-        <span className="text-xs text-muted">{ALCANCE[sub]}</span>
-        <span className="text-xs text-muted ml-auto tabular-nums">{rows.length} indicadores</span>
+      <div className="px-5 py-4 border-b border-rule">
+        <div className="flex items-baseline justify-between gap-4">
+          <h3 className="text-base font-semibold text-ink">{sub}</h3>
+          <span className="text-xs text-muted tabular-nums whitespace-nowrap">{rows.length} indicadores</span>
+        </div>
+        <div className="text-xs text-muted mt-0.5 max-w-3xl">{ALCANCE[sub]}</div>
       </div>
       <div className="overflow-x-auto">
-        <table className="min-w-full text-sm">
+        <table className="w-full min-w-[1100px] table-fixed text-sm">
           <thead>
             <tr className="text-left text-muted border-b border-rule text-xs">
-              <th className="py-2 pl-5 pr-2 font-medium w-14">Clave</th>
-              <th className="py-2 px-2 font-medium w-[17%]">Indicador</th>
-              <th className="py-2 px-2 font-medium w-[18%]">Fórmula</th>
-              <th className="py-2 px-2 font-medium whitespace-nowrap">Meta 2026</th>
-              <th className="py-2 px-2 font-medium">Base 2025</th>
-              <th className="py-2 px-2 font-medium w-[26%]">Ejemplo</th>
-              <th className="py-2 px-2 font-medium">Fuente</th>
-              <th className="py-2 px-2 font-medium">Origen</th>
-              <th className="py-2 px-2 pr-5 font-medium">Dato</th>
+              <th className="py-2 pl-5 pr-2 font-medium w-[4%]">Clave</th>
+              <th className="py-2 px-2 font-medium w-[18%]">Indicador</th>
+              <th className="py-2 px-2 font-medium w-[17%]">Fórmula</th>
+              <th className="py-2 px-2 font-medium w-[8%]">Meta 2026</th>
+              <th className="py-2 px-2 font-medium w-[8%]">Base 2025</th>
+              <th className="py-2 px-2 font-medium w-[25%]">Ejemplo</th>
+              <th className="py-2 px-2 font-medium w-[9%]">Fuente</th>
+              <th className="py-2 px-2 font-medium w-[5%]">Origen</th>
+              <th className="py-2 px-2 pr-5 font-medium w-[6%]">Dato</th>
             </tr>
           </thead>
           <tbody>
@@ -247,17 +249,17 @@ function TablaSub({ sub, rows }) {
                         {r.nota && <div className="text-xs text-muted mt-1 leading-relaxed">{r.nota}</div>}
                       </td>
                       <td className="py-2.5 px-2 text-xs text-muted leading-relaxed">{r.formula}</td>
-                      <td className="py-2.5 px-2 text-ink whitespace-nowrap">{r.meta}</td>
+                      <td className="py-2.5 px-2 text-ink font-medium">{r.meta}</td>
                       <td className="py-2.5 px-2 text-xs text-muted">{r.base}</td>
                       <td className="py-2.5 px-2 text-xs text-ink leading-relaxed">{r.ejemplo}</td>
                       <td className="py-2.5 px-2 text-xs text-muted">
                         {r.fuente}
                         <div>{r.frecuencia}</div>
                       </td>
-                      <td className="py-2.5 px-2 text-xs text-muted whitespace-nowrap">
+                      <td className="py-2.5 px-2 text-xs text-muted">
                         {r.origen === 'Catálogo 2026' ? 'Catálogo 2026' : 'Dirección'}
                       </td>
-                      <td className="py-2.5 px-2 pr-5 text-xs text-muted whitespace-nowrap">
+                      <td className="py-2.5 px-2 pr-5 text-xs text-muted">
                         <Dot c={ESTADO_COLOR[r.estadoDato] ?? '#98A2B3'} />
                         {r.estadoDato}
                       </td>
