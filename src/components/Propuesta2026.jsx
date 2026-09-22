@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { usePropuesta2026 } from '../data/usePropuesta2026.js'
 
 // Propuesta de indicadores de subdirectores 2026. Documento de lectura: una
@@ -48,6 +48,19 @@ const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 export default function Propuesta2026() {
   const { loading, rows, error } = usePropuesta2026()
   const [filtro, setFiltro] = useState('Todas')
+  // Las ligas del índice no pueden ser anclas (#id): el router del portal lee
+  // el hash y mandaría a la portada. Se navega con scroll tras el render.
+  const [irA, setIrA] = useState(null)
+  useEffect(() => {
+    if (!irA) return
+    const el = document.getElementById(irA)
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    setIrA(null)
+  }, [irA, filtro])
+  const irASub = (sub) => {
+    setFiltro('Todas')
+    setIrA(`prop-${slug(sub)}`)
+  }
 
   const { subs, porSub, totales } = useMemo(() => {
     if (!rows) return { subs: [], porSub: {}, totales: {} }
@@ -136,7 +149,13 @@ export default function Propuesta2026() {
                 {subs.map((s) => (
                   <tr key={s} className="border-b border-rule last:border-0">
                     <td className="py-1.5 pr-4">
-                      <a href={`#prop-${slug(s)}`} className="text-blue hover:underline">{s}</a>
+                      <a
+                        href={`#/dashboard`}
+                        onClick={(ev) => { ev.preventDefault(); irASub(s) }}
+                        className="text-blue hover:underline"
+                      >
+                        {s}
+                      </a>
                     </td>
                     <td className="py-1.5 text-right tabular-nums text-muted">{porSub[s].length}</td>
                   </tr>
