@@ -35,16 +35,6 @@ const ALCANCE = {
   'Auditoría y Riesgo': 'Auditoría interna, cumplimiento, control y procesos.',
 }
 
-const ESTADO_COLOR = {
-  'Existe en sistema': '#15803D',
-  'Parcial': '#B45309',
-  'Por construir': '#B91C1C',
-}
-
-function Dot({ c }) {
-  return <span className="inline-block w-2 h-2 rounded-full mr-1.5 align-middle" style={{ background: c }} />
-}
-
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 
 export default function Propuesta2026() {
@@ -74,9 +64,6 @@ export default function Propuesta2026() {
       total: rows.length,
       catalogo: rows.filter((r) => r.origen === 'Catálogo 2026').length,
       nuevos: rows.filter((r) => r.origen !== 'Catálogo 2026').length,
-      sistema: rows.filter((r) => r.estadoDato === 'Existe en sistema').length,
-      parcial: rows.filter((r) => r.estadoDato === 'Parcial').length,
-      construir: rows.filter((r) => r.estadoDato === 'Por construir').length,
     }
     return { subs, porSub, totales }
   }, [rows])
@@ -131,12 +118,6 @@ export default function Propuesta2026() {
                 difieren, se publican las dos para decidir.
               </li>
               <li>
-                <span className="font-medium">La columna Dato</span> dice si el indicador se puede medir
-                hoy: <Dot c={ESTADO_COLOR['Existe en sistema']} />sale de Business Central o Power
-                BI, <Dot c={ESTADO_COLOR['Parcial']} />existe pero se arma a mano, <Dot c={ESTADO_COLOR['Por construir']} />no
-                hay dato todavía. Lo que está por construir no debe entrar a compensación en 2026.
-              </li>
-              <li>
                 <span className="font-medium">Las metas son propuesta.</span> Se calibran con cada
                 subdirector antes de amarrarlas a bono; los pesos por eje se definen al aprobar la
                 batería.
@@ -170,10 +151,6 @@ export default function Propuesta2026() {
             </table>
             <div className="mt-3 text-xs text-muted leading-relaxed">
               {totales.catalogo} del Catálogo 2026 · {totales.nuevos} propuestos por Dirección.
-              <br />
-              <Dot c={ESTADO_COLOR['Existe en sistema']} />{totales.sistema} en sistema&ensp;
-              <Dot c={ESTADO_COLOR['Parcial']} />{totales.parcial} parcial&ensp;
-              <Dot c={ESTADO_COLOR['Por construir']} />{totales.construir} por construir
             </div>
           </div>
         </div>
@@ -220,14 +197,13 @@ function TablaSub({ sub, rows }) {
           <thead>
             <tr className="text-left text-muted border-b border-rule text-xs">
               <th className="py-2 pl-5 pr-2 font-medium w-[4%]">Clave</th>
-              <th className="py-2 px-2 font-medium w-[18%]">Indicador</th>
-              <th className="py-2 px-2 font-medium w-[17%]">Fórmula</th>
+              <th className="py-2 px-2 font-medium w-[19%]">Indicador</th>
+              <th className="py-2 px-2 font-medium w-[18%]">Fórmula</th>
               <th className="py-2 px-2 font-medium w-[8%]">Meta 2026</th>
-              <th className="py-2 px-2 font-medium w-[8%]">Base 2025</th>
-              <th className="py-2 px-2 font-medium w-[25%]">Ejemplo</th>
-              <th className="py-2 px-2 font-medium w-[9%]">Fuente</th>
-              <th className="py-2 px-2 font-medium w-[5%]">Origen</th>
-              <th className="py-2 px-2 pr-5 font-medium w-[6%]">Dato</th>
+              <th className="py-2 px-2 font-medium w-[9%]">Base 2025</th>
+              <th className="py-2 px-2 font-medium w-[27%]">Ejemplo</th>
+              <th className="py-2 px-2 font-medium w-[10%]">Fuente</th>
+              <th className="py-2 px-2 pr-5 font-medium w-[5%]">Origen</th>
             </tr>
           </thead>
           <tbody>
@@ -237,7 +213,7 @@ function TablaSub({ sub, rows }) {
               return (
                 <React.Fragment key={e.id}>
                   <tr className="bg-paper border-b border-rule">
-                    <td colSpan={9} className="py-1.5 pl-5 text-[11px] uppercase tracking-wider text-muted font-semibold">
+                    <td colSpan={8} className="py-1.5 pl-5 text-[11px] uppercase tracking-wider text-muted font-semibold">
                       {e.label} · {del.length}
                     </td>
                   </tr>
@@ -256,12 +232,8 @@ function TablaSub({ sub, rows }) {
                         {r.fuente}
                         <div>{r.frecuencia}</div>
                       </td>
-                      <td className="py-2.5 px-2 text-xs text-muted">
-                        {r.origen === 'Catálogo 2026' ? 'Catálogo 2026' : 'Dirección'}
-                      </td>
                       <td className="py-2.5 px-2 pr-5 text-xs text-muted">
-                        <Dot c={ESTADO_COLOR[r.estadoDato] ?? '#98A2B3'} />
-                        {r.estadoDato}
+                        {r.origen === 'Catálogo 2026' ? 'Catálogo 2026' : 'Dirección'}
                       </td>
                     </tr>
                   ))}
