@@ -26,7 +26,7 @@ const ORDEN_SUB = [
 
 const ALCANCE = {
   'Objetivos compartidos': 'Aplican a todas las áreas por igual.',
-  'TBX': 'Renta de contenedores, consumibles y contratos de gobierno.',
+  'TBX': 'Renta de contenedores, consumibles y contratos con gobierno y Pemex.',
   'Líneas de Servicio': 'Bombas de Lodo, Preventores, Top Drive, Cabezales, Equipos de Control de Sólidos, Katch Kan y Monoboyas, con los talleres que las sostienen. SUMIMSA vende el equipo y después le suministra refacciones y servicio; no es renta como en TBX.',
   'Cadena de Suministros': 'Abasto, inventarios, compras y proveedores.',
   'Finanzas': 'Contabilidad, tesorería, control de obra y análisis.',
