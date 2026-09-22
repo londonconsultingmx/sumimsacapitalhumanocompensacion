@@ -109,7 +109,7 @@ export default function Propuesta2026() {
             <h3 className="text-sm font-semibold text-ink">Cómo leer esta propuesta</h3>
             <ol className="mt-2 text-sm text-ink space-y-2 list-decimal pl-5 max-w-3xl">
               <li>
-                <span className="font-medium">Empiece por los tres objetivos compartidos.</span> Aplican
+                <span className="font-medium">Empieza por los tres objetivos compartidos.</span> Aplican
                 a todas las subdirecciones y son los que alinean con el negocio: EBITDA, entrega y
                 calidad de datos.
               </li>
