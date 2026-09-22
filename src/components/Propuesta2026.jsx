@@ -15,7 +15,8 @@ const EJES = [
 
 const ORDEN_SUB = [
   'Objetivos compartidos',
-  'Técnica · Operaciones',
+  'TBX',
+  'Líneas de Servicio',
   'Cadena de Suministros',
   'Finanzas',
   'TI',
@@ -24,8 +25,9 @@ const ORDEN_SUB = [
 ]
 
 const ALCANCE = {
-  'Objetivos compartidos': 'Aplican a las seis subdirecciones por igual.',
-  'Técnica · Operaciones': 'Talleres, TBX y las líneas de Proyectos y Servicios.',
+  'Objetivos compartidos': 'Aplican a todas las áreas por igual.',
+  'TBX': 'Renta de contenedores, consumibles y contratos de gobierno.',
+  'Líneas de Servicio': 'Bombas de Lodo, Preventores, Top Drive, Cabezales, Equipos de Control de Sólidos, Katch Kan y Monoboyas; incluye los talleres que las sostienen.',
   'Cadena de Suministros': 'Abasto, inventarios, compras y proveedores.',
   'Finanzas': 'Contabilidad, tesorería, control de obra y análisis.',
   'TI': 'Sistemas, datos maestros y tableros.',
