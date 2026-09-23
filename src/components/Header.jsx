@@ -10,6 +10,7 @@ const TABS = [
   { id: 'mesesbono', label: 'Compensación 2025 (Meses Bono)' },
   { id: 'benchmarks', label: 'Benchmarks' },
   { id: 'propuesta2026', label: 'Propuesta 2026' },
+  { id: 'propuestaetapas', label: 'Propuesta 2026 · por etapa' },
   { id: 'gerencias', label: 'Indicadores por gerencia' },
   { id: 'catalogo2026', label: 'Catálogo 2026' },
 ]
