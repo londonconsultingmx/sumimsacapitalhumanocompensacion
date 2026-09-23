@@ -32,12 +32,6 @@
 >   financieros · data correcta y actualizada · control interno y procesos), por
 >   subdirección más 3 objetivos compartidos. **No sustituye el esquema 2025** ni
 >   entra al cálculo de compensación; sin pesos hasta que se apruebe.
->   **Lectura por etapa (pestaña "Propuesta 2026 · por etapa",
->   `public/propuesta_2026_etapas.csv`)**: misma batería y claves, etiquetada con la
->   etapa del mapa Géminis 01 (01 Demanda y requisición · 02 Proveedores · 03 Abasto
->   · 04 Almacén · 05 Entrega · 06 Cobro · 07 Cierre financiero · Transversal) más
->   los indicadores que salen del mapa (origen "Mapa Géminis"). Es archivo aparte
->   para no tocar la propuesta vigente; si se aprueba, se fusionan.
 > - Reales alimentados del cierre 2025 + Consejo de Administración ene-2026
 >   (P&L por unidad, TBX Cumplimiento Presupuesto, CxP, madurez documental de
 >   Auditoría) y datos confirmados por el usuario (OTIF 36%, abasto 59%, etc.).

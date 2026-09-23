@@ -10,7 +10,6 @@ import MesesBono from './components/MesesBono.jsx'
 import BenchmarksPage from './components/BenchmarksPage.jsx'
 import GerenciasPage from './components/GerenciasPage.jsx'
 import Propuesta2026 from './components/Propuesta2026.jsx'
-import PropuestaEtapas from './components/PropuestaEtapas.jsx'
 import Catalogo2026 from './components/Catalogo2026.jsx'
 import { useData } from './data/useData.js'
 import { computeAllAreas, computeGrupal } from './utils/compensation.js'
@@ -65,8 +64,6 @@ function Dashboard({ onBackToIntro }) {
           <GerenciasPage />
         ) : tab === 'propuesta2026' ? (
           <Propuesta2026 />
-        ) : tab === 'propuestaetapas' ? (
-          <PropuestaEtapas />
         ) : (
           <>
             {loading && <Loading />}
