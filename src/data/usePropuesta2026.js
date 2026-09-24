@@ -25,6 +25,7 @@ export function usePropuesta2026() {
             meta: (r['Meta2026'] ?? '').trim(),
             buenoSi: (r['BuenoSi'] ?? '').trim(),
             figura: (r['Figura'] ?? '').trim(),
+            director: (r['Director'] ?? '').trim().toUpperCase() === 'X',
             base: (r['Base2025'] ?? '').trim(),
             fuente: (r['Fuente'] ?? '').trim(),
             frecuencia: (r['Frecuencia'] ?? '').trim(),

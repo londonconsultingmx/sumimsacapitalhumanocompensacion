@@ -37,9 +37,65 @@ const ALCANCE = {
 
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 
+// Selección de indicadores de Director: máximo 6 por subdirección. Se puede
+// pasar de 6, pero la marca cambia de azul a amarillo. La selección vive en el
+// navegador de quien la hace; el botón "Copiar selección" la exporta para
+// fijarla en el archivo (columna Director) y que la vea todo el mundo.
+const MAX_DIRECTOR = 6
+const LS_KEY = 'propuesta2026.director'
+const AZUL = '#1D4ED8'
+const AMARILLO = '#EAB308'
+
+function leerSeleccion() {
+  try {
+    const raw = window.localStorage.getItem(LS_KEY)
+    if (!raw) return null
+    const arr = JSON.parse(raw)
+    return Array.isArray(arr) ? new Set(arr) : null
+  } catch {
+    return null
+  }
+}
+function guardarSeleccion(set) {
+  try { window.localStorage.setItem(LS_KEY, JSON.stringify([...set])) } catch { /* sin almacenamiento */ }
+}
+
 export default function Propuesta2026() {
   const { loading, rows, error } = usePropuesta2026()
   const [filtro, setFiltro] = useState('Todas')
+  const [director, setDirector] = useState(() => leerSeleccion() ?? new Set())
+  const [inicializado, setInicializado] = useState(() => leerSeleccion() !== null)
+  const [aviso, setAviso] = useState('')
+  // Si no hay selección guardada en este navegador, se toma la del archivo.
+  useEffect(() => {
+    if (inicializado || !rows) return
+    setDirector(new Set(rows.filter((r) => r.director).map((r) => r.clave)))
+    setInicializado(true)
+  }, [rows, inicializado])
+  const toggleDirector = (clave) => {
+    setDirector((prev) => {
+      const next = new Set(prev)
+      if (next.has(clave)) next.delete(clave)
+      else next.add(clave)
+      guardarSeleccion(next)
+      return next
+    })
+  }
+  const copiarSeleccion = async () => {
+    const texto = [...director].sort().join(', ')
+    try {
+      await navigator.clipboard.writeText(texto)
+      setAviso(`Copiado: ${director.size} claves.`)
+    } catch {
+      setAviso(texto || 'Sin selección.')
+    }
+    setTimeout(() => setAviso(''), 4000)
+  }
+  const restablecer = () => {
+    const base = new Set((rows ?? []).filter((r) => r.director).map((r) => r.clave))
+    setDirector(base)
+    guardarSeleccion(base)
+  }
   // Las ligas del índice no pueden ser anclas (#id): el router del portal lee
   // el hash y mandaría a la portada. Se navega con scroll tras el render.
   const [irA, setIrA] = useState(null)
@@ -124,6 +180,13 @@ export default function Propuesta2026() {
                 una subdirección está cargada hacia un solo tipo de resultado.
               </li>
               <li>
+                <span className="font-medium">La columna Director</span> marca los indicadores que
+                sube a nivel Director cada subdirección: haz clic en el círculo para seleccionar o
+                quitar. El máximo es {MAX_DIRECTOR} por subdirección; se puede pasar, pero la marca cambia
+                de azul a amarillo. La selección se guarda en tu navegador; con "Copiar selección" me
+                la mandas y la fijo en el archivo para que la vea todo el mundo.
+              </li>
+              <li>
                 <span className="font-medium">Las metas son propuesta.</span> Se calibran con cada
                 subdirector antes de amarrarlas a bono; los pesos por eje se definen al aprobar la
                 batería.
@@ -176,9 +239,30 @@ export default function Propuesta2026() {
             <option key={s} value={s}>{s}</option>
           ))}
         </select>
+        <span className="ml-auto text-xs text-muted tabular-nums">
+          <span className="inline-block w-2.5 h-2.5 rounded-full align-middle mr-1.5" style={{ background: AZUL }} />
+          {director.size} de Director seleccionados
+        </span>
+        <button
+          type="button"
+          onClick={copiarSeleccion}
+          className="text-xs font-medium text-blue border border-rule rounded-sm px-2.5 py-1 bg-white hover:border-blue"
+        >
+          Copiar selección
+        </button>
+        <button
+          type="button"
+          onClick={restablecer}
+          className="text-xs text-muted border border-rule rounded-sm px-2.5 py-1 bg-white hover:text-ink"
+        >
+          Restablecer
+        </button>
+        {aviso && <span className="text-xs text-muted">{aviso}</span>}
       </div>
 
-      {visibles.map((s) => <TablaSub key={s} sub={s} rows={porSub[s]} />)}
+      {visibles.map((s) => (
+        <TablaSub key={s} sub={s} rows={porSub[s]} director={director} onToggle={toggleDirector} />
+      ))}
 
       <p className="text-xs text-muted max-w-3xl">
         Base 2025 tomada de los reales del cierre y del catálogo corporativo 2026. Los ejemplos usan
@@ -188,13 +272,21 @@ export default function Propuesta2026() {
   )
 }
 
-function TablaSub({ sub, rows }) {
+function TablaSub({ sub, rows, director, onToggle }) {
+  const nDir = rows.filter((r) => director.has(r.clave)).length
+  const excedido = nDir > MAX_DIRECTOR
+  const color = excedido ? AMARILLO : AZUL
   return (
     <div id={`prop-${slug(sub)}`} className="bg-white rounded-md shadow-card overflow-hidden scroll-mt-4">
       <div className="px-5 py-4 border-b border-rule">
         <div className="flex items-baseline justify-between gap-4">
           <h3 className="text-base font-semibold text-ink">{sub}</h3>
-          <span className="text-xs text-muted tabular-nums whitespace-nowrap">{rows.length} indicadores</span>
+          <span className="text-xs text-muted tabular-nums whitespace-nowrap">
+            <span className="inline-block w-2.5 h-2.5 rounded-full align-middle mr-1.5" style={{ background: color }} />
+            <span className={excedido ? 'text-amber-600 font-semibold' : ''}>Director {nDir} de {MAX_DIRECTOR}</span>
+            {excedido && <span className="text-amber-600"> · excede el máximo</span>}
+            <span className="mx-2">·</span>{rows.length} indicadores
+          </span>
         </div>
         <div className="text-xs text-muted mt-0.5 max-w-3xl">{ALCANCE[sub]}</div>
       </div>
@@ -203,13 +295,14 @@ function TablaSub({ sub, rows }) {
           <thead>
             <tr className="text-left text-muted border-b border-rule text-xs">
               <th className="py-2 pl-5 pr-2 font-medium w-[4%]">Clave</th>
+              <th className="py-2 px-1 font-medium w-[4%] text-center">Director</th>
               <th className="py-2 px-2 font-medium w-[18%]">Indicador</th>
-              <th className="py-2 px-2 font-medium w-[16%]">Fórmula</th>
+              <th className="py-2 px-2 font-medium w-[15%]">Fórmula</th>
               <th className="py-2 px-2 font-medium w-[8%]">Meta 2026</th>
               <th className="py-2 px-2 font-medium w-[5%] text-center">Bueno si</th>
               <th className="py-2 px-2 font-medium w-[9%]">Figura de mérito</th>
-              <th className="py-2 px-2 font-medium w-[8%]">Base 2025</th>
-              <th className="py-2 px-2 pr-5 font-medium w-[32%]">Ejemplo</th>
+              <th className="py-2 px-2 font-medium w-[7%]">Base 2025</th>
+              <th className="py-2 px-2 pr-5 font-medium w-[30%]">Ejemplo</th>
             </tr>
           </thead>
           <tbody>
@@ -219,13 +312,27 @@ function TablaSub({ sub, rows }) {
               return (
                 <React.Fragment key={e.id}>
                   <tr className="bg-paper border-b border-rule">
-                    <td colSpan={8} className="py-1.5 pl-5 text-[11px] uppercase tracking-wider text-muted font-semibold">
+                    <td colSpan={9} className="py-1.5 pl-5 text-[11px] uppercase tracking-wider text-muted font-semibold">
                       {e.label} · {del.length}
                     </td>
                   </tr>
                   {del.map((r) => (
                     <tr key={r.clave} className="border-b border-rule last:border-0 align-top">
                       <td className="py-2.5 pl-5 pr-2 font-mono text-xs text-muted">{r.clave}</td>
+                      <td className="py-2 px-1 text-center">
+                        <button
+                          type="button"
+                          onClick={() => onToggle(r.clave)}
+                          aria-pressed={director.has(r.clave)}
+                          title={director.has(r.clave) ? 'Quitar de Director' : 'Marcar como indicador de Director'}
+                          className="inline-block w-4 h-4 rounded-full border-2 align-middle transition"
+                          style={
+                            director.has(r.clave)
+                              ? { background: color, borderColor: color }
+                              : { background: 'transparent', borderColor: '#C7CCD6' }
+                          }
+                        />
+                      </td>
                       <td className="py-2.5 px-2">
                         <div className="font-medium text-ink">{r.indicador}</div>
                         {r.nota && <div className="text-xs text-muted mt-1 leading-relaxed">{r.nota}</div>}
