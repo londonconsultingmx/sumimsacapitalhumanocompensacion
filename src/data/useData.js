@@ -27,7 +27,7 @@ export function useData() {
   const [state, setState] = useState({ loading: true, rows: null, error: null })
 
   useEffect(() => {
-    const url = `${import.meta.env.BASE_URL}indicadores_2025.csv`
+    const url = `${import.meta.env.BASE_URL}indicadores_2025.csv?v=${Date.now()}`
     Papa.parse(url, {
       download: true,
       header: false,

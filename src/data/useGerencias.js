@@ -8,7 +8,7 @@ export function useGerencias() {
   const [state, setState] = useState({ loading: true, rows: null, error: null })
 
   useEffect(() => {
-    const url = `${import.meta.env.BASE_URL}gerencias_2026.csv`
+    const url = `${import.meta.env.BASE_URL}gerencias_2026.csv?v=${Date.now()}`
     Papa.parse(url, {
       download: true,
       header: true,

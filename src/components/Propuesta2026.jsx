@@ -46,38 +46,43 @@ const LS_KEY = 'propuesta2026.director'
 const AZUL = '#1D4ED8'
 const AMARILLO = '#EAB308'
 
-function leerSeleccion() {
+// La versión es la selección que trae el archivo. Si el archivo cambia, la
+// selección local se descarta y manda el archivo.
+const versionDe = (rows) => rows.filter((r) => r.director).map((r) => r.clave).sort().join('|')
+function leerSeleccion(version) {
   try {
     const raw = window.localStorage.getItem(LS_KEY)
     if (!raw) return null
-    const arr = JSON.parse(raw)
-    return Array.isArray(arr) ? new Set(arr) : null
+    const obj = JSON.parse(raw)
+    if (!obj || obj.v !== version || !Array.isArray(obj.s)) return null
+    return new Set(obj.s)
   } catch {
     return null
   }
 }
-function guardarSeleccion(set) {
-  try { window.localStorage.setItem(LS_KEY, JSON.stringify([...set])) } catch { /* sin almacenamiento */ }
+function guardarSeleccion(set, version) {
+  try { window.localStorage.setItem(LS_KEY, JSON.stringify({ v: version, s: [...set] })) } catch { /* sin almacenamiento */ }
 }
 
 export default function Propuesta2026() {
   const { loading, rows, error } = usePropuesta2026()
   const [filtro, setFiltro] = useState('Todas')
-  const [director, setDirector] = useState(() => leerSeleccion() ?? new Set())
-  const [inicializado, setInicializado] = useState(() => leerSeleccion() !== null)
+  const [director, setDirector] = useState(() => new Set())
   const [aviso, setAviso] = useState('')
-  // Si no hay selección guardada en este navegador, se toma la del archivo.
+  const version = useMemo(() => (rows ? versionDe(rows) : ''), [rows])
+  // Al cargar: la selección local vale solo si se hizo sobre esta misma versión
+  // del archivo; si no, manda el archivo.
   useEffect(() => {
-    if (inicializado || !rows) return
-    setDirector(new Set(rows.filter((r) => r.director).map((r) => r.clave)))
-    setInicializado(true)
-  }, [rows, inicializado])
+    if (!rows) return
+    const local = leerSeleccion(version)
+    setDirector(local ?? new Set(rows.filter((r) => r.director).map((r) => r.clave)))
+  }, [rows, version])
   const toggleDirector = (clave) => {
     setDirector((prev) => {
       const next = new Set(prev)
       if (next.has(clave)) next.delete(clave)
       else next.add(clave)
-      guardarSeleccion(next)
+      guardarSeleccion(next, version)
       return next
     })
   }
@@ -94,7 +99,7 @@ export default function Propuesta2026() {
   const restablecer = () => {
     const base = new Set((rows ?? []).filter((r) => r.director).map((r) => r.clave))
     setDirector(base)
-    guardarSeleccion(base)
+    guardarSeleccion(base, version)
   }
   // Las ligas del índice no pueden ser anclas (#id): el router del portal lee
   // el hash y mandaría a la portada. Se navega con scroll tras el render.
