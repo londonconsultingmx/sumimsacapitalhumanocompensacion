@@ -113,9 +113,15 @@ export default function Propuesta2026() {
                 calcula y cuándo cumple o no.
               </li>
               <li>
-                <span className="font-medium">La columna Origen</span> distingue lo que ya estaba en el
-                Catálogo 2026 de lo que propone Dirección. Donde la meta del catálogo y la propuesta
-                difieren, se publican las dos para decidir.
+                <span className="font-medium">La columna "Bueno si"</span> dice hacia dónde debe moverse el
+                indicador: ↑ debe subir, ↓ debe bajar, ↔ debe mantenerse en rango. Evita leer al revés
+                un indicador como NPT o cartera vencida.
+              </li>
+              <li>
+                <span className="font-medium">La columna "Figura de mérito"</span> dice qué cualidad del
+                negocio mueve cada indicador: rendimiento (dinero), crecimiento, liquidez, productividad,
+                eficiencia, calidad, oportunidad (tiempo), cumplimiento o seguridad. Sirve para ver si
+                una subdirección está cargada hacia un solo tipo de resultado.
               </li>
               <li>
                 <span className="font-medium">Las metas son propuesta.</span> Se calibran con cada
@@ -197,13 +203,13 @@ function TablaSub({ sub, rows }) {
           <thead>
             <tr className="text-left text-muted border-b border-rule text-xs">
               <th className="py-2 pl-5 pr-2 font-medium w-[4%]">Clave</th>
-              <th className="py-2 px-2 font-medium w-[19%]">Indicador</th>
-              <th className="py-2 px-2 font-medium w-[18%]">Fórmula</th>
+              <th className="py-2 px-2 font-medium w-[18%]">Indicador</th>
+              <th className="py-2 px-2 font-medium w-[16%]">Fórmula</th>
               <th className="py-2 px-2 font-medium w-[8%]">Meta 2026</th>
-              <th className="py-2 px-2 font-medium w-[9%]">Base 2025</th>
-              <th className="py-2 px-2 font-medium w-[27%]">Ejemplo</th>
-              <th className="py-2 px-2 font-medium w-[10%]">Fuente</th>
-              <th className="py-2 px-2 pr-5 font-medium w-[5%]">Origen</th>
+              <th className="py-2 px-2 font-medium w-[5%] text-center">Bueno si</th>
+              <th className="py-2 px-2 font-medium w-[9%]">Figura de mérito</th>
+              <th className="py-2 px-2 font-medium w-[8%]">Base 2025</th>
+              <th className="py-2 px-2 pr-5 font-medium w-[32%]">Ejemplo</th>
             </tr>
           </thead>
           <tbody>
@@ -226,15 +232,12 @@ function TablaSub({ sub, rows }) {
                       </td>
                       <td className="py-2.5 px-2 text-xs text-muted leading-relaxed">{r.formula}</td>
                       <td className="py-2.5 px-2 text-ink font-medium">{r.meta}</td>
+                      <td className="py-2.5 px-2 text-center text-ink text-base leading-none" title={r.buenoSi === '↑' ? 'Debe subir' : r.buenoSi === '↓' ? 'Debe bajar' : 'Debe mantenerse en rango'}>
+                        {r.buenoSi}
+                      </td>
+                      <td className="py-2.5 px-2 text-xs text-ink">{r.figura}</td>
                       <td className="py-2.5 px-2 text-xs text-muted">{r.base}</td>
-                      <td className="py-2.5 px-2 text-xs text-ink leading-relaxed">{r.ejemplo}</td>
-                      <td className="py-2.5 px-2 text-xs text-muted">
-                        {r.fuente}
-                        <div>{r.frecuencia}</div>
-                      </td>
-                      <td className="py-2.5 px-2 pr-5 text-xs text-muted">
-                        {r.origen === 'Catálogo 2026' ? 'Catálogo 2026' : 'Dirección'}
-                      </td>
+                      <td className="py-2.5 px-2 pr-5 text-xs text-ink leading-relaxed">{r.ejemplo}</td>
                     </tr>
                   ))}
                 </React.Fragment>

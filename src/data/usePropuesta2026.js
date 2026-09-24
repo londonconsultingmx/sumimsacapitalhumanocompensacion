@@ -23,6 +23,8 @@ export function usePropuesta2026() {
             indicador: (r['Indicador'] ?? '').trim(),
             formula: (r['Formula'] ?? '').trim(),
             meta: (r['Meta2026'] ?? '').trim(),
+            buenoSi: (r['BuenoSi'] ?? '').trim(),
+            figura: (r['Figura'] ?? '').trim(),
             base: (r['Base2025'] ?? '').trim(),
             fuente: (r['Fuente'] ?? '').trim(),
             frecuencia: (r['Frecuencia'] ?? '').trim(),
